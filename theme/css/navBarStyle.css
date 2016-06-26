@@ -1,0 +1,29 @@
+.nav-menu{
+	border-bottom: 3px solid #ccc;
+	padding: 20px 0 30px 0;
+}
+.nav-menu ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.nav-menu ul  li {
+    /*position: relative;*/
+    float: left;
+}
+.nav-menu ul > li > a {
+    padding: 40px 13px;
+    border: none;
+    background: none;
+    text-transform: uppercase;
+}
+.nav-menu ul ul {
+	position: absolute;
+	display: none;
+    background: #1f1f1f;
+    padding: 20px 0;
+    width: 255px;
+}
+.nav-menu ul > li:hover ul {
+    display: block;
+}
