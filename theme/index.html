@@ -2,53 +2,127 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Title of the document</title>
+		<title>UAMSHOP</title>
 		<link rel="stylesheet" type="text/css" href="css/gridStyle.css">
 		<link rel="stylesheet" type="text/css" href="css/navBarStyle.css">
     	<link href="css/font-awesome.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/generalStyle.css">
 	</head>
 
 	<body>
-		<header>			
-		</header>
-		<nav>
-			<div>
-				<div class="grid col-1">Cuenta</div>
-				<div class="grid col-1">Entregas</div>
-				<div class="grid col-1">Ayuda</div>
-				<div class="rightFloat rightAlign grid col-1">Carrito</div>
-			</div>
-			<div class="nav-menu">
-				<div class="grid col-2">
+		<nav class="nav-menu">
+			<div class="container">
+				<div class="grid col-2 nav-padding">
 					UAMSHOP
 				</div>	
 				<div class="grid col-7">
 					<ul>					
 						<li><a href="#">Inicio</a></li>	
 						<li>
-							<a href="#">Productos</a>
+							<a href="#">Categor&iacute;as</a>
 							<ul>
 								<li><a href="#">Productos A</a></li>
 								<li><a href="#">Productos B</a></li>
 							</ul>
 						</li>
 						<li><a href="#">En Oferta</a></li>	
+						<li><a href="login.html">Ingresar</a></li>	
 					</ul>
 				</div>
-				<div class="grid col-4 rightAlign">
-					<input type="text" name="" class="grid control">
-					<i class="fa fa-search blue"></i>
+				<div class="grid col-3 nav-padding">
+					<input type="text" name="busqueda" id="busqueda" class="form-control" placeholder="Buscar producto">
+					<a class="btn blue" href="#" role="button"><i class="fa fa-search"></i></a>
 				</div>
 			</div>
 		</nav>
-		<section></section>
-		<nav>
-			<div class="grid col-4">Cuenta</div>
-			<div class="grid col-4">Cuenta</div>
-			<div class="grid col-4">Cuenta</div>
-			<div class="grid col-4">Cuenta</div>
-		</nav>
-		<footer>Something</footer>
+
+		<section class="slider"  style="overflow: hidden;height: 700px;">
+			<img class="mySlides" src="img/mac-coffee-laptops-1920x1080-wallpaper.jpg">
+			<img class="mySlides" src="img/apple-drone-Introduction.jpg">
+			<img class="mySlides" src="img/Gadgets Computers Tablets Surface UHD.jpg">
+			<img class="mySlides" src="img/maxresdefault.jpg">
+
+			<a class="btn-floating" style="left:0" onclick="prograIV.slider.plusDivs(-1)">❮</a>
+			<a class="btn-floating" style="right:0" onclick="prograIV.slider.plusDivs(1)">❯</a>
+		</section>
+
+		<section class="container" style="margin-top: -200px;">
+			<div class="row">
+			    <div class="grid col-3">
+			    	<div class="small-banner">			    	
+			    		<a href="#">
+				    		<img src="img/banner_01.png">
+				    		<h5>Producto1</h5>
+				    		<span>Comprar ahora!</span>
+			    		</a>
+			    	</div>
+			    </div>
+			    <div class="grid col-3">
+			    	<div class="small-banner">			    	
+			    		<a href="#">
+				    		<img src="img/banner_02.png">
+				    		<h5>Producto1</h5>
+				    		<span>Comprar ahora!</span>
+			    		</a>
+			    	</div>
+			    </div>
+			    <div class="grid col-3">
+			    	<div class="small-banner">			    	
+			    		<a href="#">
+				    		<img src="img/banner_03.png">
+				    		<h5>Producto1</h5>
+				    		<span>Comprar ahora!</span>
+			    		</a>
+			    	</div>
+			    </div>
+			    <div class="grid col-3">
+			    	<div class="small-banner">			    	
+			    		<a href="#">
+				    		<img src="img/banner_04.png">
+				    		<h5>Producto1</h5>
+				    		<span>Comprar ahora!</span>
+			    		</a>
+			    	</div>
+			    </div>
+			</div>
+		</section>
+
+		<div class="division"></div>
+
+		<section class="grey-bg">
+			<div class="division"></div>
+			<div class="container">
+				<div class="row">
+				    <div class="grid col-6">
+				    	<h2>Bienvenidos</h2>
+					    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
+					    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				    </div>
+				    <div class="grid col-6">
+				    	<h2>Sobre Nosotros</h2>
+					    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
+					    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>  
+				    </div>
+				</div>
+			</div>
+			<div class="division"></div>
+		</section>
+
+		<footer  class="dark-grey-bg">
+			<div class="container">
+				<div class="row">
+				    <div class="grid col-12"">
+				    	<p>UAMSHOP</p>
+				    	<p>Todos los derechos reservados</p>
+				    	<p>2016</p>
+				    </div>
+				</div>
+			</div>
+		</footer>
+
+		<!-- Scripts -->
+		<script type="text/javascript" src="js/prograIV.js"></script>
+		<script type="text/javascript" src="js/slider.js"></script>
 	</body>
 
 </html>
