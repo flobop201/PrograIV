@@ -73,13 +73,13 @@
 .rightFloat{
 	float: right;
 }
-.leftAlign{
+.left-align{
 	text-align: left;
 }
-.rightAlign{
+.right-align{
 	text-align: right;
 }
-.centerAlign{
+.center-align{
 	text-align: center;
 }
 /**/
