@@ -1,0 +1,41 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/MasterPages/MainTemplate.Master" AutoEventWireup="true" CodeBehind="CategoryTemplate.master.cs" Inherits="UAMShop.MasterPages.CategoryTemplate" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+    
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+        <section class="grey-bg">
+        <div class="division"></div>
+        <div class="container">
+            <div class="row">
+                <div class="grid col-12">
+                    <h4><asp:ContentPlaceHolder ID="CategoryNameContentPlaceHolder" runat="server">Categoria actual</asp:ContentPlaceHolder></h4>
+                </div>
+            </div>
+        </div>
+        <div class="division"></div>
+    </section>
+
+    <section class="container">
+        <div class="division"></div>
+        <div class="row">
+            <div class="grid col-3">
+                <h1>Otras categor&iacute;as</h1>
+                <ul class="category-list">
+                    <li><a href="category.html">Productos B</a></li>
+                    <li><a href="category.html">Productos C</a></li>
+                </ul>
+            </div>
+            <div class="grid col-9">
+                <div class="row">
+                    <asp:ContentPlaceHolder ID="ItemContentPlaceHolder" runat="server">
+                        lista de productos
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="division"></div>
+    
+</asp:Content>
+

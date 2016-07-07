@@ -1,0 +1,66 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MainTemplate.master.cs" Inherits="UAMShop.MasterPages.MainTemplate" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="UTF-8">
+	<title>UAMSHOP</title>
+	<link rel="stylesheet" type="text/css" href="../css/gridStyle.css">
+	<link rel="stylesheet" type="text/css" href="../css/navBarStyle.css">
+    <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css" />
+	<link rel="stylesheet" type="text/css" href="../css/generalStyle.css">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <nav class="nav-menu">
+			<div class="container">
+				<div class="grid col-2 nav-padding">
+					UAMSHOP
+				</div>	
+				<div class="grid col-7">
+					<ul>					
+						<li><a href="#">Inicio</a></li>	
+						<li>
+							<a href="#">Categor&iacute;as</a>
+							<ul>
+								<li><a href="category.html">Productos A</a></li>
+								<li><a href="category.html">Productos B</a></li>
+							</ul>
+						</li>
+						<li><a href="#">En Oferta</a></li>	
+						<li><a href="login.html">Ingresar</a></li>
+						<li><a href="cart.html"><i class="fa fa-shopping-cart"></i></a></li>	
+					</ul>
+				</div>
+				<div class="grid col-3 nav-padding">
+					<input type="text" name="busqueda" id="busqueda" class="form-control" placeholder="Buscar producto">
+					<a class="btn blue" href="#" role="button"><i class="fa fa-search"></i></a>
+				</div>
+			</div>
+		</nav>
+    
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+        
+        <footer  class="dark-grey-bg">
+		    <div class="container">
+			    <div class="row">
+				    <div class="grid col-12"">
+				        <p>UAMSHOP</p>
+				        <p>Todos los derechos reservados</p>
+				        <p>2016</p>
+				    </div>
+			    </div>
+		    </div>
+	    </footer>
+    </form>
+
+	<!-- Scripts -->
+	<script type="text/javascript" src="../js/prograIV.js"></script>
+	<script type="text/javascript" src="../js/slider.js"></script>
+</body>
+</html>
