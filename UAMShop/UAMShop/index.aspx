@@ -3,10 +3,10 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 	<section class="slider"  style="overflow: hidden;height: 700px;">
-		<img class="mySlides" src="../img/mac-coffee-laptops-1920x1080-wallpaper.jpg">
-		<img class="mySlides" src="../img/apple-drone-Introduction.jpg">
-		<img class="mySlides" src="../img/Gadgets Computers Tablets Surface UHD.jpg">
-		<img class="mySlides" src="../img/maxresdefault.jpg">
+		<img class="mySlides" src="../img/mac-coffee-laptops-1920x1080-wallpaper.jpg"/>
+		<img class="mySlides" src="../img/apple-drone-Introduction.jpg"/>
+		<img class="mySlides" src="../img/Gadgets Computers Tablets Surface UHD.jpg"/>
+		<img class="mySlides" src="../img/maxresdefault.jpg"/>
 
 		<a class="btn-floating" style="left:0" onclick="prograIV.slider.plusDivs(-1)">❮</a>
 		<a class="btn-floating" style="right:0" onclick="prograIV.slider.plusDivs(1)">❯</a>

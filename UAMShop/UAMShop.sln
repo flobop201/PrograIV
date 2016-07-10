@@ -3,6 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UAMShop", "UAMShop\UAMShop.csproj", "{D3CD5A50-7BF5-401E-9619-2588C0882CE7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectionManage", "ConnectionManage\ConnectionManage.csproj", "{47F9A1EF-BAA2-418A-9F41-DC3D19CAA45F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductModule", "ProductModule\ProductModule.csproj", "{C87071AC-EC0D-4B1D-A560-41261DB95189}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +17,14 @@ Global
 		{D3CD5A50-7BF5-401E-9619-2588C0882CE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D3CD5A50-7BF5-401E-9619-2588C0882CE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D3CD5A50-7BF5-401E-9619-2588C0882CE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47F9A1EF-BAA2-418A-9F41-DC3D19CAA45F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47F9A1EF-BAA2-418A-9F41-DC3D19CAA45F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47F9A1EF-BAA2-418A-9F41-DC3D19CAA45F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47F9A1EF-BAA2-418A-9F41-DC3D19CAA45F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C87071AC-EC0D-4B1D-A560-41261DB95189}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C87071AC-EC0D-4B1D-A560-41261DB95189}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C87071AC-EC0D-4B1D-A560-41261DB95189}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C87071AC-EC0D-4B1D-A560-41261DB95189}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

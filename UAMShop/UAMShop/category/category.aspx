@@ -49,4 +49,8 @@
         <div><a class="btn blue wide" href="#" role="button">Agregar a la compra</a></div>
         <div class="division"></div>
     </div>
+    <!--Ejemplo grid productos-->
+    <div>
+        <asp:GridView ID="grvStudent" runat="server"></asp:GridView>
+    </div>
 </asp:Content>
