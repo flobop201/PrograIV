@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectionManage", "Connect
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductModule", "ProductModule\ProductModule.csproj", "{C87071AC-EC0D-4B1D-A560-41261DB95189}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MenuModule", "MenuModule\MenuModule.csproj", "{C6A1693F-032A-43F3-8D59-6D69BFA88E53}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,10 @@ Global
 		{C87071AC-EC0D-4B1D-A560-41261DB95189}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C87071AC-EC0D-4B1D-A560-41261DB95189}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C87071AC-EC0D-4B1D-A560-41261DB95189}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6A1693F-032A-43F3-8D59-6D69BFA88E53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6A1693F-032A-43F3-8D59-6D69BFA88E53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6A1693F-032A-43F3-8D59-6D69BFA88E53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6A1693F-032A-43F3-8D59-6D69BFA88E53}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

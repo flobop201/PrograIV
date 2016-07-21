@@ -140,6 +140,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MenuModule\MenuModule.csproj">
+      <Project>{c6a1693f-032a-43f3-8d59-6d69bfa88e53}</Project>
+      <Name>MenuModule</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ProductModule\ProductModule.csproj">
       <Project>{c87071ac-ec0d-4b1d-a560-41261db95189}</Project>
       <Name>ProductModule</Name>
@@ -156,9 +160,9 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerPort>10232</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:63238/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>

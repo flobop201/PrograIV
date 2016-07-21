@@ -5,3 +5,10 @@ E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\Pr
 E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\ProductModule\bin\Debug\ConnectionManage.pdb
 E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\ProductModule\obj\Debug\ProductModule.dll
 E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\ProductModule\obj\Debug\ProductModule.pdb
+C:\Users\u46416\OneDrive\git\ProyectoUAM\UAMShop\ProductModule\bin\Debug\ProductModule.dll
+C:\Users\u46416\OneDrive\git\ProyectoUAM\UAMShop\ProductModule\bin\Debug\ProductModule.pdb
+C:\Users\u46416\OneDrive\git\ProyectoUAM\UAMShop\ProductModule\bin\Debug\ConnectionManage.dll
+C:\Users\u46416\OneDrive\git\ProyectoUAM\UAMShop\ProductModule\bin\Debug\ConnectionManage.pdb
+C:\Users\u46416\OneDrive\git\ProyectoUAM\UAMShop\ProductModule\obj\Debug\ProductModule.csprojResolveAssemblyReference.cache
+C:\Users\u46416\OneDrive\git\ProyectoUAM\UAMShop\ProductModule\obj\Debug\ProductModule.dll
+C:\Users\u46416\OneDrive\git\ProyectoUAM\UAMShop\ProductModule\obj\Debug\ProductModule.pdb

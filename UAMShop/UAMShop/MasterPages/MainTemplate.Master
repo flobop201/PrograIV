@@ -21,7 +21,21 @@
 					UAMSHOP
 				</div>	
 				<div class="grid col-7">
-					<ul>					
+				       <%
+                            try
+                            {
+                                if (!Page.IsPostBack)
+                                {
+                                    var menuDal = new MenuModule.MenuDal();
+                                    Page.Response.Write(menuDal.RetieveMenuToPage());
+                                }
+                            }
+                            catch (Exception ex)
+                            {
+                              
+                            }                                    
+                        %>     
+					<%--<ul>					
 						<li><a href="#">Inicio</a></li>	
 						<li>
 							<a href="#">Categor&iacute;as</a>
@@ -33,7 +47,7 @@
 						<li><a href="#">En Oferta</a></li>	
 						<li><a href="login.html">Ingresar</a></li>
 						<li><a href="cart.html"><i class="fa fa-shopping-cart"></i></a></li>	
-					</ul>
+					</ul>--%>
 				</div>
 				<div class="grid col-3 nav-padding">
 					<input type="text" name="busqueda" id="busqueda" class="form-control" placeholder="Buscar producto">
