@@ -1,0 +1,8 @@
+C:\Users\u46416\OneDrive\git\ProyectoUAM\UAMShop\Log4NetModule\bin\Debug\Log4NetModule.dll
+C:\Users\u46416\OneDrive\git\ProyectoUAM\UAMShop\Log4NetModule\bin\Debug\Log4NetModule.pdb
+C:\Users\u46416\OneDrive\git\ProyectoUAM\UAMShop\Log4NetModule\bin\Debug\log4net.dll
+C:\Users\u46416\OneDrive\git\ProyectoUAM\UAMShop\Log4NetModule\bin\Debug\log4net.pdb
+C:\Users\u46416\OneDrive\git\ProyectoUAM\UAMShop\Log4NetModule\bin\Debug\log4net.xml
+C:\Users\u46416\OneDrive\git\ProyectoUAM\UAMShop\Log4NetModule\obj\Debug\Log4NetModule.csprojResolveAssemblyReference.cache
+C:\Users\u46416\OneDrive\git\ProyectoUAM\UAMShop\Log4NetModule\obj\Debug\Log4NetModule.dll
+C:\Users\u46416\OneDrive\git\ProyectoUAM\UAMShop\Log4NetModule\obj\Debug\Log4NetModule.pdb

@@ -1,0 +1,5 @@
+C:\Users\u46416\OneDrive\git\ProyectoUAM\UAMShop\NotificationModule\bin\Debug\NotificationModule.dll
+C:\Users\u46416\OneDrive\git\ProyectoUAM\UAMShop\NotificationModule\bin\Debug\NotificationModule.pdb
+C:\Users\u46416\OneDrive\git\ProyectoUAM\UAMShop\NotificationModule\obj\Debug\NotificationModule.csprojResolveAssemblyReference.cache
+C:\Users\u46416\OneDrive\git\ProyectoUAM\UAMShop\NotificationModule\obj\Debug\NotificationModule.dll
+C:\Users\u46416\OneDrive\git\ProyectoUAM\UAMShop\NotificationModule\obj\Debug\NotificationModule.pdb

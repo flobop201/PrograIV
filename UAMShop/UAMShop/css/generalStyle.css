@@ -61,6 +61,20 @@ footer{
     color: #fff;
     text-transform: uppercase;
 }
+.small-banner h4 {
+    margin-left: 15px;
+    font-size: 26px;
+    line-height: 28px;
+    color: #fff;
+    text-transform: uppercase;
+}
+.small-banner h3 {
+    margin-left: 15px;
+    font-size: 26px;
+    line-height: 28px;
+    color: #fff;
+    text-transform: uppercase;
+}
 .small-banner span {
     margin-left: 15px;
     border-top: 3px solid #fff;
@@ -178,6 +192,22 @@ footer{
     background: -webkit-linear-gradient(top,  #f44336 0%,#ef2d1f 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to bottom,  #f44336 0%,#ef2d1f 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f44336', endColorstr='#ef2d1f',GradientType=0 ); /* IE6-9 */
+}
+.btn.disabled{
+    text-decoration: none;
+    border-color: #333;
+    color: #fff;
+    background-color: #999;    
+    cursor:not-allowed !important;
+    pointer-events: none;    
+}
+.btn.disabled:hover{
+    text-decoration: none;
+    border-color: #333;
+    color: #fff;
+    background-color: #999;
+    cursor:not-allowed !important;
+    pointer-events: none;   
 }
 /*slider*/
 .slider{

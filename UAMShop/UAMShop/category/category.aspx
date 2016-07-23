@@ -1,56 +1,46 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPages/CategoryTemplate.master" AutoEventWireup="true" CodeBehind="category.aspx.cs" Inherits="UAMShop.category.category" %>
 
+<%@ MasterType VirtualPath="../MasterPages/CategoryTemplate.master" %>
 <asp:Content ID="Content3" ContentPlaceHolderID="CategoryNameContentPlaceHolder" runat="server">
-    Categoria escogida
+    > 
+    <%
+        string result;
+        if (idCategoria > 0)
+        {
+            result = (from categorias in Master.listCategory
+                      where categorias.Id == idCategoria
+                      select categorias.Categoria).FirstOrDefault();
+        }
+        else
+        {
+            result = "Todas las Categorias";
+        }
+        Page.Response.Write(result);
+           
+           
+    %>
 </asp:Content>
 <asp:Content ID="Content1" ContentPlaceHolderID="ItemContentPlaceHolder" runat="server">
-    <!--Iterar cuantas veces sea necesario -->
+    <%
+        foreach (var producto in listProducts)
+        {
+    %>
     <div class="grid col-4">
         <div class="prod-thumb">
-            <a href="detail.html">    
-                <img src="../img/banner_01.png">
-                <span>$80.00</span>
-                <h5>Producto 1</h5>
+            <a href="../products/productdetail.aspx">
+                <img src="<%  Page.Response.Write(producto.Imagen); %>">
+                <span><%  Page.Response.Write(String.Format("{0:C}", producto.Precio)); %></span>
+                <h5><%  Page.Response.Write(producto.Producto); %></h5>
             </a>
         </div>
-        <div><a class="btn blue wide" href="#" role="button">Agregar a la compra</a></div>
-        <div class="division"></div>
-    </div>
-    <div class="grid col-4">
-        <div class="prod-thumb">                    
-            <a href="detail.html">    
-                <img src="../img/banner_02.png">
-                <span>$80.00</span>
-                <h5>Producto 2</h5>
-            </a>
+        <div>
+            <a class="btn blue wide <% if (producto.Existencia == 0)
+                                       {%> disabled <%} %> "
+                href="#" role="button">Agregar a la compra</a>
         </div>
-        <div><a class="btn blue wide" href="#" role="button">Agregar a la compra</a></div>
         <div class="division"></div>
     </div>
-    <div class="grid col-4">
-        <div class="prod-thumb">                    
-            <a href="detail.html">    
-                <img src="../img/banner_03.png">
-                <span>$80.00</span>
-                <h5>Producto 3</h5>
-            </a>
-        </div>
-        <div><a class="btn blue wide" href="#" role="button">Agregar a la compra</a></div>
-        <div class="division"></div>
-    </div>
-    <div class="grid col-4">
-        <div class="prod-thumb">                    
-            <a href="detail.html">    
-                <img src="../img/banner_04.png">
-                <span>$80.00</span>
-                <h5>Producto 4</h5>
-            </a>
-        </div>
-        <div><a class="btn blue wide" href="#" role="button">Agregar a la compra</a></div>
-        <div class="division"></div>
-    </div>
-    <!--Ejemplo grid productos-->
-    <div>
-        <asp:GridView ID="grvStudent" runat="server"></asp:GridView>
-    </div>
+    <% }
+
+    %>
 </asp:Content>

@@ -70,13 +70,18 @@
     <Content Include="img\banner_02.png" />
     <Content Include="img\banner_03.png" />
     <Content Include="img\banner_04.png" />
+    <Content Include="img\confused-emoji.png" />
     <Content Include="img\Gadgets Computers Tablets Surface UHD.jpg" />
     <Content Include="img\mac-coffee-laptops-1920x1080-wallpaper.jpg" />
     <Content Include="img\maxresdefault.jpg" />
+    <Content Include="img\productos\120882.png" />
+    <Content Include="img\productos\127688.png" />
     <Content Include="index.aspx" />
+    <Content Include="informacion.aspx" />
     <Content Include="js\prograIV.js" />
     <Content Include="js\slider.js" />
     <Content Include="login.aspx" />
+    <Content Include="products\productdetail.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -101,6 +106,13 @@
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
+    <Compile Include="informacion.aspx.cs">
+      <DependentUpon>informacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="informacion.aspx.designer.cs">
+      <DependentUpon>informacion.aspx</DependentUpon>
+    </Compile>
     <Compile Include="login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -122,6 +134,13 @@
     <Compile Include="MasterPages\MainTemplate.Master.designer.cs">
       <DependentUpon>MainTemplate.Master</DependentUpon>
     </Compile>
+    <Compile Include="products\productdetail.aspx.cs">
+      <DependentUpon>productdetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="products\productdetail.aspx.designer.cs">
+      <DependentUpon>productdetail.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -140,6 +159,14 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CategoryModule\CategoryModule.csproj">
+      <Project>{3b5464c1-3918-49dd-90cb-5a6ea489297a}</Project>
+      <Name>CategoryModule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Log4NetModule\Log4NetModule.csproj">
+      <Project>{ce282c79-8d6e-4c03-bfa8-e98472d2c6c8}</Project>
+      <Name>Log4NetModule</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MenuModule\MenuModule.csproj">
       <Project>{c6a1693f-032a-43f3-8d59-6d69bfa88e53}</Project>
       <Name>MenuModule</Name>

@@ -33,7 +33,8 @@ namespace MenuModule
                     IdMenu = Int32.Parse(menuReader["IdMenu"].ToString()),
                     Menu = menuReader["Menu"].ToString(),
                     Pagina = menuReader["Pagina"].ToString(),
-                    IdSubMenu = Int32.Parse(menuReader["IdSubMenu"].ToString())
+                    IdSubMenu = Int32.Parse(menuReader["IdSubMenu"].ToString()),
+                    IdCategoria = Int32.Parse(menuReader["IdCategoria"].ToString())
                 };
 
                 listMenu.Add(menu);

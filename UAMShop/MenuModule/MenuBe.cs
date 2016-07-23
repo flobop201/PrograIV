@@ -11,6 +11,7 @@ namespace MenuModule
         public int IdMenu { get; set; }
         public string Menu { get; set; }
         public string Pagina { get; set; }
-        public int IdSubMenu { get; set; }   
+        public int IdSubMenu { get; set; }
+        public int IdCategoria { get; set; }
     }
 }

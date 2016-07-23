@@ -1,14 +1,17 @@
 ﻿<%@ Master Language="C#" MasterPageFile="~/MasterPages/MainTemplate.Master" AutoEventWireup="true" CodeBehind="CategoryTemplate.master.cs" Inherits="UAMShop.MasterPages.CategoryTemplate" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
-    
+
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-        <section class="grey-bg">
+    <section class="grey-bg">
         <div class="division"></div>
         <div class="container">
             <div class="row">
                 <div class="grid col-12">
-                    <h4><asp:ContentPlaceHolder ID="CategoryNameContentPlaceHolder" runat="server">Categoria actual</asp:ContentPlaceHolder></h4>
+                    <h4>
+                        <asp:ContentPlaceHolder ID="CategoryNameContentPlaceHolder" runat="server">Categoria actual</asp:ContentPlaceHolder>
+                    </h4>
                 </div>
             </div>
         </div>
@@ -21,8 +24,12 @@
             <div class="grid col-3">
                 <h1>Otras categor&iacute;as</h1>
                 <ul class="category-list">
-                    <li><a href="category.html">Productos B</a></li>
-                    <li><a href="category.html">Productos C</a></li>
+                    <% foreach (var categoria in listCategory)
+                       {
+                    %>
+                    <li><a href="?id=<% Page.Response.Write(categoria.Id); %>"><% Page.Response.Write(categoria.Categoria); %></a></li>
+                    <%
+                       } %>
                 </ul>
             </div>
             <div class="grid col-9">
@@ -36,6 +43,6 @@
     </section>
 
     <div class="division"></div>
-    
+
 </asp:Content>
 
