@@ -5,10 +5,10 @@
     > 
     <%
         string result;
-        if (idCategoria > 0)
+        if (IdCategoria > 0)
         {
-            result = (from categorias in Master.listCategory
-                      where categorias.Id == idCategoria
+            result = (from categorias in Master.ListCategory
+                      where categorias.Id == IdCategoria
                       select categorias.Categoria).FirstOrDefault();
         }
         else
@@ -22,7 +22,7 @@
 </asp:Content>
 <asp:Content ID="Content1" ContentPlaceHolderID="ItemContentPlaceHolder" runat="server">
     <%
-        foreach (var producto in listProducts)
+        foreach (var producto in ListProducts)
         {
     %>
     <div class="grid col-4">

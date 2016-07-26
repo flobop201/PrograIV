@@ -50,6 +50,10 @@
       <Project>{47f9a1ef-baa2-418a-9f41-dc3d19caa45f}</Project>
       <Name>ConnectionManage</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Log4NetModule\Log4NetModule.csproj">
+      <Project>{ce282c79-8d6e-4c03-bfa8-e98472d2c6c8}</Project>
+      <Name>Log4NetModule</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

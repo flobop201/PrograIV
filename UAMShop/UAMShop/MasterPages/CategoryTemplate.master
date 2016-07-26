@@ -24,7 +24,7 @@
             <div class="grid col-3">
                 <h1>Otras categor&iacute;as</h1>
                 <ul class="category-list">
-                    <% foreach (var categoria in listCategory)
+                    <% foreach (var categoria in ListCategory)
                        {
                     %>
                     <li><a href="?id=<% Page.Response.Write(categoria.Id); %>"><% Page.Response.Write(categoria.Categoria); %></a></li>

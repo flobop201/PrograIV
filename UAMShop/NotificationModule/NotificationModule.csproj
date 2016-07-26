@@ -29,6 +29,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -39,13 +42,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Correos.cs" />
-    <Compile Include="EnviarCorreo.cs" />
+    <Compile Include="Mail.cs" />
+    <Compile Include="SendMail.cs" />
     <Compile Include="Test.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="img\banneruam.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Log4NetModule\Log4NetModule.csproj">
+      <Project>{ce282c79-8d6e-4c03-bfa8-e98472d2c6c8}</Project>
+      <Name>Log4NetModule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ProductModule\ProductModule.csproj">
+      <Project>{c87071ac-ec0d-4b1d-a560-41261db95189}</Project>
+      <Name>ProductModule</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Log4NetModule;
 using MenuModule;
 
 namespace UAMShop.MasterPages
@@ -20,6 +21,7 @@ namespace UAMShop.MasterPages
             }
             catch (Exception exception)
             {
+                Log4Net.WriteLog(exception,Log4Net.LogType.Error);
                 Response.Redirect("~/informacion.aspx");
             }
 

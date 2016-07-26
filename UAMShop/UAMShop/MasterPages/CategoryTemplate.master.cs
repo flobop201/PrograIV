@@ -6,24 +6,26 @@ using System.Web.Configuration;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using CategoryModule;
+using Log4NetModule;
 
 namespace UAMShop.MasterPages
 {
     public partial class CategoryTemplate : System.Web.UI.MasterPage
     {
         
-        public List<CategoryBE> listCategory;
+        public List<CategoryBE> ListCategory;
         protected void Page_Load(object sender, EventArgs e)
         {
             try
             {
-                CategoryDAL CategoryDAL = new CategoryDAL();
+                var categoryDal = new CategoryDAL();
                 string connection = WebConfigurationManager.AppSettings["ConnectionString"];
-                listCategory = CategoryDAL.RetrieveCategory(connection);
+                ListCategory = categoryDal.RetrieveCategory(connection);
             }
-            catch (Exception)
+            catch (Exception exception)
             {
-                throw;
+                Log4Net.WriteLog(exception, Log4Net.LogType.Error);                
+                Response.Redirect("~/informacion.aspx");
             }
         }
     }

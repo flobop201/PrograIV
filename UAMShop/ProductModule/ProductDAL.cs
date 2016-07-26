@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using ConnectionManage;
 using System.Data;
 using System.Data.SqlClient;
+using Log4NetModule;
 
 namespace ProductModule
 {
@@ -10,37 +11,35 @@ namespace ProductModule
     {
         public List<ProductBE> RetrieveProducts(string connectionString,int idCategoria, string busqueda)
         {
-            ConnectionManager myConnection = new ConnectionManager(connectionString);
-            SqlConnection conexion = myConnection.CreateConnection();
-            SqlCommand command = myConnection.createCommand(conexion);
-            SqlDataReader productReader;
+            var myConnection = new ConnectionManager(connectionString);
+            var conexion = myConnection.CreateConnection();
+            var command = myConnection.createCommand(conexion);
 
-            List<ProductBE> listResult = new List<ProductBE>();
-            ProductBE product;
+            var listResult = new List<ProductBE>();
 
             command.CommandText = "usp_productosSelect";
             command.CommandType = CommandType.StoredProcedure;
 
-            SqlParameter parameter = new SqlParameter("@IdCategoria",SqlDbType.Int);
-            parameter.Value = idCategoria;                        
+            var parameter = new SqlParameter("@IdCategoria",SqlDbType.Int) {Value = idCategoria};
             command.Parameters.Add(parameter);
 
-            SqlParameter parameter2 = new SqlParameter("@Busqueda", SqlDbType.VarChar);
-            parameter2.Value = busqueda;
+            var parameter2 = new SqlParameter("@Busqueda", SqlDbType.VarChar) {Value = busqueda};
             command.Parameters.Add(parameter2);
 
             conexion.Open();
-            productReader = command.ExecuteReader();
+            SqlDataReader productReader = command.ExecuteReader();
 
             while (productReader.Read())
             {
-                product = new ProductBE();
-                product.Codigo = productReader["Codigo"].ToString();
-                product.Producto = productReader["Producto"].ToString();
-                product.Existencia = Int32.Parse(productReader["Existencia"].ToString());
-                product.IdCategoria = Int32.Parse(productReader["IdCategoria"].ToString());
-                product.Imagen = productReader["Imagen"].ToString();
-                product.Precio = Double.Parse(productReader["Precio"].ToString());
+                var product = new ProductBE
+                {
+                    Codigo = productReader["Codigo"].ToString(),
+                    Producto = productReader["Producto"].ToString(),
+                    Existencia = Int32.Parse(productReader["Existencia"].ToString()),
+                    IdCategoria = Int32.Parse(productReader["IdCategoria"].ToString()),
+                    Imagen = productReader["Imagen"].ToString(),
+                    Precio = Double.Parse(productReader["Precio"].ToString())
+                };
                 listResult.Add(product);
             }
 
@@ -50,37 +49,43 @@ namespace ProductModule
 
         public List<ProductBE> RetrieveProductsTop(string connectionString)
         {
-            ConnectionManager myConnection = new ConnectionManager(connectionString);
-            SqlConnection conexion = myConnection.CreateConnection();
-            SqlCommand command = myConnection.createCommand(conexion);
-            SqlDataReader productReader;
+            var listResult= new List<ProductBE>();
+            try
+            {
+            var myConnection = new ConnectionManager(connectionString);
+            var conexion = myConnection.CreateConnection();
+            var command = myConnection.createCommand(conexion);
 
-            List<ProductBE> listResult = new List<ProductBE>();
-            ProductBE product;
+                listResult = new List<ProductBE>();
 
-            command.CommandText = "usp_productosSelectTop";
+                command.CommandText = "usp_productosSelectTop";
             command.CommandType = CommandType.StoredProcedure;
 
             conexion.Open();
 
-            productReader = command.ExecuteReader();
+            SqlDataReader productReader = command.ExecuteReader();
 
             while (productReader.Read())
             {
-                product = new ProductBE();
-                product.Codigo = productReader["Codigo"].ToString();
-                product.Producto = productReader["Producto"].ToString();
-                product.Existencia = Int32.Parse(productReader["Existencia"].ToString());
-                product.IdCategoria = Int32.Parse(productReader["IdCategoria"].ToString());
-                product.Imagen = productReader["Imagen"].ToString();
-                product.Precio = Double.Parse(productReader["Precio"].ToString());
+                var product = new ProductBE
+                {
+                    Codigo = productReader["Codigo"].ToString(),
+                    Producto = productReader["Producto"].ToString(),
+                    Existencia = Int32.Parse(productReader["Existencia"].ToString()),
+                    IdCategoria = Int32.Parse(productReader["IdCategoria"].ToString()),
+                    Imagen = productReader["Imagen"].ToString(),
+                    Precio = Double.Parse(productReader["Precio"].ToString())
+                };
                 listResult.Add(product);
             }
 
             conexion.Close();
+            }
+            catch (Exception exception)
+            {
+                Log4Net.WriteLog(exception,Log4Net.LogType.Error);
+            }
             return listResult;
-        }
-
-        //ToDo: Insert - Crear Delete - Crear Update
+        }        
     }
 }
