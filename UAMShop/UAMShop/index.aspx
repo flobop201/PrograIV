@@ -16,7 +16,7 @@
     <section class="container" style="margin-top: -200px;">
         <div class="row">
             <%
-                foreach (var producto in listProducts)
+                foreach (var producto in ListProducts)
                 {
             %>
             <div class="grid col-3">

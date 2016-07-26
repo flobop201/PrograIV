@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-
+using Log4NetModule;
 using ProductModule;
 using System.Web.Configuration;
 
@@ -12,24 +12,24 @@ namespace UAMShop.category
 {
     public partial class category : System.Web.UI.Page
     {
-        public List<ProductBE> listProducts;
-        public int idCategoria;
-        public string busqueda;
+        public List<ProductBE> ListProducts;
+        public int IdCategoria;
+        public string Busqueda;
         protected void Page_Load(object sender, EventArgs e)
         {
             try
             {
-                idCategoria= Convert.ToInt16(Request["id"]);
-                busqueda = Request["search"];
-                ProductDAL ProductDAL = new ProductDAL();
+                IdCategoria= Convert.ToInt16(Request["id"]);
+                Busqueda = Request["search"];
+                var productDal = new ProductDAL();
                 string connection = WebConfigurationManager.AppSettings["ConnectionString"];
-                listProducts = ProductDAL.RetrieveProducts(connection, idCategoria, busqueda);           
+                ListProducts = productDal.RetrieveProducts(connection, IdCategoria, Busqueda);           
             }
-            catch (Exception)
-            {                    
-               Response.Redirect("~/informacion.aspx");
-            }
-            
+            catch (Exception exception)
+            {
+                Log4Net.WriteLog(exception, Log4Net.LogType.Error);
+                Response.Redirect("~/informacion.aspx");
+            }            
         }
     }
 }

@@ -2,7 +2,7 @@
 
 namespace NotificationModule
 {
-    class Correos
+    class Mail
     {
         /*
          * Cliente SMTP
@@ -11,7 +11,7 @@ namespace NotificationModule
          */
         readonly SmtpClient _server = new SmtpClient("smtp.gmail.com", 587);
 
-        public Correos()
+        public Mail()
         {
             /*
              * Autenticacion en el Servidor
@@ -24,7 +24,7 @@ namespace NotificationModule
             _server.EnableSsl = true;
         }
 
-        public void MandarCorreo(MailMessage mensaje)
+        public void SendMail(MailMessage mensaje)
         {
             _server.Send(mensaje);
         }        

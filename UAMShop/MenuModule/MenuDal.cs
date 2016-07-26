@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Log4NetModule;
 
 namespace MenuModule
 {
@@ -13,34 +14,39 @@ namespace MenuModule
     {
         public List<MenuBe> RetrieveMenu()
         {
-            string connectionString = ConfigurationManager.AppSettings["ConnectionString"];
-            var myConnection = new ConnectionManage.ConnectionManager(connectionString);
-            SqlConnection conexion = myConnection.CreateConnection();
-            SqlCommand command = myConnection.createCommand(conexion);
-
             var listMenu = new List<MenuBe>();
-
-            command.CommandType = CommandType.StoredProcedure;
-            command.CommandText = "usp_menuSelect";
-
-            conexion.Open();
-            SqlDataReader menuReader = command.ExecuteReader();
-
-            while (menuReader.Read())
+            try
             {
-                var menu = new MenuBe
+                string connectionString = ConfigurationManager.AppSettings["ConnectionString"];
+                var myConnection = new ConnectionManage.ConnectionManager(connectionString);
+                SqlConnection conexion = myConnection.CreateConnection();
+                SqlCommand command = myConnection.createCommand(conexion);                
+                command.CommandType = CommandType.StoredProcedure;
+                command.CommandText = "usp_menuSelect";
+
+                conexion.Open();
+                SqlDataReader menuReader = command.ExecuteReader();
+
+                while (menuReader.Read())
                 {
-                    IdMenu = Int32.Parse(menuReader["IdMenu"].ToString()),
-                    Menu = menuReader["Menu"].ToString(),
-                    Pagina = menuReader["Pagina"].ToString(),
-                    IdSubMenu = Int32.Parse(menuReader["IdSubMenu"].ToString()),
-                    IdCategoria = Int32.Parse(menuReader["IdCategoria"].ToString())
-                };
+                    var menu = new MenuBe
+                    {
+                        IdMenu = Int32.Parse(menuReader["IdMenu"].ToString()),
+                        Menu = menuReader["Menu"].ToString(),
+                        Pagina = menuReader["Pagina"].ToString(),
+                        IdSubMenu = Int32.Parse(menuReader["IdSubMenu"].ToString()),
+                        IdCategoria = Int32.Parse(menuReader["IdCategoria"].ToString())
+                    };
 
-                listMenu.Add(menu);
+                    listMenu.Add(menu);
+                }
+
+                conexion.Close();                
             }
-
-            conexion.Close();
+            catch (Exception exception)
+            {
+                Log4Net.WriteLog(exception, Log4Net.LogType.Error);
+            }
             return listMenu;
         }
 

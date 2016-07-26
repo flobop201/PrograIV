@@ -7,3 +7,7 @@ C:\Users\u46416\OneDrive\git\ProyectoUAM\UAMShop\ConnectionManage\bin\Debug\Conn
 C:\Users\u46416\OneDrive\git\ProyectoUAM\UAMShop\ConnectionManage\bin\Debug\ConnectionManage.pdb
 C:\Users\u46416\OneDrive\git\ProyectoUAM\UAMShop\ConnectionManage\obj\Debug\ConnectionManage.dll
 C:\Users\u46416\OneDrive\git\ProyectoUAM\UAMShop\ConnectionManage\obj\Debug\ConnectionManage.pdb
+C:\Users\u46416\OneDrive\git\UAMShop\ConnectionManage\bin\Debug\ConnectionManage.dll
+C:\Users\u46416\OneDrive\git\UAMShop\ConnectionManage\bin\Debug\ConnectionManage.pdb
+C:\Users\u46416\OneDrive\git\UAMShop\ConnectionManage\obj\Debug\ConnectionManage.dll
+C:\Users\u46416\OneDrive\git\UAMShop\ConnectionManage\obj\Debug\ConnectionManage.pdb

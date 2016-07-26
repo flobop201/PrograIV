@@ -5,27 +5,27 @@ using System.Web;
 using System.Web.Configuration;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Log4NetModule;
 using ProductModule;
 
 namespace UAMShop
 {
     public partial class index : System.Web.UI.Page
     {
-        public List<ProductBE> listProducts;
-        public int idCategoria;
+        public List<ProductBE> ListProducts;
+        public int IdCategoria;
         protected void Page_Load(object sender, EventArgs e)
         {
             try
             {                
-                ProductDAL ProductDAL = new ProductDAL();
+                var productDal = new ProductDAL();
                 string connection = WebConfigurationManager.AppSettings["ConnectionString"];
-                listProducts = ProductDAL.RetrieveProductsTop(connection);               
-                
+                ListProducts = productDal.RetrieveProductsTop(connection);                               
             }
-            catch (Exception)
+            catch (Exception exception)
             {
-                Response.Redirect("informacion.aspx");
-                
+                Log4Net.WriteLog(exception,Log4Net.LogType.Error);
+                Response.Redirect("informacion.aspx");                
             }
 
         }
