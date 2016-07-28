@@ -62,7 +62,7 @@
                 </div>
                 <div class="grid col-3 nav-padding">
                     <input type="text" name="busqueda" id="busqueda" class="form-control" placeholder="Buscar Producto"/>
-                    <a id="search" class="btn blue" href="../category/category.aspx?search=<% Page.Response.Write( Request.Form["busqueda"]); %>" role="button"><i class="fa fa-search"></i></a>
+                    <a id="search" class="btn blue" role="button"><i class="fa fa-search"></i></a>
                 </div>
             </div>
         </nav>

@@ -23,6 +23,10 @@
         actualizarCantidadbyAjax(id, cantidad);
     });
 
+    $('#search').click(function () {
+        realizarBusquedabyAjax();
+    });
+
     $('.btn.blue.carrito').click(function () {
         debugger;
         var $parent = $(this).parents('#parent');
@@ -32,6 +36,11 @@
         agregarCarritobyAjax(codigo, cantidad);
     });
 });
+
+function realizarBusquedabyAjax() {
+    var newUrl =  "../category/category.aspx?search=" + $('#busqueda').val();
+    window.location.href = newUrl;
+};
 
 function deletebyAjax(id, $self) {
 
