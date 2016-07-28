@@ -25,7 +25,7 @@
                         <img src="<%  Page.Response.Write(producto.Imagen); %>" />
                         <span><%  Page.Response.Write(String.Format("{0:C}", producto.Precio)); %></span>
                         <h3><%  Page.Response.Write(producto.Producto); %></h3>
-                        <span>Comprar ahora!</span>
+                        <%--<span>Comprar ahora!</span>--%>
                     </a>
                 </div>
             </div>

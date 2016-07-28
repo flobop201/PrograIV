@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Services;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Log4NetModule;
 using ProductModule;
 using System.Web.Configuration;
+using SaleModule;
 
 namespace UAMShop.category
 {
@@ -30,6 +32,16 @@ namespace UAMShop.category
                 Log4Net.WriteLog(exception, Log4Net.LogType.Error);
                 Response.Redirect("~/informacion.aspx");
             }            
+        }
+
+        [WebMethod]
+        public static string AgregarCarrito(Int32 codigo, Int32 cantidad)
+        {
+            const int idUsuario = 1; //Este debe ser el usuario
+            var carritoDal = new CarritoDal();
+            string connection = WebConfigurationManager.AppSettings["ConnectionString"];
+            carritoDal.AgregarItem(connection, idUsuario,codigo, cantidad);
+            return "";
         }
     }
 }

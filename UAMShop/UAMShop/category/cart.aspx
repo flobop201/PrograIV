@@ -1,9 +1,12 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPages/CategoryTemplate.master" AutoEventWireup="true" CodeBehind="cart.aspx.cs" Inherits="UAMShop.category.cart" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="CategoryNameContentPlaceHolder" runat="server">
     Compras
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ItemContentPlaceHolder" runat="server">
-    <div class="grid col-12">
+
+
+    <div id="carrito" class="grid col-12">
         <div>
             <table class="cart" cellspacing="0">
                 <tr>
@@ -13,36 +16,29 @@
                     <th>Total</th>
                     <th></th>
                 </tr>
+                <% foreach (var item in ListCarrito)
+                   {%>
                 <tr>
-                    <td><img src="img/banner_03.png" width="45" height="45"></td>
-                    <td>Producto 1</td>
-                    <td>$80.00</td>
-                    <td><input type="number" step="1" min="0" name="cart[b139e104214a08ae3f2ebcce149cdf6e][qty]" value="1" title="Qty" class="input-text qty text" size="4"></td>
-                    <td>$80</td>
-                    <td><a class="btn red wide" href="#" role="button"><i class="fa fa-times"></i></a></td>
+                    <td>
+                        <input type="hidden" id="id" value="<% Page.Response.Write(item.Id); %>" />
+                        <img src="<% Page.Response.Write(item.Imagen); %>" width="45" height="45">
+                    </td>
+                    <td><% Page.Response.Write(item.Descripcion); %></td>
+                    <td><% Page.Response.Write(string.Format("{0:C}", item.Precio)); %></td>
+                    <td>
+                        <input id="cantidad" type="number" step="1" min="1" name="cart[b139e104214a08ae3f2ebcce149cdf6e][qty]" value="<% Page.Response.Write(item.Cantidad); %>" title="Qty" class="input-text qty text"></td>
+                    <td><% Page.Response.Write(string.Format("{0:C}", item.Cantidad * item.Precio)); %></td>
+                    <td><a id="btnDeleteitem" class="btn red wide" role="button"><i class="fa fa-times"></i></a></td>
                 </tr>
-                <tr>
-                    <td><img src="img/banner_02.png" width="45" height="45"></td>
-                    <td>Producto 2</td>
-                    <td>$80.00</td>
-                    <td><input type="number" step="1" min="0" name="cart[b139e104214a08ae3f2ebcce149cdf6e][qty]" value="2" title="Qty" class="input-text qty text" size="4"></td>
-                    <td>$80</td>
-                    <td><a class="btn red wide" href="#" role="button"><i class="fa fa-times"></i></a></td>
-                </tr>
-                <tr>
-                    <td><img src="img/banner_04.png" width="45" height="45"></td>
-                    <td>Producto 3</td>
-                    <td>$80.00</td>
-                    <td><input type="number" step="1" min="0" name="cart[b139e104214a08ae3f2ebcce149cdf6e][qty]" value="1" title="Qty" class="input-text qty text" size="4"></td>
-                    <td>$80</td>
-                    <td><a class="btn red wide" href="#" role="button"><i class="fa fa-times"></i></a></td>
-                </tr>
+                <% } %>
             </table>
         </div>
         <div class="division"></div>
-        <div><a class="btn blue wide" href="#" role="button">Proceder con la compra <i class="fa fa-chevron-right"></i></a></div>
+        <div>
+            <a id="btnRelizarCompra" class="btn blue wide" role="button">Proceder con la compra <i class="fa fa-chevron-right"></i></a>            
+        </div>
         <div class="division"></div>
     </div>
-
     <div class="division"></div>
+
 </asp:Content>

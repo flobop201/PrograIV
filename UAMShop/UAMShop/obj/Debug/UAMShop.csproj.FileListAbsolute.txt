@@ -38,3 +38,7 @@ C:\Users\u46416\OneDrive\git\UAMShop\UAMShop\obj\Debug\UAMShop.dll
 C:\Users\u46416\OneDrive\git\UAMShop\UAMShop\obj\Debug\UAMShop.pdb
 C:\Users\u46416\OneDrive\git\UAMShop\UAMShop\bin\Log4NetModule.dll
 C:\Users\u46416\OneDrive\git\UAMShop\UAMShop\bin\App.config
+C:\Users\u46416\OneDrive\git\UAMShop\UAMShop\bin\SaleModule.dll
+C:\Users\u46416\OneDrive\git\UAMShop\UAMShop\bin\NotificationModule.dll
+C:\Users\u46416\OneDrive\git\UAMShop\UAMShop\bin\SaleModule.pdb
+C:\Users\u46416\OneDrive\git\UAMShop\UAMShop\bin\NotificationModule.pdb

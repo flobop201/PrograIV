@@ -27,16 +27,26 @@
     %>
     <div class="grid col-4">
         <div class="prod-thumb">
+            <input id="codigo" type="hidden" value="<%  Page.Response.Write(producto.Codigo); %>" />
             <a href="../products/productdetail.aspx">
                 <img src="<%  Page.Response.Write(producto.Imagen); %>">
                 <span><%  Page.Response.Write(String.Format("{0:C}", producto.Precio)); %></span>
+                   <% if (producto.Existencia > 10)
+                              {
+                                  Page.Response.Write(String.Format("(En Stock)"));
+                              }
+                              else
+                              {
+                                  Page.Response.Write(String.Format("({0} en Stock)",producto.Existencia));
+                              }
+                               %>
                 <h5><%  Page.Response.Write(producto.Producto); %></h5>
             </a>
         </div>
         <div>
-            <a class="btn blue wide <% if (producto.Existencia == 0)
+            <a class="btn blue wide carrito <% if (producto.Existencia == 0)
                                        {%> disabled <%} %> "
-                href="#" role="button">Agregar a la compra</a>
+                 role="button">Agregar a la compra</a>
         </div>
         <div class="division"></div>
     </div>

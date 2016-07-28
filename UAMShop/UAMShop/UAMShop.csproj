@@ -78,6 +78,10 @@
     <Content Include="img\productos\127688.png" />
     <Content Include="index.aspx" />
     <Content Include="informacion.aspx" />
+    <Content Include="css\alert.css" />
+    <Content Include="js\alertify.js" />
+    <Content Include="js\alertify.min.js" />
+    <Content Include="js\carrito.js" />
     <Content Include="js\prograIV.js" />
     <Content Include="js\slider.js" />
     <Content Include="login.aspx" />
@@ -174,6 +178,10 @@
     <ProjectReference Include="..\ProductModule\ProductModule.csproj">
       <Project>{c87071ac-ec0d-4b1d-a560-41261db95189}</Project>
       <Name>ProductModule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SaleModule\SaleModule.csproj">
+      <Project>{c3f78a20-77a4-4139-a77b-82291a9f8a73}</Project>
+      <Name>SaleModule</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
