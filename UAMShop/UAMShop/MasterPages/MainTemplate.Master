@@ -12,9 +12,7 @@
     <link rel="stylesheet" type="text/css" href="../css/navBarStyle.css">
     <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css" />
     <link rel="stylesheet" type="text/css" href="../css/generalStyle.css">
-    <link rel="stylesheet" type="text/css" href="../css/alert.css" />
-    <script src="../js/alertify.js"></script>
-    <script src="../js/alertify.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/alert.css" />    
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>

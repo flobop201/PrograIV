@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ConnectionManage;
+using Log4NetModule;
 
 namespace SaleModule
 {
@@ -92,13 +93,14 @@ namespace SaleModule
           
         }
 
-        public void AgregarItem(string connection, int idUsuario, int codigo, int cantidad)
+        public bool AgregarItem(string connection, int idUsuario, int codigo, int cantidad)
         {
+            var resultado = false;
+            try
+            {
             var myConnection = new ConnectionManager(connection);
             var conexion = myConnection.CreateConnection();
             var command = myConnection.createCommand(conexion);
-
-
 
             command.CommandText = "usp_carritoInsert";
             command.CommandType = CommandType.StoredProcedure;
@@ -115,6 +117,14 @@ namespace SaleModule
             conexion.Open();
             command.ExecuteNonQuery();
             conexion.Close();
+
+                resultado = true;
+            }
+            catch (Exception exception)
+            {
+                Log4Net.WriteLog(exception,Log4Net.LogType.Error);                
+            }
+            return resultado;
         }
     }
 }

@@ -79,8 +79,6 @@
     <Content Include="index.aspx" />
     <Content Include="informacion.aspx" />
     <Content Include="css\alert.css" />
-    <Content Include="js\alertify.js" />
-    <Content Include="js\alertify.min.js" />
     <Content Include="js\carrito.js" />
     <Content Include="js\prograIV.js" />
     <Content Include="js\slider.js" />

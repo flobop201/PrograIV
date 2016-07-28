@@ -34,14 +34,14 @@ namespace NotificationModule
                 {
                     string ruta = directoryName.Remove(0, 6) + @"\img\banneruam.PNG";
                     ruta = ruta.Replace("\\bin\\Debug", "");
-                    LinkedResource imagen;
+                    LinkedResource imagen = null;
                     try
                     {
                          imagen = new LinkedResource(ruta, MediaTypeNames.Image.Jpeg) {ContentId = "imagen"};
                     }
                     catch (Exception)
                     {
-                        return true;
+                        string val="";
                     }
                     htmlmessage += "<h2 style=\"color:white;width:100%;background-color:#DF0101\">UAM Shop | Factura de Compra</h2>"
                                    + "<ul><li><strong>Detalle de Compra.</strong><br>"
