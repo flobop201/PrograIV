@@ -1,13 +1,8 @@
 ﻿jQuery(document).ready(function () {
 
-    $('.alert').hide();
+    $('.alert').hide();  
 
-    $('#search').click(function () {
-        var busqueda = $('#busqueda').val();        
-    });
-
-    $('.btnDeleteitem').click(function () {
-        debugger;
+    $('.btnDeleteitem').click(function () {     
         var $parent = $(this).parents('#parent');
         var id = $('#id', $parent).val();       
         deletebyAjax(id, $(this));        
@@ -17,9 +12,11 @@
         realizarComprabyAjax();
     });
 
-    $("#cantidad").bind('keyup mouseup', function () {
-        var id = $('#id').val();
-        var cantidad = $('#cantidad').val();
+    $(".cantidad").bind('keyup mouseup', function () {
+        debugger;
+        var $parent = $(this).parents('#parent');
+        var id = $('#id',$parent).val();
+        var cantidad = $('#cantidad',$parent).val();
         actualizarCantidadbyAjax(id, cantidad);
     });
 

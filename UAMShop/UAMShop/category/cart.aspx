@@ -25,7 +25,7 @@
                     <td><% Page.Response.Write(item.Descripcion); %></td>
                     <td><% Page.Response.Write(string.Format("{0:C}", item.Precio)); %></td>
                     <td>
-                        <input id="cantidad" type="number" step="1" min="1" name="cart[b139e104214a08ae3f2ebcce149cdf6e][qty]" value="<% Page.Response.Write(item.Cantidad); %>" title="Qty" class="input-text qty text"></td>
+                        <input id="cantidad" class="cantidad" type="number" step="1" min="1" name="cart[b139e104214a08ae3f2ebcce149cdf6e][qty]" value="<% Page.Response.Write(item.Cantidad); %>" title="Qty" class="input-text qty text"></td>
                     <td><% Page.Response.Write(string.Format("{0:C}", item.Cantidad * item.Precio)); %></td>
                     <td><a class="btn red wide btnDeleteitem" role="button"><i class="fa fa-times"></i></a></td>
                 </tr>

@@ -79,6 +79,12 @@
     <Content Include="img\maxresdefault.jpg" />
     <Content Include="img\productos\120882.png" />
     <Content Include="img\productos\127688.png" />
+    <Content Include="img\productos\127786.png" />
+    <Content Include="img\productos\142652.png" />
+    <Content Include="img\productos\146551.png" />
+    <Content Include="img\productos\147710.png" />
+    <Content Include="img\productos\149083.png" />
+    <Content Include="img\productos\149084.png" />
     <Content Include="index.aspx" />
     <Content Include="informacion.aspx" />
     <Content Include="css\alert.css" />
