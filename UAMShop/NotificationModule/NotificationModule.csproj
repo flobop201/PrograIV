@@ -50,7 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="img\banneruam.PNG">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <ItemGroup>

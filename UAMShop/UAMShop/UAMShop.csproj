@@ -66,6 +66,9 @@
     <Content Include="css\navBarStyle.css" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="img\apple-drone-Introduction.jpg" />
+    <Content Include="img\banneruam.PNG">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="img\banner_01.png" />
     <Content Include="img\banner_02.png" />
     <Content Include="img\banner_03.png" />

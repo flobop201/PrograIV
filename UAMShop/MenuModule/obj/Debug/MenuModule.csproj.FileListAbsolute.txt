@@ -5,13 +5,13 @@ C:\Users\u46416\OneDrive\git\ProyectoUAM\UAMShop\MenuModule\bin\Debug\Connection
 C:\Users\u46416\OneDrive\git\ProyectoUAM\UAMShop\MenuModule\obj\Debug\MenuModule.csprojResolveAssemblyReference.cache
 C:\Users\u46416\OneDrive\git\ProyectoUAM\UAMShop\MenuModule\obj\Debug\MenuModule.dll
 C:\Users\u46416\OneDrive\git\ProyectoUAM\UAMShop\MenuModule\obj\Debug\MenuModule.pdb
+C:\Users\u46416\OneDrive\git\UAMShop\MenuModule\bin\Debug\App.config
 C:\Users\u46416\OneDrive\git\UAMShop\MenuModule\bin\Debug\MenuModule.dll
 C:\Users\u46416\OneDrive\git\UAMShop\MenuModule\bin\Debug\MenuModule.pdb
 C:\Users\u46416\OneDrive\git\UAMShop\MenuModule\bin\Debug\ConnectionManage.dll
+C:\Users\u46416\OneDrive\git\UAMShop\MenuModule\bin\Debug\Log4NetModule.dll
 C:\Users\u46416\OneDrive\git\UAMShop\MenuModule\bin\Debug\ConnectionManage.pdb
+C:\Users\u46416\OneDrive\git\UAMShop\MenuModule\bin\Debug\Log4NetModule.pdb
 C:\Users\u46416\OneDrive\git\UAMShop\MenuModule\obj\Debug\MenuModule.csprojResolveAssemblyReference.cache
 C:\Users\u46416\OneDrive\git\UAMShop\MenuModule\obj\Debug\MenuModule.dll
 C:\Users\u46416\OneDrive\git\UAMShop\MenuModule\obj\Debug\MenuModule.pdb
-C:\Users\u46416\OneDrive\git\UAMShop\MenuModule\bin\Debug\Log4NetModule.dll
-C:\Users\u46416\OneDrive\git\UAMShop\MenuModule\bin\Debug\Log4NetModule.pdb
-C:\Users\u46416\OneDrive\git\UAMShop\MenuModule\bin\Debug\App.config

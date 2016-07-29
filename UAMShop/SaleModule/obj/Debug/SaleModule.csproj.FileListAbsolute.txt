@@ -1,4 +1,4 @@
-C:\Users\u46416\OneDrive\git\UAMShop\SaleModule\obj\Debug\SaleModule.csprojResolveAssemblyReference.cache
+C:\Users\u46416\OneDrive\git\UAMShop\SaleModule\bin\Debug\img\banneruam.PNG
 C:\Users\u46416\OneDrive\git\UAMShop\SaleModule\bin\Debug\App.config
 C:\Users\u46416\OneDrive\git\UAMShop\SaleModule\bin\Debug\SaleModule.dll
 C:\Users\u46416\OneDrive\git\UAMShop\SaleModule\bin\Debug\SaleModule.pdb
@@ -10,6 +10,6 @@ C:\Users\u46416\OneDrive\git\UAMShop\SaleModule\bin\Debug\ConnectionManage.pdb
 C:\Users\u46416\OneDrive\git\UAMShop\SaleModule\bin\Debug\Log4NetModule.pdb
 C:\Users\u46416\OneDrive\git\UAMShop\SaleModule\bin\Debug\NotificationModule.pdb
 C:\Users\u46416\OneDrive\git\UAMShop\SaleModule\bin\Debug\ProductModule.pdb
+C:\Users\u46416\OneDrive\git\UAMShop\SaleModule\obj\Debug\SaleModule.csprojResolveAssemblyReference.cache
 C:\Users\u46416\OneDrive\git\UAMShop\SaleModule\obj\Debug\SaleModule.dll
 C:\Users\u46416\OneDrive\git\UAMShop\SaleModule\obj\Debug\SaleModule.pdb
-C:\Users\u46416\OneDrive\git\UAMShop\SaleModule\bin\Debug\img\banneruam.PNG

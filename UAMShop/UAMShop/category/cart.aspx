@@ -20,7 +20,7 @@
                 <tr  id="parent" class="listaCarrito">
                     <td>
                         <input type="hidden" id="id" value="<% Page.Response.Write(item.Id); %>" />
-                        <img src="<% Page.Response.Write(item.Imagen); %>" width="45" height="45">
+                        <img src="<% Page.Response.Write(item.Imagen); %>"  height="45">
                     </td>
                     <td><% Page.Response.Write(item.Descripcion); %></td>
                     <td><% Page.Response.Write(string.Format("{0:C}", item.Precio)); %></td>

@@ -33,7 +33,7 @@
         <div class="prod-thumb">
             <input id="codigo" type="hidden" value="<%  Page.Response.Write(producto.Codigo); %>" />
             <a href="../products/productdetail.aspx">
-                <img src="<%  Page.Response.Write(producto.Imagen); %>">
+                <img height="195" src="<%  Page.Response.Write(producto.Imagen); %>">
                 <span><%  Page.Response.Write(String.Format("{0:C}", producto.Precio)); %></span>
                 <% if (producto.Existencia == 0)
                    {
