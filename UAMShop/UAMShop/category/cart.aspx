@@ -17,10 +17,10 @@
                 </tr>
                 <% foreach (var item in ListCarrito)
                    {%>
-                <tr  id="parent" class="listaCarrito">
+                <tr id="parent" class="listaCarrito">
                     <td>
                         <input type="hidden" id="id" value="<% Page.Response.Write(item.Id); %>" />
-                        <img src="<% Page.Response.Write(item.Imagen); %>"  height="45">
+                        <img src="<% Page.Response.Write(item.Imagen); %>" height="45">
                     </td>
                     <td><% Page.Response.Write(item.Descripcion); %></td>
                     <td><% Page.Response.Write(string.Format("{0:C}", item.Precio)); %></td>
@@ -33,13 +33,45 @@
             </table>
         </div>
         <div class="division"></div>
-        <div>
-            <a id="btnRelizarCompra" class="btn blue wide" role="button">Proceder con la compra <i class="fa fa-chevron-right"></i></a>
+        <br>
+        <style>
+            .test input,
+            .test select
+            {
+                width: 100%;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                box-shadow: inset 0 1px 3px #ddd;
+                border-radius: 4px;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                padding-left: 20px;
+                padding-right: 20px;
+                padding-top: 12px;
+                padding-bottom: 12px;
+            }
+        </style>
+        <div class="test" style="border-radius: 5px; background-color: #f2f2f2; padding: 40px;">
+            <h3>Realizar Compra</h3>
+            <label for="correo">Correo Electronico:</label>
+            <input type="email" id="correo">
+            <label for="titular">Titular Tarjeta:</label>
+            <input type="text" id="titular" required />
+            <label for="tarjeta">Numero Tarjeta:</label>
+            <input type="text" id="tarjeta" value="3770 XXXX XX78" required />
+            <div>
+                <br>
+                <a id="btnRelizarCompra" class="btn blue wide" role="button">Proceder con la compra <i class="fa fa-chevron-right"></i></a>
+            </div>
         </div>
+        <br>
+
         <div class="division"></div>
         <div class="alert hide" id="mensaje">
             <span class="closebtn" onclick="this.parentElement.style.display='none';">×</span>
-            <span id="txtMensaje">This is an alert box.</span>
+            <span id="txtMensaje">Texto de Alerta</span>
         </div>
     </div>
     <div class="division"></div>

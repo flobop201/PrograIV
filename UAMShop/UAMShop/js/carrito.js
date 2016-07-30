@@ -1,5 +1,4 @@
-﻿jQuery(document).ready(function () {
-
+﻿jQuery(document).ready(function () {      
     $('.alert').hide();  
 
     $('.btnDeleteitem').click(function () {     
@@ -9,7 +8,10 @@
     });
 
     $('#btnRelizarCompra').click(function () {
-        realizarComprabyAjax();
+        var correo = $('#correo').val();
+        var titular = $('#titular').val();
+        var tarjeta = $('#tarjeta').val();
+        realizarComprabyAjax(correo,titular,tarjeta);
     });
 
     $(".cantidad").bind('keyup mouseup', function () {
@@ -35,14 +37,14 @@
 });
 
 function realizarBusquedabyAjax() {
+    debugger;
     var newUrl =  "../category/category.aspx?search=" + $('#busqueda').val();
     window.location.href = newUrl;
 };
 
 function deletebyAjax(id, $self) {
-
-    var actionData = "{'id': '" + id + "'}";
     debugger;
+    var actionData = "{'id': '" + id + "'}";    
     $.ajax(
     {
         url: "cart.aspx/Eliminar",
@@ -65,8 +67,8 @@ function deletebyAjax(id, $self) {
     });   
 };
 
-function realizarComprabyAjax() {
-    var actionData = "";
+function realizarComprabyAjax(correo, titular, tarjeta) {
+    var actionData = "{'correo': '" + correo + "', 'titular': '" + titular + "', 'tarjeta': '"+tarjeta+"' }";
     debugger;
     $.ajax(
     {

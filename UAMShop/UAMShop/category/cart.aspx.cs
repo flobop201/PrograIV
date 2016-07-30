@@ -56,14 +56,14 @@ namespace UAMShop.category
 
 
         [WebMethod]
-        public static string RealizarCompra()
+        public static string RealizarCompra(String correo, String titular, String tarjeta)
         {
             string resultado = string.Empty;
             try
             {
                 string connection = WebConfigurationManager.AppSettings["ConnectionString"];
                 var facturaDal = new FacturaDal();
-                resultado = facturaDal.GenerarFactura(1, "3770 XXXX XX78", "FRANCISCO LOBO P", "loboporras@gmail.com", "Francisco Lobo P", connection);
+                resultado = facturaDal.GenerarFactura(1, tarjeta, titular, correo, titular, connection);
                 return resultado;
             }
             catch (Exception exception)
