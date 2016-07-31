@@ -38,6 +38,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.2.0.5\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -60,6 +63,7 @@
     <Content Include="category\cart.aspx" />
     <Content Include="category\category.aspx" />
     <Content Include="css\alert.css" />
+    <Content Include="css\datagrid.css" />
     <Content Include="css\font-awesome.css" />
     <Content Include="css\font-awesome.min.css" />
     <Content Include="css\generalStyle.css" />
@@ -90,6 +94,9 @@
     <Content Include="js\prograIV.js" />
     <Content Include="js\slider.js" />
     <Content Include="login.aspx" />
+    <Content Include="mantenimiento\mantcategorias.aspx" />
+    <Content Include="mantenimiento\mantproductos.aspx" />
+    <Content Include="mantenimiento\mantusuarios.aspx" />
     <Content Include="products\productdetail.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -129,6 +136,27 @@
     <Compile Include="login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="mantenimiento\mantcategorias.aspx.cs">
+      <DependentUpon>mantcategorias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mantenimiento\mantcategorias.aspx.designer.cs">
+      <DependentUpon>mantcategorias.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="mantenimiento\mantproductos.aspx.cs">
+      <DependentUpon>mantproductos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mantenimiento\mantproductos.aspx.designer.cs">
+      <DependentUpon>mantproductos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="mantenimiento\mantusuarios.aspx.cs">
+      <DependentUpon>mantusuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mantenimiento\mantusuarios.aspx.designer.cs">
+      <DependentUpon>mantusuarios.aspx</DependentUpon>
+    </Compile>
     <Compile Include="MasterPages\CategoryTemplate.master.cs">
       <DependentUpon>CategoryTemplate.master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -160,6 +188,7 @@
     <Content Include="fonts\fontawesome-webfont.woff2" />
     <Content Include="fonts\FontAwesome.otf" />
     <Content Include="MasterPages\CategoryTemplate.master" />
+    <Content Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
