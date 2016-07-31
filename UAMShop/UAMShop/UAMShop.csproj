@@ -167,6 +167,10 @@
       <Project>{ce282c79-8d6e-4c03-bfa8-e98472d2c6c8}</Project>
       <Name>Log4NetModule</Name>
     </ProjectReference>
+    <ProjectReference Include="..\LoginModule\LoginModule.csproj">
+      <Project>{9b0dceec-1e32-4982-a40c-2a932abb7262}</Project>
+      <Name>LoginModule</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MenuModule\MenuModule.csproj">
       <Project>{c6a1693f-032a-43f3-8d59-6d69bfa88e53}</Project>
       <Name>MenuModule</Name>

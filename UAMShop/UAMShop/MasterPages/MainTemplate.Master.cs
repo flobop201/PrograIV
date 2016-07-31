@@ -16,6 +16,10 @@ namespace UAMShop.MasterPages
         {
             try
             {
+                if (Page.ToString().Replace("ASP.","").Replace("_",".") != "login.aspx")
+                {                    
+                Response.Cookies.Add(new HttpCookie("returnUrl", Request.Url.PathAndQuery));
+                }
                 var menuDal = new MenuDal();
                 ListMenuBe = menuDal.RetrieveMenu();              
             }

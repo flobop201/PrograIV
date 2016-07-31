@@ -15,3 +15,14 @@ C:\Users\u46416\OneDrive\git\UAMShop\MenuModule\obj\Debug\MenuModule.pdb
 C:\Users\u46416\OneDrive\git\UAMShop\MenuModule\bin\Debug\Log4NetModule.dll
 C:\Users\u46416\OneDrive\git\UAMShop\MenuModule\bin\Debug\Log4NetModule.pdb
 C:\Users\u46416\OneDrive\git\UAMShop\MenuModule\bin\Debug\App.config
+E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\MenuModule\bin\Debug\App.config
+E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\MenuModule\bin\Debug\MenuModule.dll
+E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\MenuModule\bin\Debug\MenuModule.pdb
+E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\MenuModule\bin\Debug\ConnectionManage.dll
+E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\MenuModule\bin\Debug\Log4NetModule.dll
+E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\MenuModule\bin\Debug\log4net.dll
+E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\MenuModule\bin\Debug\ConnectionManage.pdb
+E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\MenuModule\bin\Debug\Log4NetModule.pdb
+E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\MenuModule\obj\Debug\MenuModule.csprojResolveAssemblyReference.cache
+E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\MenuModule\obj\Debug\MenuModule.dll
+E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\MenuModule\obj\Debug\MenuModule.pdb

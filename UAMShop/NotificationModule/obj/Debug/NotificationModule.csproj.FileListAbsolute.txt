@@ -15,3 +15,18 @@ C:\Users\u46416\OneDrive\git\UAMShop\NotificationModule\bin\Debug\ProductModule.
 C:\Users\u46416\OneDrive\git\UAMShop\NotificationModule\bin\Debug\ConnectionManage.pdb
 C:\Users\u46416\OneDrive\git\UAMShop\NotificationModule\bin\Debug\NotificationModule.dll
 C:\Users\u46416\OneDrive\git\UAMShop\NotificationModule\obj\Debug\NotificationModule.dll
+E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\NotificationModule\bin\Debug\App.config
+E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\NotificationModule\bin\Debug\NotificationModule.dll
+E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\NotificationModule\bin\Debug\NotificationModule.pdb
+E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\NotificationModule\bin\Debug\Log4NetModule.dll
+E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\NotificationModule\bin\Debug\ProductModule.dll
+E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\NotificationModule\bin\Debug\log4net.dll
+E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\NotificationModule\bin\Debug\ConnectionManage.dll
+E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\NotificationModule\bin\Debug\Log4NetModule.pdb
+E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\NotificationModule\bin\Debug\ProductModule.pdb
+E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\NotificationModule\bin\Debug\log4net.pdb
+E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\NotificationModule\bin\Debug\log4net.xml
+E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\NotificationModule\bin\Debug\ConnectionManage.pdb
+E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\NotificationModule\obj\Debug\NotificationModule.csprojResolveAssemblyReference.cache
+E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\NotificationModule\obj\Debug\NotificationModule.dll
+E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\NotificationModule\obj\Debug\NotificationModule.pdb

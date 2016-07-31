@@ -38,3 +38,13 @@ C:\Users\u46416\OneDrive\git\UAMShop\UAMShop\obj\Debug\UAMShop.dll
 C:\Users\u46416\OneDrive\git\UAMShop\UAMShop\obj\Debug\UAMShop.pdb
 C:\Users\u46416\OneDrive\git\UAMShop\UAMShop\bin\Log4NetModule.dll
 C:\Users\u46416\OneDrive\git\UAMShop\UAMShop\bin\App.config
+E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\UAMShop\bin\App.config
+E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\UAMShop\bin\CategoryModule.dll
+E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\UAMShop\bin\Log4NetModule.dll
+E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\UAMShop\bin\MenuModule.dll
+E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\UAMShop\bin\log4net.dll
+E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\UAMShop\bin\CategoryModule.pdb
+E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\UAMShop\bin\Log4NetModule.pdb
+E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\UAMShop\bin\MenuModule.pdb
+E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\UAMShop\bin\LoginModule.dll
+E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\UAMShop\bin\LoginModule.pdb

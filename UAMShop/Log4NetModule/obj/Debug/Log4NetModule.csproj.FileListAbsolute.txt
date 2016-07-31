@@ -13,3 +13,9 @@ C:\Users\u46416\OneDrive\git\UAMShop\Log4NetModule\bin\Debug\Log4NetModule.dll.c
 C:\Users\u46416\OneDrive\git\UAMShop\Log4NetModule\bin\Debug\Log4NetModule.dll
 C:\Users\u46416\OneDrive\git\UAMShop\Log4NetModule\obj\Debug\Log4NetModule.dll
 C:\Users\u46416\OneDrive\git\UAMShop\Log4NetModule\bin\Debug\App.config
+E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\Log4NetModule\bin\Debug\App.config
+E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\Log4NetModule\bin\Debug\Log4NetModule.dll.config
+E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\Log4NetModule\bin\Debug\Log4NetModule.dll
+E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\Log4NetModule\bin\Debug\Log4NetModule.pdb
+E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\Log4NetModule\obj\Debug\Log4NetModule.dll
+E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\Log4NetModule\obj\Debug\Log4NetModule.pdb

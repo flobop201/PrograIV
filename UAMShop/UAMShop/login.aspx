@@ -18,16 +18,19 @@
 				<div class="grid col-6" style="border:1px solid #ccc; border-radius: 4px; padding:25px">
 					<div class="row">
 					    <div class="grid col-6">
-					    	<input type="text" name="correo" id="correo" class="form-control wide" placeholder="Correo"/>
+					    	<%--<input type="text" name="correo" id="correo" class="form-control wide" placeholder="Correo"/>--%>
+                            <asp:TextBox ID="correo" Name="correo" Type="text" runat="server" CssClass="form-control wide" placeholder="Correo"></asp:TextBox>
 					    </div>
 					    <div class="grid col-6">
-					    	<input type="password" name="password" id="password" class="form-control wide" placeholder="Contrase&ntilde;a"/>
+					    	<%--<input type="password" name="password" id="password" class="form-control wide" placeholder="Contrase&ntilde;a"/>--%>
+                            <asp:TextBox ID="password" Name="password" Type="password" runat="server" CssClass="form-control wide" placeholder="Contrase&ntilde;a"></asp:TextBox>
 					    </div>
 					</div>
 					<div class="division"></div>
 					<div class="row">
 					    <div class="grid col-12">
-					    	<a class="btn blue wide" href="#" role="button">Ingresar</a>
+					    	<a class="btn blue wide" href="#" role="button" runat="server" onserverclick="login_btn_Click">Ingresar</a>
+                            
 					    </div>
 					</div>
 				</div>
