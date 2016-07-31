@@ -1,22 +1,4 @@
-C:\Users\u46416\OneDrive\git\ProyectoUAM\UAMShop\CategoryModule\bin\Debug\CategoryModule.dll
-C:\Users\u46416\OneDrive\git\ProyectoUAM\UAMShop\CategoryModule\bin\Debug\CategoryModule.pdb
-C:\Users\u46416\OneDrive\git\ProyectoUAM\UAMShop\CategoryModule\bin\Debug\ConnectionManage.dll
-C:\Users\u46416\OneDrive\git\ProyectoUAM\UAMShop\CategoryModule\bin\Debug\Log4NetModule.dll
-C:\Users\u46416\OneDrive\git\ProyectoUAM\UAMShop\CategoryModule\bin\Debug\ConnectionManage.pdb
-C:\Users\u46416\OneDrive\git\ProyectoUAM\UAMShop\CategoryModule\bin\Debug\Log4NetModule.pdb
-C:\Users\u46416\OneDrive\git\ProyectoUAM\UAMShop\CategoryModule\obj\Debug\CategoryModule.csprojResolveAssemblyReference.cache
-C:\Users\u46416\OneDrive\git\ProyectoUAM\UAMShop\CategoryModule\obj\Debug\CategoryModule.dll
-C:\Users\u46416\OneDrive\git\ProyectoUAM\UAMShop\CategoryModule\obj\Debug\CategoryModule.pdb
-C:\Users\u46416\OneDrive\git\UAMShop\CategoryModule\bin\Debug\CategoryModule.dll
-C:\Users\u46416\OneDrive\git\UAMShop\CategoryModule\bin\Debug\CategoryModule.pdb
-C:\Users\u46416\OneDrive\git\UAMShop\CategoryModule\bin\Debug\ConnectionManage.dll
-C:\Users\u46416\OneDrive\git\UAMShop\CategoryModule\bin\Debug\ConnectionManage.pdb
-C:\Users\u46416\OneDrive\git\UAMShop\CategoryModule\bin\Debug\Log4NetModule.pdb
-C:\Users\u46416\OneDrive\git\UAMShop\CategoryModule\obj\Debug\CategoryModule.csprojResolveAssemblyReference.cache
-C:\Users\u46416\OneDrive\git\UAMShop\CategoryModule\obj\Debug\CategoryModule.dll
-C:\Users\u46416\OneDrive\git\UAMShop\CategoryModule\obj\Debug\CategoryModule.pdb
-C:\Users\u46416\OneDrive\git\UAMShop\CategoryModule\bin\Debug\Log4NetModule.dll
-C:\Users\u46416\OneDrive\git\UAMShop\CategoryModule\bin\Debug\App.config
+E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\CategoryModule\obj\Debug\CategoryModule.csprojResolveAssemblyReference.cache
 E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\CategoryModule\bin\Debug\App.config
 E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\CategoryModule\bin\Debug\CategoryModule.dll
 E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\CategoryModule\bin\Debug\CategoryModule.pdb
@@ -25,6 +7,5 @@ E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\Ca
 E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\CategoryModule\bin\Debug\log4net.dll
 E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\CategoryModule\bin\Debug\ConnectionManage.pdb
 E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\CategoryModule\bin\Debug\Log4NetModule.pdb
-E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\CategoryModule\obj\Debug\CategoryModule.csprojResolveAssemblyReference.cache
 E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\CategoryModule\obj\Debug\CategoryModule.dll
 E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\CategoryModule\obj\Debug\CategoryModule.pdb
