@@ -27,7 +27,7 @@
                     <% foreach (var categoria in ListCategory)
                        {
                     %>
-                    <li><a href="?id=<% Page.Response.Write(categoria.Id); %>"><% Page.Response.Write(categoria.Categoria); %></a></li>
+                    <li><a href="../category/category.aspx?id=<% Page.Response.Write(categoria.Id); %>"><% Page.Response.Write(categoria.Categoria); %></a></li>
                     <%
                        } %>
                 </ul>

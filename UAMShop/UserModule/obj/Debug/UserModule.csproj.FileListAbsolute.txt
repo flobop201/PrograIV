@@ -1,6 +1,0 @@
-E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\UserModule\bin\Debug\UserModule.dll.config
-E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\UserModule\bin\Debug\UserModule.dll
-E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\UserModule\bin\Debug\UserModule.pdb
-E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\UserModule\obj\Debug\UserModule.csprojResolveAssemblyReference.cache
-E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\UserModule\obj\Debug\UserModule.dll
-E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\UserModule\obj\Debug\UserModule.pdb

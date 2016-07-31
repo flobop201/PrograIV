@@ -66,6 +66,9 @@
     <Content Include="css\navBarStyle.css" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="img\apple-drone-Introduction.jpg" />
+    <Content Include="img\banneruam.PNG">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="img\banner_01.png" />
     <Content Include="img\banner_02.png" />
     <Content Include="img\banner_03.png" />
@@ -76,8 +79,16 @@
     <Content Include="img\maxresdefault.jpg" />
     <Content Include="img\productos\120882.png" />
     <Content Include="img\productos\127688.png" />
+    <Content Include="img\productos\127786.png" />
+    <Content Include="img\productos\142652.png" />
+    <Content Include="img\productos\146551.png" />
+    <Content Include="img\productos\147710.png" />
+    <Content Include="img\productos\149083.png" />
+    <Content Include="img\productos\149084.png" />
     <Content Include="index.aspx" />
     <Content Include="informacion.aspx" />
+    <Content Include="css\alert.css" />
+    <Content Include="js\carrito.js" />
     <Content Include="js\prograIV.js" />
     <Content Include="js\slider.js" />
     <Content Include="login.aspx" />
@@ -179,9 +190,15 @@
       <Project>{c87071ac-ec0d-4b1d-a560-41261db95189}</Project>
       <Name>ProductModule</Name>
     </ProjectReference>
+<<<<<<< HEAD
     <ProjectReference Include="..\UserModule\UserModule.csproj">
       <Project>{dd25147d-fab6-4b6a-b4e0-6981cace9918}</Project>
       <Name>UserModule</Name>
+=======
+    <ProjectReference Include="..\SaleModule\SaleModule.csproj">
+      <Project>{c3f78a20-77a4-4139-a77b-82291a9f8a73}</Project>
+      <Name>SaleModule</Name>
+>>>>>>> e5afbd4f62e6f28acc6cbabdfc641ff42f1df279
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

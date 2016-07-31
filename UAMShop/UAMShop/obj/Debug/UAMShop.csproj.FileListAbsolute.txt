@@ -17,5 +17,44 @@ E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\UA
 E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\UAMShop\bin\ProductModule.pdb
 E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\UAMShop\bin\UserModule.pdb
 E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\UAMShop\bin\ConnectionManage.pdb
+<<<<<<< HEAD
 E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\UAMShop\obj\Debug\UAMShop.dll
 E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\UAMShop\obj\Debug\UAMShop.pdb
+=======
+C:\Users\u46416\OneDrive\git\ProyectoUAM\UAMShop\UAMShop\bin\UAMShop.dll
+C:\Users\u46416\OneDrive\git\ProyectoUAM\UAMShop\UAMShop\bin\UAMShop.pdb
+C:\Users\u46416\OneDrive\git\ProyectoUAM\UAMShop\UAMShop\bin\CategoryModule.dll
+C:\Users\u46416\OneDrive\git\ProyectoUAM\UAMShop\UAMShop\bin\Log4NetModule.dll
+C:\Users\u46416\OneDrive\git\ProyectoUAM\UAMShop\UAMShop\bin\MenuModule.dll
+C:\Users\u46416\OneDrive\git\ProyectoUAM\UAMShop\UAMShop\bin\ProductModule.dll
+C:\Users\u46416\OneDrive\git\ProyectoUAM\UAMShop\UAMShop\bin\ConnectionManage.dll
+C:\Users\u46416\OneDrive\git\ProyectoUAM\UAMShop\UAMShop\bin\CategoryModule.pdb
+C:\Users\u46416\OneDrive\git\ProyectoUAM\UAMShop\UAMShop\bin\Log4NetModule.pdb
+C:\Users\u46416\OneDrive\git\ProyectoUAM\UAMShop\UAMShop\bin\MenuModule.pdb
+C:\Users\u46416\OneDrive\git\ProyectoUAM\UAMShop\UAMShop\bin\ProductModule.pdb
+C:\Users\u46416\OneDrive\git\ProyectoUAM\UAMShop\UAMShop\bin\ConnectionManage.pdb
+C:\Users\u46416\OneDrive\git\ProyectoUAM\UAMShop\UAMShop\obj\Debug\UAMShop.csprojResolveAssemblyReference.cache
+C:\Users\u46416\OneDrive\git\ProyectoUAM\UAMShop\UAMShop\obj\Debug\UAMShop.dll
+C:\Users\u46416\OneDrive\git\ProyectoUAM\UAMShop\UAMShop\obj\Debug\UAMShop.pdb
+C:\Users\u46416\OneDrive\git\UAMShop\UAMShop\bin\img\banneruam.PNG
+C:\Users\u46416\OneDrive\git\UAMShop\UAMShop\bin\App.config
+C:\Users\u46416\OneDrive\git\UAMShop\UAMShop\bin\UAMShop.dll
+C:\Users\u46416\OneDrive\git\UAMShop\UAMShop\bin\UAMShop.pdb
+C:\Users\u46416\OneDrive\git\UAMShop\UAMShop\bin\CategoryModule.dll
+C:\Users\u46416\OneDrive\git\UAMShop\UAMShop\bin\Log4NetModule.dll
+C:\Users\u46416\OneDrive\git\UAMShop\UAMShop\bin\MenuModule.dll
+C:\Users\u46416\OneDrive\git\UAMShop\UAMShop\bin\ProductModule.dll
+C:\Users\u46416\OneDrive\git\UAMShop\UAMShop\bin\SaleModule.dll
+C:\Users\u46416\OneDrive\git\UAMShop\UAMShop\bin\ConnectionManage.dll
+C:\Users\u46416\OneDrive\git\UAMShop\UAMShop\bin\NotificationModule.dll
+C:\Users\u46416\OneDrive\git\UAMShop\UAMShop\bin\CategoryModule.pdb
+C:\Users\u46416\OneDrive\git\UAMShop\UAMShop\bin\Log4NetModule.pdb
+C:\Users\u46416\OneDrive\git\UAMShop\UAMShop\bin\MenuModule.pdb
+C:\Users\u46416\OneDrive\git\UAMShop\UAMShop\bin\ProductModule.pdb
+C:\Users\u46416\OneDrive\git\UAMShop\UAMShop\bin\SaleModule.pdb
+C:\Users\u46416\OneDrive\git\UAMShop\UAMShop\bin\ConnectionManage.pdb
+C:\Users\u46416\OneDrive\git\UAMShop\UAMShop\bin\NotificationModule.pdb
+C:\Users\u46416\OneDrive\git\UAMShop\UAMShop\obj\Debug\UAMShop.csprojResolveAssemblyReference.cache
+C:\Users\u46416\OneDrive\git\UAMShop\UAMShop\obj\Debug\UAMShop.dll
+C:\Users\u46416\OneDrive\git\UAMShop\UAMShop\obj\Debug\UAMShop.pdb
+>>>>>>> e5afbd4f62e6f28acc6cbabdfc641ff42f1df279

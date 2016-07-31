@@ -7,6 +7,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using Log4NetModule;
 using ProductModule;
+using SaleModule;
 
 namespace UAMShop
 {
@@ -15,12 +16,12 @@ namespace UAMShop
         public List<ProductBE> ListProducts;
         public int IdCategoria;
         protected void Page_Load(object sender, EventArgs e)
-        {
+        {                        
             try
             {                
                 var productDal = new ProductDAL();
                 string connection = WebConfigurationManager.AppSettings["ConnectionString"];
-                ListProducts = productDal.RetrieveProductsTop(connection);                               
+                ListProducts = productDal.RetrieveProductsTop(connection);               
             }
             catch (Exception exception)
             {
