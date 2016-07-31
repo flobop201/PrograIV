@@ -17,11 +17,13 @@ namespace UAMShop.category
         public List<ProductBE> ListProducts;
         public int IdCategoria;
         public string Busqueda;
+        private static object _user;
 
         protected void Page_Load(object sender, EventArgs e)
         {
             try
             {
+                _user = Session["usuario_id"];
                 IdCategoria = Convert.ToInt16(Request["id"]);
                 Busqueda = Request["search"];
                 var productDal = new ProductDAL();
@@ -38,21 +40,29 @@ namespace UAMShop.category
         [WebMethod]
         public static string AgregarCarrito(Int32 codigo, Int32 cantidad)
         {
-            const int idUsuario = 1; //Este debe ser el usuario
-            var carritoDal = new CarritoDal();
-            string connection = WebConfigurationManager.AppSettings["ConnectionString"];
-            var resultado = carritoDal.AgregarItem(connection, idUsuario, codigo, cantidad);
-            string mensaje = string.Empty;
-            switch (resultado)
+            if (_user != null)
             {
-                case true:
-                    mensaje= string.Format("Producto agregado al carrito de compras.");
-                    break;
-                case false:
-                    mensaje=string.Format("El producto no ha sido agregado al carrito de compras.");
-                    break;
+                int idUsuario = Convert.ToInt32(_user);
+
+                var carritoDal = new CarritoDal();
+                string connection = WebConfigurationManager.AppSettings["ConnectionString"];
+                var resultado = carritoDal.AgregarItem(connection, idUsuario, codigo, cantidad);
+                string mensaje = string.Empty;
+                switch (resultado)
+                {
+                    case true:
+                        mensaje = string.Format("Producto agregado al carrito de compras.");
+                        break;
+                    case false:
+                        mensaje = string.Format("El producto no ha sido agregado al carrito de compras.");
+                        break;
+                }
+                return mensaje;
             }
-            return mensaje;
+            else
+            {
+                return "Por favor inicie session...";
+            }
         }
     }
 }

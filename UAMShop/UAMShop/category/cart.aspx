@@ -58,7 +58,7 @@
         <div class="test" style="border-radius: 5px; background-color: #f2f2f2; padding: 40px;">
             <h3>Realizar Compra</h3>
             <label for="correo">* Correo Electronico:</label>
-            <input type="email" id="correo" style="text-transform: lowercase" required="" />
+            <input type="email" id="correo" style="text-transform: lowercase" required="" value="<% Page.Response.Write(Session["usuario_correo"]);%> "/>
             <label for="titular">* Titular Tarjeta:</label>
             <input type="text" id="titular" style="text-transform: uppercase" required="" />
             <label for="tarjeta">* Numero Tarjeta:</label>

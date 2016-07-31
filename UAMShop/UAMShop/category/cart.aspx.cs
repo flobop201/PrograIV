@@ -10,14 +10,21 @@ namespace UAMShop.category
     public partial class cart : System.Web.UI.Page
     {
         public List<CarritoBe> ListCarrito;
-
+        private static Object _idUsuario;
+        private static Object _nombreUsuario;
         protected void Page_Load(object sender, EventArgs e)
         {
             try
             {
-                var carritoDal = new CarritoDal();
-                string connection = WebConfigurationManager.AppSettings["ConnectionString"];
-                ListCarrito = carritoDal.ObtenerCarrito(1, connection);
+                ListCarrito = new List<CarritoBe>();
+                _idUsuario = Session["usuario_id"];
+                _nombreUsuario = Session["usuario_nombre"];
+                if (_idUsuario != null)
+                {
+                    var carritoDal = new CarritoDal();
+                    string connection = WebConfigurationManager.AppSettings["ConnectionString"];
+                    ListCarrito = carritoDal.ObtenerCarrito(Convert.ToInt32(_idUsuario), connection);
+                }
             }
             catch (Exception exception)
             {
@@ -28,7 +35,7 @@ namespace UAMShop.category
 
         [WebMethod]
         public static string Eliminar(Int32 id)
-        {           
+        {
             var carritoDal = new CarritoDal();
             string connection = WebConfigurationManager.AppSettings["ConnectionString"];
             var resultado = carritoDal.EliminarItem(connection, id);
@@ -63,7 +70,7 @@ namespace UAMShop.category
             {
                 string connection = WebConfigurationManager.AppSettings["ConnectionString"];
                 var facturaDal = new FacturaDal();
-                resultado = facturaDal.GenerarFactura(1, tarjeta, titular, correo, titular, connection);
+                resultado = facturaDal.GenerarFactura(Convert.ToInt32(_idUsuario), tarjeta, titular, correo, Convert.ToString(_nombreUsuario), connection);
                 return resultado;
             }
             catch (Exception exception)

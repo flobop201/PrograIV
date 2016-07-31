@@ -23,7 +23,7 @@ namespace NotificationModule
                 mailMessage.From = new MailAddress("uamshopcr@gmail.com", "UAM SHOP");
                 mailMessage.IsBodyHtml = true;
 
-                string htmlmessage = "<h3>Estimado " + nameTo + ":</h3>"
+                string htmlmessage = "<h3>Estimado(a) " + nameTo + ":</h3>"
                                      + "<br>Es un gusto enviarle la factura de su compra realizada recientemente"
                                      + "<br><br>Le recordamos que puede ver su historial de compras en www.uamshopcr.com, lo esperamos próximamente en la sucursal electronica."
                                      + "<br><br>Gracias por recibir su factura de compra, de esta forma cuidamos el medio ambiente al reducir el uso de papel y energía."
@@ -33,7 +33,7 @@ namespace NotificationModule
                 if (directoryName != null)
                 {
                     string ruta = directoryName.Remove(0, 6) + @"\img\banneruam.PNG";
-                    ruta = ruta.Replace("\\bin\\Debug", "");
+                    ruta = ruta.Replace("\\bin", "");
                     LinkedResource imagen = null;
                     try
                     {

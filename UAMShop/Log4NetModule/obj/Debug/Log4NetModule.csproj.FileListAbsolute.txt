@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\Log4NetModule\obj\Debug\Log4NetModule.csprojResolveAssemblyReference.cache
 E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\Log4NetModule\bin\Debug\App.config
 E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\Log4NetModule\bin\Debug\Log4NetModule.dll.config
@@ -6,20 +5,10 @@ E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\Lo
 E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\Log4NetModule\bin\Debug\Log4NetModule.pdb
 E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\Log4NetModule\obj\Debug\Log4NetModule.dll
 E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\Log4NetModule\obj\Debug\Log4NetModule.pdb
-=======
-C:\Users\u46416\OneDrive\git\ProyectoUAM\UAMShop\Log4NetModule\bin\Debug\Log4NetModule.dll
-C:\Users\u46416\OneDrive\git\ProyectoUAM\UAMShop\Log4NetModule\bin\Debug\Log4NetModule.pdb
-C:\Users\u46416\OneDrive\git\ProyectoUAM\UAMShop\Log4NetModule\bin\Debug\log4net.dll
-C:\Users\u46416\OneDrive\git\ProyectoUAM\UAMShop\Log4NetModule\bin\Debug\log4net.pdb
-C:\Users\u46416\OneDrive\git\ProyectoUAM\UAMShop\Log4NetModule\bin\Debug\log4net.xml
-C:\Users\u46416\OneDrive\git\ProyectoUAM\UAMShop\Log4NetModule\obj\Debug\Log4NetModule.csprojResolveAssemblyReference.cache
-C:\Users\u46416\OneDrive\git\ProyectoUAM\UAMShop\Log4NetModule\obj\Debug\Log4NetModule.dll
-C:\Users\u46416\OneDrive\git\ProyectoUAM\UAMShop\Log4NetModule\obj\Debug\Log4NetModule.pdb
 C:\Users\u46416\OneDrive\git\UAMShop\Log4NetModule\bin\Debug\App.config
 C:\Users\u46416\OneDrive\git\UAMShop\Log4NetModule\bin\Debug\Log4NetModule.dll.config
 C:\Users\u46416\OneDrive\git\UAMShop\Log4NetModule\bin\Debug\Log4NetModule.dll
 C:\Users\u46416\OneDrive\git\UAMShop\Log4NetModule\bin\Debug\Log4NetModule.pdb
+C:\Users\u46416\OneDrive\git\UAMShop\Log4NetModule\obj\Debug\Log4NetModule.csprojResolveAssemblyReference.cache
 C:\Users\u46416\OneDrive\git\UAMShop\Log4NetModule\obj\Debug\Log4NetModule.dll
 C:\Users\u46416\OneDrive\git\UAMShop\Log4NetModule\obj\Debug\Log4NetModule.pdb
-C:\Users\u46416\OneDrive\git\UAMShop\Log4NetModule\obj\Debug\Log4NetModule.csprojResolveAssemblyReference.cache
->>>>>>> e5afbd4f62e6f28acc6cbabdfc641ff42f1df279
