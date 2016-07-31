@@ -63,7 +63,6 @@
     <Content Include="css\font-awesome.min.css" />
     <Content Include="css\generalStyle.css" />
     <Content Include="css\gridStyle.css" />
-    <Content Include="css\modal-popup.css" />
     <Content Include="css\navBarStyle.css" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="img\apple-drone-Introduction.jpg" />

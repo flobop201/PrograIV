@@ -11,11 +11,11 @@ using NotificationModule;
 namespace SaleModule
 {
     public class FacturaDal
-    {       
+    {
         public string GenerarFactura(Int32 usuario, String tarjeta, String titular, String emailTo, String emailNameTo, string connectionString)
         {
             var firstOrDefault = string.Empty;
-            string resultado=string.Empty;
+            string resultado = string.Empty;
             try
             {
                 var execute = GuardarFactura(usuario, tarjeta, titular, connectionString);
@@ -93,7 +93,8 @@ namespace SaleModule
                         Codigo = Int32.Parse(invoiceReader["Codigo"].ToString()),
                         Descripcion = invoiceReader["Descripcion"].ToString(),
                         Precio = Double.Parse(invoiceReader["Precio"].ToString()),
-                        Cantidad = Int32.Parse(invoiceReader["Cantidad"].ToString())
+                        Cantidad = Int32.Parse(invoiceReader["Cantidad"].ToString()),
+                        Imagen = invoiceReader["Imagen"].ToString()
                     };
                     listFacturaDetalleBe.Add(facturadetalle);
                 }
@@ -124,6 +125,7 @@ namespace SaleModule
 
                 tablahtml += htmlTableStart;
                 tablahtml += htmlHeaderRowStart;
+                //tablahtml += htmlTdStart + "Imagen " + htmlTdEnd;
                 tablahtml += htmlTdStart + "Codigo " + htmlTdEnd;
                 tablahtml += htmlTdStart + "Descripcion " + htmlTdEnd;
                 tablahtml += htmlTdStart + "Precio " + htmlTdEnd;
@@ -134,6 +136,7 @@ namespace SaleModule
                 foreach (var producto in list)
                 {
                     tablahtml = tablahtml + htmlTrStart;
+                    //tablahtml = tablahtml + htmlTdStart + producto.Imagen + htmlTdEnd;
                     tablahtml = tablahtml + htmlTdStart + producto.Codigo + htmlTdEnd;
                     tablahtml = tablahtml + htmlTdStart + producto.Descripcion + htmlTdEnd;
                     tablahtml = tablahtml + htmlTdStart + String.Format("{0:C}", producto.Precio) + htmlTdEnd;
