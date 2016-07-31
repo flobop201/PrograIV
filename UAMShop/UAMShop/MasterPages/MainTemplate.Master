@@ -19,6 +19,14 @@
     <form id="form1" runat="server">
         <nav class="nav-menu">
             <div class="container">
+                <div class="grid col-12">
+                <% if (Session["usuario_nombre"] != null){
+                       %><p style="text-align: right"><%
+                       Page.Response.Write("Hola, "+Session["usuario_nombre"]);
+                       %> <i class="fa fa-sign-out" style="color:red; cursor:pointer;" title="Cerrar sessi&oacute;n"></i></p><% 
+                   }
+                %>
+                </div>
                 <div class="grid col-2 nav-padding">
                     UAMSHOP
                 </div>

@@ -179,6 +179,10 @@
       <Project>{c87071ac-ec0d-4b1d-a560-41261db95189}</Project>
       <Name>ProductModule</Name>
     </ProjectReference>
+    <ProjectReference Include="..\UserModule\UserModule.csproj">
+      <Project>{dd25147d-fab6-4b6a-b4e0-6981cace9918}</Project>
+      <Name>UserModule</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

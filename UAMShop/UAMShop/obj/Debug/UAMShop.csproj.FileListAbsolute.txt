@@ -48,3 +48,5 @@ E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\UA
 E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\UAMShop\bin\MenuModule.pdb
 E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\UAMShop\bin\LoginModule.dll
 E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\UAMShop\bin\LoginModule.pdb
+E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\UAMShop\bin\UserModule.dll
+E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\UAMShop\bin\UserModule.pdb

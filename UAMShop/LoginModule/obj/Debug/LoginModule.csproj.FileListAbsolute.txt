@@ -3,3 +3,12 @@ E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\Lo
 E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\LoginModule\bin\Debug\LoginModule.pdb
 E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\LoginModule\obj\Debug\LoginModule.dll
 E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\LoginModule\obj\Debug\LoginModule.pdb
+E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\LoginModule\bin\Debug\App.config
+E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\LoginModule\bin\Debug\ConnectionManage.dll
+E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\LoginModule\bin\Debug\Log4NetModule.dll
+E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\LoginModule\bin\Debug\log4net.dll
+E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\LoginModule\bin\Debug\ConnectionManage.pdb
+E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\LoginModule\bin\Debug\Log4NetModule.pdb
+E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\LoginModule\obj\Debug\LoginModule.csprojResolveAssemblyReference.cache
+E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\LoginModule\bin\Debug\UserModule.dll
+E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\LoginModule\bin\Debug\UserModule.pdb
