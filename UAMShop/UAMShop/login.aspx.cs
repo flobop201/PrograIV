@@ -11,6 +11,7 @@ namespace UAMShop
 {
     public partial class login : System.Web.UI.Page
     {
+        protected bool mensajeError = false;
         protected void Page_Load(object sender, EventArgs e)
         {
         }
@@ -26,6 +27,10 @@ namespace UAMShop
                 Session["usuario_id"] = usuario.IdUsuario;
                 HttpCookie returnCookie = Request.Cookies["returnUrl"];
                 Response.Redirect(returnCookie.Value);
+            }
+            else
+            {
+                mensajeError = true;
             }
         }
     }

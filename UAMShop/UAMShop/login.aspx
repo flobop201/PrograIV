@@ -12,6 +12,10 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <section>
 		<div class="container">
+            <div class="alert" id="mensaje">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">×</span>
+                <span id="txtMensaje">This is an alert box.</span>
+            </div>
 			<div class="division"></div>
 			<div class="row">
 				<div class="grid col-3"></div>
@@ -39,4 +43,14 @@
 		</div>
 		<div class="division"></div>
 	</section>
+            <% if (mensajeError==true){ %>
+            
+            <script>
+                setTimeout(function () {
+                    $(document).ready(function () {
+                        DesplegarCredencialesInvalidas('Las credenciales suministradas no son correctas.');
+                    });
+                }, 0);
+            </script>           
+            <% } %>
 </asp:Content>
