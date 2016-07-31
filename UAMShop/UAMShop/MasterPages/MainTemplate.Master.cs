@@ -30,5 +30,14 @@ namespace UAMShop.MasterPages
             }
 
         }
+
+        protected void logout_btn_Click(object sender, EventArgs e)
+        {
+            Session.Remove("usuario");
+            Session.Remove("usuario_nombre");
+            Session.Remove("usuario_correo");
+            Session.Remove("usuario_id");
+            Response.Redirect(Request.RawUrl);
+        }
     }
 }
