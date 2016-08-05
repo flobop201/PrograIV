@@ -46,15 +46,23 @@ namespace UAMShop
 
         protected void btnAgregarCat_Click(object sender, EventArgs e)
         {
-            SqlDataSource1.InsertParameters.Add("Categoria", txtbCategoria.Text);
-
-           var x = SqlDataSource1.Insert();
-           if (x == 1) 
-           {
-               //"Valor ingresado satisfactoriamente";
-           }
-            GridViewEditarCategorias.DataBind();
-            GridViewVerCategorias.DataBind();
+            if (!string.IsNullOrWhiteSpace(txtbCategoria.Text))
+            {
+                SqlDataSource1.InsertParameters.Add("Categoria", Convert.ToString(txtbCategoria.Text));
+                SqlDataSource1.Insert();
+                GridViewEditarCategorias.DataBind();
+                GridViewVerCategorias.DataBind();
+                lblAgregarCategoriaExitosa.Text = "Categoria cargada satisfactoriamente!";
+                lblAgregarCategoriaExitosa.ForeColor = System.Drawing.Color.Black;
+                lblAgregarCategoriaExitosa.Visible = true;
+            }
+            else 
+            {
+                lblAgregarCategoriaExitosa.Text = "Categoria es requerida!";
+                lblAgregarCategoriaExitosa.ForeColor = System.Drawing.Color.Red;
+                lblAgregarCategoriaExitosa.Visible = true;
+            }
+            
         }
 
         protected void GridViewEditarCategorias_SelectedIndexChanged(object sender, EventArgs e)

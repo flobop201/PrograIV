@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.IO;
+using System.Data;
 
 namespace UAMShop.mantenimiento
 {
@@ -12,11 +13,11 @@ namespace UAMShop.mantenimiento
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
         }
 
         protected void btnVerProductos_Click(object sender, EventArgs e)
         {
+            lblResultadoAgregarProducto.Text = "";
             MultiViewProductos.ActiveViewIndex = 0;
             GridViewVerProductos.Visible = true;
             GridViewVerProductos.DataBind();
@@ -24,6 +25,7 @@ namespace UAMShop.mantenimiento
 
         protected void btnModificarProductos_Click(object sender, EventArgs e)
         {
+            lblResultadoAgregarProducto.Text = "";
             MultiViewProductos.ActiveViewIndex = 2;
             GridViewModificarProductos.Visible = true;
             GridViewModificarProductos.DataBind();
@@ -31,6 +33,7 @@ namespace UAMShop.mantenimiento
 
         protected void btnAgregarProductos_Click(object sender, EventArgs e)
         {
+            lblResultadoAgregarProducto.Text = "";
             MultiViewProductos.ActiveViewIndex = 1;
             lblProductos.Visible = true;
             FileUploadAgregarProducto.Visible = true;
@@ -38,44 +41,140 @@ namespace UAMShop.mantenimiento
 
         protected void btnAgregarProducto_Click(object sender, EventArgs e)
         {
-            
+            lblErrorCodigo.Visible = false;
+            lblErrorNombre.Visible = false;
+            lblErrorExistencia.Visible = false;
+            lblErrorPrecio.Visible = false;
+
             if (FileUploadAgregarProducto.HasFile)
             {
                 try
                 {
                     if (FileUploadAgregarProducto.PostedFile.ContentType == "image/png")
                     {
-                        SqlDataSourceProductos.InsertParameters.Add("Codigo", txtbAgregarCodigoProducto.Text);
-                        SqlDataSourceProductos.InsertParameters.Add("Producto", txtbAgregarNombreProducto.Text);
-                        SqlDataSourceProductos.InsertParameters.Add("Existencia", txtbAgregarExistenciaProducto.Text);
-                        SqlDataSourceProductos.InsertParameters.Add("Precio", txtbAgregarPrecioProducto.Text);
-                        SqlDataSourceProductos.InsertParameters.Add("IdCategoria", txtbAgregarCategoriaProducto.Text);
-                        string filename = (txtbAgregarCodigoProducto.Text + ".png");
-                        FileUploadAgregarProducto.SaveAs(Server.MapPath("../img/productos/") + filename);
-                        SqlDataSourceProductos.InsertParameters.Add("Imagen", ("../img/productos/") + filename);
-                        SqlDataSourceProductos.Insert();
-                        lblResultadoAgregarProducto.Text = "Producto cargado satisfactoriamente!";
-                        lblResultadoAgregarProducto.Visible = true;
+
+                        if (!string.IsNullOrWhiteSpace(txtbAgregarCodigoProducto.Text) && !string.IsNullOrWhiteSpace(txtbAgregarNombreProducto.Text) && System.Text.RegularExpressions.Regex.IsMatch(txtbAgregarExistenciaProducto.Text, "[ ^ 0-9]") && System.Text.RegularExpressions.Regex.IsMatch(txtbAgregarPrecioProducto.Text, "[ ^ 0-9]"))
+                        {
+                            SqlDataSourceProductos.InsertParameters.Add("Codigo", txtbAgregarCodigoProducto.Text);
+                            SqlDataSourceProductos.InsertParameters.Add("Producto", txtbAgregarNombreProducto.Text);
+                            SqlDataSourceProductos.InsertParameters.Add("Existencia", txtbAgregarExistenciaProducto.Text);
+                            SqlDataSourceProductos.InsertParameters.Add("Precio", txtbAgregarPrecioProducto.Text);
+                            SqlDataSourceProductos.InsertParameters.Add("IdCategoria", DropDownListCategorias.SelectedItem.Value);
+                            string filename = (txtbAgregarCodigoProducto.Text + ".png");
+                            SqlDataSourceProductos.InsertParameters.Add("Imagen", ("../img/productos/") + filename);
+                            FileUploadAgregarProducto.SaveAs(Server.MapPath("../img/productos/") + filename);
+                            SqlDataSourceProductos.Insert();
+                            lblResultadoAgregarProducto.ForeColor = System.Drawing.Color.Black;
+                            lblResultadoAgregarProducto.Text = "Producto cargado satisfactoriamente!";
+                            lblResultadoAgregarProducto.Visible = true;
+                            txtbAgregarCodigoProducto.Text = "";
+                            txtbAgregarNombreProducto.Text = "";
+                            txtbAgregarExistenciaProducto.Text = "";
+                            txtbAgregarPrecioProducto.Text = "";
+                        }
+
+                        else
+                        {
+                            if (string.IsNullOrWhiteSpace(txtbAgregarCodigoProducto.Text))
+                            {
+                                lblErrorCodigo.ForeColor = System.Drawing.Color.Red;
+                                lblErrorCodigo.Text = "Codigo es necesario!";
+                                lblErrorCodigo.Visible = true;
+                            }
+
+                            if (string.IsNullOrWhiteSpace(txtbAgregarNombreProducto.Text))
+                            {
+                                lblErrorNombre.ForeColor = System.Drawing.Color.Red;
+                                lblErrorNombre.Text = "Nombre es necesario!";
+                                lblErrorNombre.Visible = true;
+                            }
+                            if (string.IsNullOrWhiteSpace(txtbAgregarExistenciaProducto.Text))
+                            {
+                                lblErrorExistencia.ForeColor = System.Drawing.Color.Red;
+                                lblErrorExistencia.Text = "Existencias es necesario!";
+                                lblErrorExistencia.Visible = true;
+                            }
+                            else
+                            {
+                                if (!System.Text.RegularExpressions.Regex.IsMatch(txtbAgregarExistenciaProducto.Text, "[ ^ 0-9]"))
+                                {
+                                    lblErrorExistencia.ForeColor = System.Drawing.Color.Red;
+                                    lblErrorExistencia.Text = "Solo numeros son permitidos!";
+                                    lblErrorExistencia.Visible = true;
+                                }
+                            }
+
+                            if (string.IsNullOrWhiteSpace(txtbAgregarPrecioProducto.Text))
+                            {
+                                lblErrorPrecio.ForeColor = System.Drawing.Color.Red;
+                                lblErrorPrecio.Text = "Precio es necesario!";
+                                lblErrorPrecio.Visible = true;
+                            }
+                            else 
+                            {
+                                if (!System.Text.RegularExpressions.Regex.IsMatch(txtbAgregarPrecioProducto.Text, "[ ^ 0-9]"))
+                                {
+                                    lblErrorPrecio.ForeColor = System.Drawing.Color.Red;
+                                    lblErrorPrecio.Text = "Solo numeros son permitidos!";
+                                    lblErrorPrecio.Visible = true;
+                                }
+                            }
+                        }
                     }
-                    else 
+                    else
                     {
+                        lblResultadoAgregarProducto.ForeColor = System.Drawing.Color.Red;
                         lblResultadoAgregarProducto.Text = "Error: Solo formato .png es permitido!";
                         lblResultadoAgregarProducto.Visible = true;
-                    }  
+                    }
                 }
                 catch (Exception ex)
                 {
-                    lblResultadoAgregarProducto.Text = "Upload status: The file could not be uploaded. The following error occured: " + ex.Message;
+                    lblResultadoAgregarProducto.ForeColor = System.Drawing.Color.Red;
+                    lblResultadoAgregarProducto.Text = "Error al ingresar el producto: El siguiente error ocurrió: " + ex.Message;
+                    Log4NetModule.Log4Net.WriteLog(ex, Log4NetModule.Log4Net.LogType.Error);
                 }
+
             }
-            else { lblResultadoAgregarProducto.Text = "Incluir una imagen es obligatorio"; }
+            else 
+            {
+                lblResultadoAgregarProducto.Text = "Incluir una imagen es obligatorio";
+                lblResultadoAgregarProducto.ForeColor = System.Drawing.Color.Red;
+                lblResultadoAgregarProducto.Visible = true;
+            } 
 
             
         }
 
+        protected void DropDownListCategorias_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
 
 
+        protected void DataGrid1_ItemDataBound(object sender, DataGridItemEventArgs e)
+        {
+            if (e.Item.ItemType == ListItemType.EditItem)
+            {
+                DropDownList dropDownList1 = (DropDownList)e.Item.FindControl("Dropdownlist1");
+                DataRowView dataItem1 = (DataRowView)e.Item.DataItem;
+                dropDownList1.SelectedValue = (string)dataItem1.Row["IdCategoria"];
 
+            }
+        }
+
+        protected void GridView1_RowUpdating(object sender, GridViewUpdateEventArgs e)
+        {
+
+            FileUpload fileUpload = GridViewModificarProductos.Rows[e.RowIndex].FindControl("FileUpload1") as FileUpload;
+            fileUpload.SaveAs(Server.MapPath("../img/productos/") + fileUpload.FileName);
+            SqlDataSourceProductos.UpdateParameters["Imagen"].DefaultValue = "../img/productos/" + fileUpload.FileName;
+        }
+
+        protected void DropDownListCategorias_SelectedIndexChanged1(object sender, EventArgs e)
+        {
+
+        }
 
 
     }

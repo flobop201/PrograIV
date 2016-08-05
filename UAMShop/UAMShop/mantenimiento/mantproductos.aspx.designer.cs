@@ -31,6 +31,15 @@ namespace UAMShop.mantenimiento {
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSourceProductos;
         
         /// <summary>
+        /// SqlDataSourceCategoria control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSourceCategoria;
+        
+        /// <summary>
         /// btnVerProductos control.
         /// </summary>
         /// <remarks>
@@ -121,6 +130,15 @@ namespace UAMShop.mantenimiento {
         protected global::System.Web.UI.WebControls.TextBox txtbAgregarCodigoProducto;
         
         /// <summary>
+        /// lblErrorCodigo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblErrorCodigo;
+        
+        /// <summary>
         /// lblAgregarNombreProducto control.
         /// </summary>
         /// <remarks>
@@ -137,6 +155,15 @@ namespace UAMShop.mantenimiento {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtbAgregarNombreProducto;
+        
+        /// <summary>
+        /// lblErrorNombre control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblErrorNombre;
         
         /// <summary>
         /// lblAgregarExistenciaProducto control.
@@ -157,6 +184,15 @@ namespace UAMShop.mantenimiento {
         protected global::System.Web.UI.WebControls.TextBox txtbAgregarExistenciaProducto;
         
         /// <summary>
+        /// lblErrorExistencia control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblErrorExistencia;
+        
+        /// <summary>
         /// lblAgregarPrecioProducto control.
         /// </summary>
         /// <remarks>
@@ -175,6 +211,15 @@ namespace UAMShop.mantenimiento {
         protected global::System.Web.UI.WebControls.TextBox txtbAgregarPrecioProducto;
         
         /// <summary>
+        /// lblErrorPrecio control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblErrorPrecio;
+        
+        /// <summary>
         /// lblAgregarCategoriaProducto control.
         /// </summary>
         /// <remarks>
@@ -184,13 +229,13 @@ namespace UAMShop.mantenimiento {
         protected global::System.Web.UI.WebControls.Label lblAgregarCategoriaProducto;
         
         /// <summary>
-        /// txtbAgregarCategoriaProducto control.
+        /// DropDownListCategorias control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtbAgregarCategoriaProducto;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownListCategorias;
         
         /// <summary>
         /// lblImagenDelProducto control.

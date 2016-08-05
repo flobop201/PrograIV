@@ -15,7 +15,7 @@
 <body>
     <form id="form1" runat="server">
     <div>
-    <h1 class="nav-menu"> Bienvenido al modulo de mantenimiento de categorias </h1>
+    <h3 class="nav-menu"> Bienvenido al modulo de mantenimiento de categorias </h3>
     </div>
         <asp:Label ID="LblMantenimiento" runat="server" Text="Seleccionar la modificacion a realizar: "></asp:Label>
  <br />
@@ -69,12 +69,14 @@
                 <br />
                 <br />
                 <asp:Label align="left" ID="lblCategoria" runat="server" Text="Digitar nombre de la categoria:" Visible="False"></asp:Label>
-                &nbsp;<br /> &nbsp;
-                <br />
+                &nbsp;<br />
  
                 <div class="grid col-3 nav-padding">
                 <asp:TextBox class="form-control" ID="txtbCategoria" runat="server" Visible="False" placeholder="Nombre Categoria"></asp:TextBox>
                 <asp:Button class="btn blue" ID="btnAgregarCat" runat="server" Text="Adicionar" Visible="False" OnClick="btnAgregarCat_Click" />
+                    <br />
+                    <br />
+                    <asp:Label ID="lblAgregarCategoriaExitosa" runat="server" Text="" Visible="False"></asp:Label>
                 </div>
                 
             </asp:View>
@@ -91,6 +93,7 @@
                 </asp:GridView>
             </asp:View>
         </asp:MultiView>
+
     </form>
-</body>
+</body>     
 </html>
