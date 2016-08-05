@@ -4,6 +4,15 @@ C:\Users\chingg\Desktop\Progra 4\GIT\UAMShop\Log4NetModule\bin\Debug\Log4NetModu
 C:\Users\chingg\Desktop\Progra 4\GIT\UAMShop\Log4NetModule\bin\Debug\Log4NetModule.pdb
 C:\Users\chingg\Desktop\Progra 4\GIT\UAMShop\Log4NetModule\bin\Debug\log4net.dll
 C:\Users\chingg\Desktop\Progra 4\GIT\UAMShop\Log4NetModule\bin\Debug\log4net.xml
+C:\Users\chingg\Desktop\Progra 4\GIT\UAMShop\Log4NetModule\obj\Debug\Log4NetModule.csprojResolveAssemblyReference.cache
 C:\Users\chingg\Desktop\Progra 4\GIT\UAMShop\Log4NetModule\obj\Debug\Log4NetModule.dll
 C:\Users\chingg\Desktop\Progra 4\GIT\UAMShop\Log4NetModule\obj\Debug\Log4NetModule.pdb
-C:\Users\chingg\Desktop\Progra 4\GIT\UAMShop\Log4NetModule\obj\Debug\Log4NetModule.csprojResolveAssemblyReference.cache
+E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\Log4NetModule\bin\Debug\App.config
+E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\Log4NetModule\bin\Debug\Log4NetModule.dll.config
+E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\Log4NetModule\bin\Debug\Log4NetModule.dll
+E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\Log4NetModule\bin\Debug\Log4NetModule.pdb
+E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\Log4NetModule\bin\Debug\log4net.dll
+E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\Log4NetModule\bin\Debug\log4net.xml
+E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\Log4NetModule\obj\Debug\Log4NetModule.csprojResolveAssemblyReference.cache
+E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\Log4NetModule\obj\Debug\Log4NetModule.dll
+E:\UAM - Ing.Sistemas - 2016\Cuatrimestre II\Programacion IV\PrograIV\UAMShop\Log4NetModule\obj\Debug\Log4NetModule.pdb

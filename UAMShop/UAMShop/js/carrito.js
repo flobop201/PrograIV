@@ -1,5 +1,5 @@
 ﻿jQuery(document).ready(function () {      
-    $('.alert').hide();  
+    /*$('.alert').hide();  */
 
     $('.btnDeleteitem').click(function () {     
         var $parent = $(this).parents('#parent');
@@ -138,3 +138,11 @@ function agregarCarritobyAjax(codigo, cantidad) {
     });
     debugger;
 };
+
+function DesplegarCredencialesInvalidas(mensaje) {
+    setTimeout(function () {
+        $('.alert').show();
+        $('#txtMensaje').text(mensaje);
+        $('#mensaje').addClass("alert");
+    }, 0);
+}
