@@ -78,6 +78,7 @@
                 <HeaderStyle CssClass="headerstyle" />
                 <RowStyle CssClass="rowstyle" />
                 </asp:GridView>
+                <asp:Label ID="lblerrorverproducto" runat="server" Visible="False"></asp:Label>
             </asp:View>
             <asp:View ID="View2" runat="server">
                 <br />
@@ -87,22 +88,22 @@
                 &nbsp;<br />
                 <br />
                 <asp:Label align="left" display="inline-block" width= "200px" ID="lblAgregarCodigoProducto" runat="server" Text="Codigo del producto: "></asp:Label>
-                <asp:TextBox class="form-control" ID="txtbAgregarCodigoProducto" runat="server" placeholder="Codigo del producto" Width="245px"></asp:TextBox>
+                <asp:TextBox class="form-control" maxlength="10" ID="txtbAgregarCodigoProducto" runat="server" placeholder="Codigo" Width="245px"></asp:TextBox>
                 <asp:Label ID="lblErrorCodigo" runat="server" Text="" Visible="False"></asp:Label>
                 <br />
                 <br />
                 <asp:Label ID="lblAgregarNombreProducto" width= "200px" runat="server" Text="Nombre del producto: "></asp:Label>
-                <asp:TextBox class="form-control" ID="txtbAgregarNombreProducto" runat="server" placeholder="Nombre del producto" Width="245px"></asp:TextBox>
+                <asp:TextBox class="form-control" maxlength="20" ID="txtbAgregarNombreProducto" runat="server" placeholder="Nombre" Width="245px"></asp:TextBox>
                 <asp:Label ID="lblErrorNombre" runat="server" Text="" Visible="False"></asp:Label>
                 <br />
                 <br />
                 <asp:Label ID="lblAgregarExistenciaProducto" width= "200px" runat="server" Text="Cantidad de existencias: "></asp:Label>
-                <asp:TextBox class="form-control" ID="txtbAgregarExistenciaProducto" runat="server" placeholder="Cantidad de existencias" Width="245px"></asp:TextBox>
+                <asp:TextBox class="form-control" ID="txtbAgregarExistenciaProducto" maxlength="10" runat="server" placeholder="Cantidad" Width="245px"></asp:TextBox>
                 <asp:Label ID="lblErrorExistencia" runat="server" Visible="False"></asp:Label>
                 <br />
                 <br />
                 <asp:Label ID="lblAgregarPrecioProducto" width= "200px" runat="server" Text="Precio del producto: "></asp:Label>
-                <asp:TextBox class="form-control" ID="txtbAgregarPrecioProducto" runat="server" placeholder="Precio del producto" Width="245px"></asp:TextBox>
+                <asp:TextBox class="form-control" ID="txtbAgregarPrecioProducto" maxlength="20" runat="server" placeholder="Precio" Width="245px"></asp:TextBox>
                 <asp:Label ID="lblErrorPrecio" runat="server" Visible="False"></asp:Label>
                 <br />
                 <br />
@@ -168,6 +169,7 @@
                 <HeaderStyle CssClass="headerstyle" />
                 <RowStyle CssClass="rowstyle" />
                 </asp:GridView>
+                <asp:Label ID="lblErrorModificarProducto" runat="server" Visible="False"></asp:Label>
             </asp:View>
         </asp:MultiView>
     </form>

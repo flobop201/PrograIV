@@ -77,6 +77,8 @@
     <Content Include="img\banner_03.png" />
     <Content Include="img\banner_04.png" />
     <Content Include="img\confused-emoji.png" />
+    <Content Include="img\dt-arrow-dn.png" />
+    <Content Include="img\dt-arrow-up.png" />
     <Content Include="img\Gadgets Computers Tablets Surface UHD.jpg" />
     <Content Include="img\mac-coffee-laptops-1920x1080-wallpaper.jpg" />
     <Content Include="img\maxresdefault.jpg" />
@@ -89,6 +91,7 @@
     <Content Include="img\productos\149083.png" />
     <Content Include="img\productos\149084.png" />
     <Content Include="img\productos\34344.png" />
+    <Content Include="img\sprite.png" />
     <Content Include="index.aspx" />
     <Content Include="informacion.aspx" />
     <Content Include="js\carrito.js" />

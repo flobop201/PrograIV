@@ -94,6 +94,15 @@ namespace UAMShop.mantenimiento {
         protected global::System.Web.UI.WebControls.GridView GridViewVerUsuarios;
         
         /// <summary>
+        /// lblErrorVerUsuarios control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblErrorVerUsuarios;
+        
+        /// <summary>
         /// View2 control.
         /// </summary>
         /// <remarks>
@@ -245,5 +254,14 @@ namespace UAMShop.mantenimiento {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView GridViewModificarUsuarios;
+        
+        /// <summary>
+        /// lblErrorModificarUsuario control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblErrorModificarUsuario;
     }
 }

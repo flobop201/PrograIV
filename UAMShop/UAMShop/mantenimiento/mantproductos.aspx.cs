@@ -18,25 +18,69 @@ namespace UAMShop.mantenimiento
         protected void btnVerProductos_Click(object sender, EventArgs e)
         {
             lblResultadoAgregarProducto.Text = "";
-            MultiViewProductos.ActiveViewIndex = 0;
-            GridViewVerProductos.Visible = true;
-            GridViewVerProductos.DataBind();
+            lblResultadoAgregarProducto.Text = "";
+            lblErrorModificarProducto.Text = "";
+            lblerrorverproducto.Text = "";
+            try
+            {
+                MultiViewProductos.ActiveViewIndex = 0;
+                GridViewVerProductos.Visible = true;
+                GridViewVerProductos.DataBind();
+            }
+            catch (Exception ex)
+            {
+                lblerrorverproducto.ForeColor = System.Drawing.Color.Red;
+                lblerrorverproducto.Text = "Error: El siguiente error ocurrió: " + ex.Message;
+                lblerrorverproducto.Visible = true;
+                Log4NetModule.Log4Net.WriteLog(ex, Log4NetModule.Log4Net.LogType.Error);
+            }
+            
+            
         }
 
         protected void btnModificarProductos_Click(object sender, EventArgs e)
         {
             lblResultadoAgregarProducto.Text = "";
-            MultiViewProductos.ActiveViewIndex = 2;
-            GridViewModificarProductos.Visible = true;
-            GridViewModificarProductos.DataBind();
+            lblErrorModificarProducto.Text = "";
+            lblerrorverproducto.Text = "";
+            lblResultadoAgregarProducto.Text = "";
+            try
+            {
+                MultiViewProductos.ActiveViewIndex = 2;
+                GridViewModificarProductos.Visible = true;
+                GridViewModificarProductos.DataBind();
+            }
+            catch (Exception ex)
+            {
+                lblErrorModificarProducto.ForeColor = System.Drawing.Color.Red;
+                lblErrorModificarProducto.Text = "Error: El siguiente error ocurrió: " + ex.Message;
+                lblErrorModificarProducto.Visible = true;
+                Log4NetModule.Log4Net.WriteLog(ex, Log4NetModule.Log4Net.LogType.Error);
+            }
+            
+            
         }
 
         protected void btnAgregarProductos_Click(object sender, EventArgs e)
         {
             lblResultadoAgregarProducto.Text = "";
-            MultiViewProductos.ActiveViewIndex = 1;
-            lblProductos.Visible = true;
-            FileUploadAgregarProducto.Visible = true;
+            lblErrorModificarProducto.Text = "";
+            lblerrorverproducto.Text = "";
+            lblResultadoAgregarProducto.Text = "";
+            try
+            {
+                MultiViewProductos.ActiveViewIndex = 1;
+                lblProductos.Visible = true;
+                FileUploadAgregarProducto.Visible = true;
+            }
+            catch (Exception ex)
+            {
+                lblResultadoAgregarProducto.ForeColor = System.Drawing.Color.Red;
+                lblResultadoAgregarProducto.Text = "Error: El siguiente error ocurrió: " + ex.Message;
+                lblResultadoAgregarProducto.Visible = true;
+                Log4NetModule.Log4Net.WriteLog(ex, Log4NetModule.Log4Net.LogType.Error);
+            }
+            
         }
 
         protected void btnAgregarProducto_Click(object sender, EventArgs e)
@@ -132,6 +176,7 @@ namespace UAMShop.mantenimiento
                 {
                     lblResultadoAgregarProducto.ForeColor = System.Drawing.Color.Red;
                     lblResultadoAgregarProducto.Text = "Error al ingresar el producto: El siguiente error ocurrió: " + ex.Message;
+                    lblResultadoAgregarProducto.Visible = true;
                     Log4NetModule.Log4Net.WriteLog(ex, Log4NetModule.Log4Net.LogType.Error);
                 }
 
@@ -154,21 +199,39 @@ namespace UAMShop.mantenimiento
 
         protected void DataGrid1_ItemDataBound(object sender, DataGridItemEventArgs e)
         {
-            if (e.Item.ItemType == ListItemType.EditItem)
+            try
             {
-                DropDownList dropDownList1 = (DropDownList)e.Item.FindControl("Dropdownlist1");
-                DataRowView dataItem1 = (DataRowView)e.Item.DataItem;
-                dropDownList1.SelectedValue = (string)dataItem1.Row["IdCategoria"];
-
+                if (e.Item.ItemType == ListItemType.EditItem)
+                {
+                    DropDownList dropDownList1 = (DropDownList)e.Item.FindControl("Dropdownlist1");
+                    DataRowView dataItem1 = (DataRowView)e.Item.DataItem;
+                    dropDownList1.SelectedValue = (string)dataItem1.Row["IdCategoria"];
+                }
             }
+            catch (Exception ex)
+            {
+                lblResultadoAgregarProducto.ForeColor = System.Drawing.Color.Red;
+                lblResultadoAgregarProducto.Text = "Error: El siguiente error ocurrió: " + ex.Message;
+                Log4NetModule.Log4Net.WriteLog(ex, Log4NetModule.Log4Net.LogType.Error);
+            }
+            
         }
 
         protected void GridView1_RowUpdating(object sender, GridViewUpdateEventArgs e)
         {
-
-            FileUpload fileUpload = GridViewModificarProductos.Rows[e.RowIndex].FindControl("FileUpload1") as FileUpload;
-            fileUpload.SaveAs(Server.MapPath("../img/productos/") + fileUpload.FileName);
-            SqlDataSourceProductos.UpdateParameters["Imagen"].DefaultValue = "../img/productos/" + fileUpload.FileName;
+            try
+            {
+                FileUpload fileUpload = GridViewModificarProductos.Rows[e.RowIndex].FindControl("FileUpload1") as FileUpload;
+                fileUpload.SaveAs(Server.MapPath("../img/productos/") + fileUpload.FileName);
+                SqlDataSourceProductos.UpdateParameters["Imagen"].DefaultValue = "../img/productos/" + fileUpload.FileName;
+            }
+            catch (Exception ex)
+            {
+                lblErrorModificarProducto.ForeColor = System.Drawing.Color.Red;
+                lblErrorModificarProducto.Text = "Error: El siguiente error ocurrió: " + ex.Message;
+                Log4NetModule.Log4Net.WriteLog(ex, Log4NetModule.Log4Net.LogType.Error);
+            }
+            
         }
 
         protected void DropDownListCategorias_SelectedIndexChanged1(object sender, EventArgs e)

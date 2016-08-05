@@ -72,7 +72,7 @@
                 &nbsp;<br />
  
                 <div class="grid col-3 nav-padding">
-                <asp:TextBox class="form-control" ID="txtbCategoria" runat="server" Visible="False" placeholder="Nombre Categoria"></asp:TextBox>
+                <asp:TextBox class="form-control" ID="txtbCategoria" maxlength="20" runat="server" Visible="False" placeholder="Nombre Categoria"></asp:TextBox>
                 <asp:Button class="btn blue" ID="btnAgregarCat" runat="server" Text="Adicionar" Visible="False" OnClick="btnAgregarCat_Click" />
                     <br />
                     <br />

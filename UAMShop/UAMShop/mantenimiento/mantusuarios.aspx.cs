@@ -17,63 +17,121 @@ namespace UAMShop.mantenimiento
 
         protected void btnVerUsuario_Click(object sender, EventArgs e)
         {
-            MultiViewUsuarios.ActiveViewIndex = 0;
-            GridViewVerUsuarios.DataBind();
-            GridViewVerUsuarios.Visible = true;
+
+            lblErrorVerUsuarios.Text = "";
+            lblResultadoAgregarUsuario.Text = "";
+            lblErrorModificarUsuario.Text = "";
+
+            try
+            {
+                MultiViewUsuarios.ActiveViewIndex = 0;
+                GridViewVerUsuarios.DataBind();
+                GridViewVerUsuarios.Visible = true;
+            }
+            catch (Exception ex)
+            {
+                lblErrorVerUsuarios.ForeColor = System.Drawing.Color.Red;
+                lblErrorVerUsuarios.Text = "Error: El siguiente error ocurrió: " + ex.Message;
+                Log4NetModule.Log4Net.WriteLog(ex, Log4NetModule.Log4Net.LogType.Error);
+            }
+            
         }
 
         protected void btnAgregarUsuario_Click(object sender, EventArgs e)
         {
-            MultiViewUsuarios.ActiveViewIndex = 1;
-            GridViewModificarUsuarios.Visible = true;
-            GridViewModificarUsuarios.DataBind();
+
+            lblErrorVerUsuarios.Text = "";
+            lblResultadoAgregarUsuario.Text = "";
+            lblErrorModificarUsuario.Text = "";
+
+            try
+            {
+                MultiViewUsuarios.ActiveViewIndex = 1;
+                GridViewModificarUsuarios.Visible = true;
+                GridViewModificarUsuarios.DataBind();
+            }
+            catch (Exception ex)
+            {
+                lblResultadoAgregarUsuario.ForeColor = System.Drawing.Color.Red;
+                lblResultadoAgregarUsuario.Text = "Error: El siguiente error ocurrió: " + ex.Message;
+                Log4NetModule.Log4Net.WriteLog(ex, Log4NetModule.Log4Net.LogType.Error);
+            }
+            
         }
 
         protected void btnModificarUsuario_Click(object sender, EventArgs e)
         {
-            MultiViewUsuarios.ActiveViewIndex = 2;
-            GridViewModificarUsuarios.Visible = true;
-            GridViewModificarUsuarios.DataBind();
+
+            lblErrorVerUsuarios.Text = "";
+            lblResultadoAgregarUsuario.Text = "";
+            lblErrorModificarUsuario.Text = "";
+
+            try
+            {
+                MultiViewUsuarios.ActiveViewIndex = 2;
+                GridViewModificarUsuarios.Visible = true;
+                GridViewModificarUsuarios.DataBind();
+            }
+            catch (Exception ex)
+            {
+                lblErrorModificarUsuario.ForeColor = System.Drawing.Color.Red;
+                lblErrorModificarUsuario.Text = "Error: El siguiente error ocurrió: " + ex.Message;
+                Log4NetModule.Log4Net.WriteLog(ex, Log4NetModule.Log4Net.LogType.Error);
+            }
+           
 
         }
 
         protected void btnAgregarUsuario_Click1(object sender, EventArgs e)
         {
+
+            lblErrorVerUsuarios.Text = "";
+            lblResultadoAgregarUsuario.Text = "";
+            lblErrorModificarUsuario.Text = "";
             lblErrorUsuario.Visible = false;
             lblErrorNombre.Visible = false;
             lblErrorContrasena.Visible = false;
-
-            if (!string.IsNullOrWhiteSpace(txtbAgregarUsuario.Text) && !string.IsNullOrWhiteSpace(txtbAgregarNombreUsuario.Text) && !string.IsNullOrWhiteSpace(txtbAgregarContrasenaUsuario.Text))
+            try
             {
-                SqlDataSourceUsuarios.InsertParameters.Add("Usuario", txtbAgregarUsuario.Text);
-                SqlDataSourceUsuarios.InsertParameters.Add("Nombre", txtbAgregarNombreUsuario.Text);
-                SqlDataSourceUsuarios.InsertParameters.Add("Contrasena", txtbAgregarContrasenaUsuario.Text);
-                SqlDataSourceUsuarios.InsertParameters.Add("IdRol", DropDownListRol.SelectedItem.Value);
-                SqlDataSourceUsuarios.Insert();
-                lblResultadoAgregarUsuario.Text = "Usuario cargado satisfactoriamente!";
-                lblResultadoAgregarUsuario.Visible = true;
+                if (!string.IsNullOrWhiteSpace(txtbAgregarUsuario.Text) && !string.IsNullOrWhiteSpace(txtbAgregarNombreUsuario.Text) && !string.IsNullOrWhiteSpace(txtbAgregarContrasenaUsuario.Text))
+                {
+                    SqlDataSourceUsuarios.InsertParameters.Add("Usuario", txtbAgregarUsuario.Text);
+                    SqlDataSourceUsuarios.InsertParameters.Add("Nombre", txtbAgregarNombreUsuario.Text);
+                    SqlDataSourceUsuarios.InsertParameters.Add("Contrasena", txtbAgregarContrasenaUsuario.Text);
+                    SqlDataSourceUsuarios.InsertParameters.Add("IdRol", DropDownListRol.SelectedItem.Value);
+                    SqlDataSourceUsuarios.Insert();
+                    lblResultadoAgregarUsuario.Text = "Usuario cargado satisfactoriamente!";
+                    lblResultadoAgregarUsuario.Visible = true;
+                }
+                else
+                {
+                    if (string.IsNullOrWhiteSpace(txtbAgregarUsuario.Text))
+                    {
+                        lblErrorUsuario.ForeColor = System.Drawing.Color.Red;
+                        lblErrorUsuario.Text = "Dato Requerido!";
+                        lblErrorUsuario.Visible = true;
+                    }
+                    if (string.IsNullOrWhiteSpace(txtbAgregarNombreUsuario.Text))
+                    {
+                        lblErrorNombre.ForeColor = System.Drawing.Color.Red;
+                        lblErrorNombre.Text = "Dato Requerido!";
+                        lblErrorNombre.Visible = true;
+                    }
+                    if (string.IsNullOrWhiteSpace(txtbAgregarContrasenaUsuario.Text))
+                    {
+                        lblErrorContrasena.ForeColor = System.Drawing.Color.Red;
+                        lblErrorContrasena.Text = "Dato Requerido!";
+                        lblErrorContrasena.Visible = true;
+                    }
+                }
             }
-            else 
+            catch (Exception ex)
             {
-                if (string.IsNullOrWhiteSpace(txtbAgregarUsuario.Text))
-                { 
-                    lblErrorUsuario.ForeColor = System.Drawing.Color.Red;
-                    lblErrorUsuario.Text = "Dato Requerido!";
-                    lblErrorUsuario.Visible = true;
-                }
-                if (string.IsNullOrWhiteSpace(txtbAgregarNombreUsuario.Text))
-                {
-                    lblErrorNombre.ForeColor = System.Drawing.Color.Red;
-                    lblErrorNombre.Text = "Dato Requerido!";
-                    lblErrorNombre.Visible = true;
-                }
-                if (string.IsNullOrWhiteSpace(txtbAgregarContrasenaUsuario.Text))
-                {
-                    lblErrorContrasena.ForeColor = System.Drawing.Color.Red;
-                    lblErrorContrasena.Text = "Dato Requerido!";
-                    lblErrorContrasena.Visible = true;
-                }
+                lblResultadoAgregarUsuario.ForeColor = System.Drawing.Color.Red;
+                lblResultadoAgregarUsuario.Text = "Error: El siguiente error ocurrió: " + ex.Message;
+                Log4NetModule.Log4Net.WriteLog(ex, Log4NetModule.Log4Net.LogType.Error);
             }
+            
         }
 
         protected void DataGrid1_ItemDataBound(object sender, DataGridItemEventArgs e)
@@ -85,8 +143,6 @@ namespace UAMShop.mantenimiento
                 dropDownList1.SelectedValue = (string)dataItem1.Row["IdRol"];
 
             }
-        }
-
-        
+        }   
     }
 }

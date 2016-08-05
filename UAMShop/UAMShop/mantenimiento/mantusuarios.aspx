@@ -72,6 +72,9 @@
                 <RowStyle CssClass="rowstyle" />
                 </asp:GridView>
 
+                <br />
+                <asp:Label ID="lblErrorVerUsuarios" runat="server" Text=""></asp:Label>
+
             </asp:View>
             <asp:View ID="View2" runat="server">
                 <br />
@@ -81,17 +84,17 @@
                 &nbsp;<br />
                 <br />
                 <asp:Label align="left" display="inline-block" width= "200px" ID="lblAgregarUsuario" runat="server" Text="Usuario: "></asp:Label>
-                <asp:TextBox class="form-control" ID="txtbAgregarUsuario" runat="server" placeholder="Ej: Juan.Perez@gmail.com"></asp:TextBox>
+                <asp:TextBox class="form-control" maxlength="40" ID="txtbAgregarUsuario" runat="server" placeholder="Ej: Juan.Perez@gmail.com"></asp:TextBox>
                 <asp:Label ID="lblErrorUsuario" runat="server" Text="" Visible="False"></asp:Label>
                 <br />
                 <br />
                 <asp:Label ID="lblAgregarNombreUsuario" width= "200px" runat="server" Text="Nombre del usuario: "></asp:Label>
-                <asp:TextBox class="form-control" ID="txtbAgregarNombreUsuario" runat="server" placeholder="Ej: Juan Perez"></asp:TextBox>
+                <asp:TextBox class="form-control" maxlength="30" ID="txtbAgregarNombreUsuario" runat="server" placeholder="Ej: Juan Perez"></asp:TextBox>
                 <asp:Label ID="lblErrorNombre" runat="server" Text="" Visible="False"></asp:Label>
                 <br />
                 <br />
                 <asp:Label ID="lblAgregarContrasenaUsuario" width= "200px" runat="server" Text="Contrasena: "></asp:Label>
-                <asp:TextBox class="form-control" ID="txtbAgregarContrasenaUsuario" runat="server" placeholder="Contrasena"></asp:TextBox>
+                <asp:TextBox class="form-control" maxlength="40" ID="txtbAgregarContrasenaUsuario" runat="server" placeholder="Contrasena"></asp:TextBox>
                 <asp:Label ID="lblErrorContrasena" runat="server" Visible="False"></asp:Label>
                 <br />
                 <br />
@@ -143,6 +146,8 @@
                 <HeaderStyle CssClass="headerstyle" />
                 <RowStyle CssClass="rowstyle" />
                 </asp:GridView>
+                    <br />
+                    <asp:Label ID="lblErrorModificarUsuario" runat="server" Text=""></asp:Label>
             </asp:View>
         </asp:MultiView>
     </form>
