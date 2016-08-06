@@ -14,12 +14,33 @@
         <link href="../css/font-awesome.min.css" rel="stylesheet" />
         <link href="../css/gridStyle.css" rel="stylesheet" />
         <link href="../css/datagrid.css" rel="stylesheet" />
+        <style>
+        footer{
+            bottom: 0px;
+            position: fixed;
+            left: 0;
+            right: 0;
+        }
+    </style>
     </head>
-
-            <div>
-                <h3 class="nav-menu">Bienvenido al modulo de mantenimiento de categorias </h3>
+        <section class="grey-bg">
+        <div class="division"></div>
+        <div class="container">
+            <div class="row">
+                <div class="grid col-12">
+                        <h4>Bienvenido al modulo de mantenimiento de categorias </h4>
+                </div>
             </div>
-            <asp:Label ID="LblMantenimiento" runat="server" Text="Seleccionar la modificacion a realizar: "></asp:Label>
+        </div>
+        <div class="division"></div>
+    </section>
+
+        <section class="container">
+        <div class="division"></div>
+        <div class="row">
+            <div class="grid col-12">
+                <div class="row">
+		<asp:Label ID="LblMantenimiento" runat="server" Text="Seleccionar la modificacion a realizar: "></asp:Label>
             <br />
             <br />
 
@@ -75,6 +96,8 @@
 
                     <div class="grid col-3 nav-padding">
                         <asp:TextBox class="form-control" ID="txtbCategoria" MaxLength="30" runat="server" Visible="False" placeholder="Nombre Categoria"></asp:TextBox>
+                        <br />
+            <br />
                         <asp:Button class="btn blue" ID="btnAgregarCat" runat="server" Text="Adicionar" Visible="False" OnClick="btnAgregarCat_Click" />
                         <br />
                         <br />
@@ -95,20 +118,8 @@
                     </asp:GridView>
                 </asp:View>
             </asp:MultiView>
-        <div class="division"></div>
-        <div class="division"></div>
-        <div class="division"></div>
-        <div class="division"></div>
-        <div class="division"></div>
-        <div class="division"></div>
-        <div class="division"></div>
-        <div class="division"></div>
-        <div class="division"></div>
-        <div class="division"></div>
-        <div class="division"></div>
-        <div class="division"></div>
-        <div class="division"></div>
-        <div class="division"></div>
-        <div class="division"></div>
-        </section>
+                </div>
+            </div>
+        </div>
+    </section>
 </asp:Content>

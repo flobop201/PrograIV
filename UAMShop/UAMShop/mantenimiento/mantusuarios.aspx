@@ -7,6 +7,7 @@
 <!DOCTYPE html>
 
 <head >
+
     <title></title>
     <link href="../css/generalStyle.css" rel="stylesheet" />
     <link href="../css/navBarStyle.css" rel="stylesheet" />
@@ -14,13 +15,38 @@
     <link href="../css/font-awesome.min.css" rel="stylesheet" />
     <link href="../css/gridStyle.css" rel="stylesheet" />
     <link href="../css/datagrid.css" rel="stylesheet" />
+    <style>
+        footer{
+            bottom: 0px;
+            position: fixed;
+            left: 0;
+            right: 0;
+        }
+    </style>
 </head>
 
     <div>
-    <h3 class="nav-menu"> Bienvenido al modulo de mantenimiento de usuarios </h3>
-    </div>
-
-         <asp:SqlDataSource ID="SqlDataSourceUsuarios" runat="server"
+          <section class="grey-bg">
+        <div class="division"></div>
+        <div class="container">
+            <div class="row">
+                <div class="grid col-12">
+                        <h4>Bienvenido al modulo de mantenimiento de usuarios </h4>
+                </div>
+            </div>
+        </div>
+        <div class="division"></div>
+    </section>
+       <section class="container">
+        <div class="division"></div>
+        <div class="row">
+            <div class="grid col-12">
+                <div class="row">
+		<br />
+                    <asp:Label ID="LblMantProductos" runat="server" Text="Seleccionar la modificacion a realizar: "></asp:Label>
+            <br />
+            <br />
+                     <asp:SqlDataSource ID="SqlDataSourceUsuarios" runat="server"
             ConnectionString="<% $AppSettings:ConnectionString %> "
             SelectCommandType="StoredProcedure" 
             SelectCommand="selectusers"
@@ -170,20 +196,12 @@
                     <asp:Label ID="lblErrorModificarUsuario" runat="server" Text=""></asp:Label>
             </asp:View>
         </asp:MultiView>
-        <div class="division"></div>
-        <div class="division"></div>
-        <div class="division"></div>
-        <div class="division"></div>
-        <div class="division"></div>
-        <div class="division"></div>
-        <div class="division"></div>
-        <div class="division"></div>
-        <div class="division"></div>
-        <div class="division"></div>
-        <div class="division"></div>
-        <div class="division"></div>
-        <div class="division"></div>
-        <div class="division"></div>
-        <div class="division"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </div>
+
+        
         </section>
 </asp:Content>

@@ -3,7 +3,14 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
+    <style>
+        footer{
+            bottom: 0px;
+            position: fixed;
+            left: 0;
+            right: 0;
+        }
+    </style>
     <br />
     <section>
         <div class="container">
