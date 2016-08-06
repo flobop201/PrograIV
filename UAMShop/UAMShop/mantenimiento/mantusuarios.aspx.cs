@@ -99,6 +99,7 @@ namespace UAMShop.mantenimiento
                     SqlDataSourceUsuarios.InsertParameters.Add("Nombre", txtbAgregarNombreUsuario.Text);
                     SqlDataSourceUsuarios.InsertParameters.Add("Contrasena", txtbAgregarContrasenaUsuario.Text);
                     SqlDataSourceUsuarios.InsertParameters.Add("IdRol", DropDownListRol.SelectedItem.Value);
+                    SqlDataSourceUsuarios.InsertParameters.Add("Estado", "1");
                     SqlDataSourceUsuarios.Insert();
                     lblResultadoAgregarUsuario.Text = "Usuario cargado satisfactoriamente!";
                     lblResultadoAgregarUsuario.Visible = true;
@@ -134,6 +135,7 @@ namespace UAMShop.mantenimiento
             
         }
 
+
         protected void DataGrid1_ItemDataBound(object sender, DataGridItemEventArgs e)
         {
             if (e.Item.ItemType == ListItemType.EditItem)
@@ -143,6 +145,9 @@ namespace UAMShop.mantenimiento
                 dropDownList1.SelectedValue = (string)dataItem1.Row["IdRol"];
 
             }
-        }   
+        }
+
+
+
     }
 }

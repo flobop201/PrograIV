@@ -1,9 +1,13 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="mantproductos.aspx.cs" Inherits="UAMShop.mantenimiento.mantproductos" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/MasterPages/MainTemplate.Master" CodeBehind="mantproductos.aspx.cs" Inherits="UAMShop.mantenimiento.mantproductos" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <section>
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
+
+<head >
     <title></title>
     <link href="../css/generalStyle.css" rel="stylesheet" />
     <link href="../css/navBarStyle.css" rel="stylesheet" />
@@ -12,8 +16,7 @@
     <link href="../css/gridStyle.css" rel="stylesheet" />
     <link href="../css/datagrid.css" rel="stylesheet" />
 </head>
-<body>
-    <form id="form1" runat="server">
+
     <div>
     
         <h3 class="nav-menu"> Bienvenido al modulo de mantenimiento de productos </h3>
@@ -70,7 +73,7 @@
                 <asp:BoundField DataField="Categoria" HeaderText="Categoria"/>
                 <asp:ImageField DataImageUrlField = "Imagen"
                  DataImageUrlFormatString="~/Photos/{0}"
-                 ControlStyle-Width = "100" ControlStyle-Height = "100"
+                 ControlStyle-Height = "100" 
                  HeaderText = "Imagen previa"
                  runat="server"/>
                 </Columns>
@@ -93,7 +96,7 @@
                 <br />
                 <br />
                 <asp:Label ID="lblAgregarNombreProducto" width= "200px" runat="server" Text="Nombre del producto: "></asp:Label>
-                <asp:TextBox class="form-control" maxlength="20" ID="txtbAgregarNombreProducto" runat="server" placeholder="Nombre" Width="245px"></asp:TextBox>
+                <asp:TextBox class="form-control" maxlength="30" ID="txtbAgregarNombreProducto" runat="server" placeholder="Nombre" Width="245px"></asp:TextBox>
                 <asp:Label ID="lblErrorNombre" runat="server" Text="" Visible="False"></asp:Label>
                 <br />
                 <br />
@@ -160,7 +163,7 @@
                          <ItemTemplate>
                              <asp:Image ID="Image1" runat="server" 
                                 ImageUrl='<%# Eval("Imagen","~/Images/{0}") %>'
-                                ControlStyle-Width = "100" ControlStyle-Height = "100"
+                                ControlStyle-Height = "100"
                                 HeaderText = "Imagen previa"/>
                          </ItemTemplate>
                      </asp:TemplateField>
@@ -172,6 +175,20 @@
                 <asp:Label ID="lblErrorModificarProducto" runat="server" Visible="False"></asp:Label>
             </asp:View>
         </asp:MultiView>
-    </form>
-</body>
-</html>
+        <div class="division"></div>
+        <div class="division"></div>
+        <div class="division"></div>
+        <div class="division"></div>
+        <div class="division"></div>
+        <div class="division"></div>
+        <div class="division"></div>
+        <div class="division"></div>
+        <div class="division"></div>
+        <div class="division"></div>
+        <div class="division"></div>
+        <div class="division"></div>
+        <div class="division"></div>
+        <div class="division"></div>
+        <div class="division"></div>
+        </section>
+</asp:Content>

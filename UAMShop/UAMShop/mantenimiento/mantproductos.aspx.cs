@@ -126,6 +126,7 @@ namespace UAMShop.mantenimiento
                                 lblErrorCodigo.Visible = true;
                             }
 
+
                             if (string.IsNullOrWhiteSpace(txtbAgregarNombreProducto.Text))
                             {
                                 lblErrorNombre.ForeColor = System.Drawing.Color.Red;
@@ -145,6 +146,12 @@ namespace UAMShop.mantenimiento
                                     lblErrorExistencia.ForeColor = System.Drawing.Color.Red;
                                     lblErrorExistencia.Text = "Solo numeros son permitidos!";
                                     lblErrorExistencia.Visible = true;
+                                }
+                                if (!System.Text.RegularExpressions.Regex.IsMatch(txtbAgregarCodigoProducto.Text, "[ ^ 0-9]"))
+                                {
+                                    lblErrorCodigo.ForeColor = System.Drawing.Color.Red;
+                                    lblErrorCodigo.Text = "Solo numeros son permitidos!";
+                                    lblErrorCodigo.Visible = true;
                                 }
                             }
 

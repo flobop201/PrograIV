@@ -14,7 +14,6 @@
     <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css" />
     <link rel="stylesheet" type="text/css" href="../css/generalStyle.css">
     <link rel="stylesheet" type="text/css" href="../css/alert.css" />    
-    <link rel="stylesheet" type="text/css" href="../css/modal-popup.css"  />
     <!-- Scripts -->
     <script type="text/javascript" src="../js/prograIV.js"></script>
     <script type="text/javascript" src="../js/slider.js"></script>
@@ -53,7 +52,16 @@
                                 <%}
                                foreach (var subitem in submenus)
                                {
-                                %><li><a href="<% Page.Response.Write(item.Pagina); %>?id=<% if (subitem.IdCategoria>0){ Page.Response.Write(subitem.IdCategoria);} %>"><% Page.Response.Write(subitem.Menu); %> </a></li><%
+                                %><li><a href="<% if (subitem.IdCategoria > 0)
+                                                  {
+                                                      Page.Response.Write(subitem.Pagina); %>../category/category.aspx?id=<% Page.Response.Write(subitem.IdCategoria);
+                                                                                                      
+                                                  }
+                                                  else 
+                                                  {
+                                                      Page.Response.Write(subitem.Pagina);
+                                                  }
+                                                  %>"><% Page.Response.Write(subitem.Menu); %> </a></li><%
                                }
                                if (submenus.Any()){%>
                             </ul>

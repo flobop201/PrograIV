@@ -21,10 +21,13 @@ namespace UAMShop
             UserBE usuario = LoginModule.Login.Autenticar(correo.Text, password.Text);
             if (usuario.IdUsuario != null)
             {
-                Session["usuario"] = usuario;
+                Session["usuario"] = usuario.Usuario;
                 Session["usuario_nombre"] = usuario.Nombre;
                 Session["usuario_correo"] = usuario.Usuario;
                 Session["usuario_id"] = usuario.IdUsuario;
+                Session["usuario_idrol"] = usuario.IdRol;
+                Session["usuario_estado"] = usuario.Estado;
+                Session["usuario_fecha_suscripcion"] = usuario.FechaSuscripcion;
                 HttpCookie returnCookie = Request.Cookies["returnUrl"];
                 Response.Redirect(returnCookie.Value);
             }

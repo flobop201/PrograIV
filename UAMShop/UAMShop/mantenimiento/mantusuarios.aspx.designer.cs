@@ -13,15 +13,6 @@ namespace UAMShop.mantenimiento {
     public partial class mantusuarios {
         
         /// <summary>
-        /// form1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-        
-        /// <summary>
         /// SqlDataSourceUsuarios control.
         /// </summary>
         /// <remarks>
@@ -38,6 +29,15 @@ namespace UAMShop.mantenimiento {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSourceRol;
+        
+        /// <summary>
+        /// SqlDataSourceEstado control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSourceEstado;
         
         /// <summary>
         /// btnVerUsuarios control.

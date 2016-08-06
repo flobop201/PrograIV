@@ -30,5 +30,28 @@ namespace UserModule
             set { idUsuario = value; }
         }
 
+        private string idRol;
+
+        public string IdRol
+        {
+            get { return idRol; }
+            set { idRol = value; }
+        }
+
+        private string estado;
+
+        public string Estado
+        {
+            get { return estado; }
+            set { estado = value; }
+        }
+
+        private DateTime fechaSuscripcion;
+
+        public DateTime FechaSuscripcion
+        {
+            get { return fechaSuscripcion; }
+            set { fechaSuscripcion = value; }
+        }
     }
 }

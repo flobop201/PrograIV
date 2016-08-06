@@ -63,6 +63,10 @@ namespace LoginModule
                     usuario.Nombre = userReader["Nombre"].ToString();
                     usuario.Usuario = userReader["Usuario"].ToString();
                     usuario.IdUsuario = userReader["IdUsuario"].ToString();
+                    usuario.IdRol = (userReader["Rol"].ToString());
+                    usuario.Estado = (userReader["EstadoA"].ToString());
+                    usuario.FechaSuscripcion = Convert.ToDateTime(userReader["FechaSuscripcion"]);
+                    
                 }
                 conexion.Close();
                 return usuario;
@@ -73,5 +77,6 @@ namespace LoginModule
                 throw;
             }
         }
+
     }
 }
