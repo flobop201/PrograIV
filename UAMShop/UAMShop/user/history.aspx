@@ -17,7 +17,7 @@
                     <tr>
                         <td><% Page.Response.Write(compra.IdFactura); %></td>
                         <td><% Page.Response.Write(compra.Fecha); %></td>
-                        <td><% Page.Response.Write(string.Format("{0:C}", compra.Monto)); %></td>
+                        <td><% Page.Response.Write(string.Format("₡ {0:N}", compra.Monto)); %></td>
                         <td><% Page.Response.Write(compra.Tarjeta); %></td>
                         <td><% Page.Response.Write(compra.Titular); %></td>
                     </tr>

@@ -92,7 +92,6 @@
     <Content Include="img\productos\147710.png" />
     <Content Include="img\productos\149083.png" />
     <Content Include="img\productos\149084.png" />
-    <Content Include="img\productos\34344.png" />
     <Content Include="img\sprite.png" />
     <Content Include="index.aspx" />
     <Content Include="informacion.aspx" />
@@ -222,6 +221,8 @@
     <Content Include="fonts\FontAwesome.otf" />
     <Content Include="MasterPages\CategoryTemplate.master" />
     <Content Include="packages.config" />
+    <None Include="Properties\PublishProfiles\uamcr - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\uamcr - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

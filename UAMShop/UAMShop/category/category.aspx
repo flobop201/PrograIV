@@ -33,7 +33,7 @@
         <div class="prod-thumb">
             <input id="codigo" type="hidden" value="<%  Page.Response.Write(producto.Codigo); %>" />
                 <img height="195" src="<%  Page.Response.Write(producto.Imagen); %>">
-                <span><%  Page.Response.Write(String.Format("{0:C}", producto.Precio)); %></span>
+                <span><%  Page.Response.Write(String.Format("₡ {0:N}", producto.Precio)); %></span>
                 <% if (producto.Existencia == 0)
                    {
                 %> <font color="red"> <%Page.Response.Write(String.Format("(Agotado)"));%> </font><%
