@@ -43,7 +43,7 @@ namespace UAMShop.category
             switch (resultado)
             {
                 case true:
-                    mensaje = string.Format("Producto eliminado al carrito de compras.");
+                    mensaje = string.Format("Producto eliminado del carrito de compras.");
                     break;
                 case false:
                     mensaje = string.Format("El producto no ha sido eliminado del carrito de compras.");

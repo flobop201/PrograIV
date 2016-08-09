@@ -65,7 +65,10 @@
 	width:91.66666667%;
 }
 .grid.col-12{
-	width:100%;
+	width:98%;
+    top: -9px;
+    left: -6px;
+    height: 30px;
 }
 .leftFloat{
 	float: left;

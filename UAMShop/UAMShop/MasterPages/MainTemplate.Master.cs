@@ -38,6 +38,7 @@ namespace UAMShop.MasterPages
             Session.Remove("usuario_correo");
             Session.Remove("usuario_id");
             Response.Redirect(Request.RawUrl);
+            ScriptManager.RegisterStartupScript(this, typeof(Page), "invocarfuncion", "MostrarLogoutCarrito()", true);
         }
     }
 }

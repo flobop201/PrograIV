@@ -22,7 +22,6 @@
 				<div class="grid col-6" style="border:1px solid #ccc; border-radius: 4px; padding:25px">
 					<div class="row">
 					    <div class="grid col-6">
-					    	<%--<input type="text" name="correo" id="correo" class="form-control wide" placeholder="Correo"/>--%>
                             <asp:TextBox ID="correo" Name="correo" Type="text" runat="server" CssClass="form-control wide" placeholder="Correo"></asp:TextBox>
 					    </div>
 					    <div class="grid col-6">
@@ -31,15 +30,25 @@
 					    </div>
 					</div>
 					<div class="division"></div>
-					<div class="row">
+                    <div class="row">
 					    <div class="grid col-12">
-					    	<a class="btn blue wide" href="#" role="button" runat="server" onserverclick="login_btn_Click">Ingresar</a>
-                            
+                            <br />
+					    	<a id="A1" class="btn blue wide" href="#" role="button" runat="server" onserverclick="login_btn_Click">Ingresar</a>
+					    </div>
+					</div>
+                    <div class="division"></div>
+                    <div class="division"></div>
+                    <div class="row">
+					    <div class="grid col-12">
+                            <asp:LinkButton ID="lbtnRegistrar" runat="server" PostBackUrl="~/user/register.aspx">Nuevo usuario? Registrate aqui</asp:LinkButton>            
 					    </div>
 					</div>
 				</div>
 				<div class="grid col-2"></div>
 			</div>
+            <br />
+            <br />
+            <br />
 		</div>
 		<div class="division"></div>
 	</section>

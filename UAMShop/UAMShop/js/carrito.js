@@ -1,24 +1,24 @@
-﻿jQuery(document).ready(function () {      
+﻿jQuery(document).ready(function () {
     /*$('.alert').hide();  */
 
-    $('.btnDeleteitem').click(function () {     
+    $('.btnDeleteitem').click(function () {
         var $parent = $(this).parents('#parent');
-        var id = $('#id', $parent).val();       
-        deletebyAjax(id, $(this));        
+        var id = $('#id', $parent).val();
+        deletebyAjax(id, $(this));
     });
 
     $('#btnRelizarCompra').click(function () {
         var correo = $('#correo').val();
         var titular = $('#titular').val();
         var tarjeta = $('#tarjeta').val();
-        realizarComprabyAjax(correo,titular,tarjeta);
+        realizarComprabyAjax(correo, titular, tarjeta);
     });
 
     $(".cantidad").bind('keyup mouseup', function () {
         debugger;
         var $parent = $(this).parents('#parent');
-        var id = $('#id',$parent).val();
-        var cantidad = $('#cantidad',$parent).val();
+        var id = $('#id', $parent).val();
+        var cantidad = $('#cantidad', $parent).val();
         actualizarCantidadbyAjax(id, cantidad);
     });
 
@@ -38,13 +38,13 @@
 
 function realizarBusquedabyAjax() {
     debugger;
-    var newUrl =  "../category/category.aspx?search=" + $('#busqueda').val();
+    var newUrl = "../category/category.aspx?search=" + $('#busqueda').val();
     window.location.href = newUrl;
 };
 
 function deletebyAjax(id, $self) {
     debugger;
-    var actionData = "{'id': '" + id + "'}";    
+    var actionData = "{'id': '" + id + "'}";
     $.ajax(
     {
         url: "cart.aspx/Eliminar",
@@ -52,23 +52,19 @@ function deletebyAjax(id, $self) {
         dataType: "json",
         type: "POST",
         contentType: "application/json; charset=utf-8",
-        success: function (msg) {                   
+        success: function (msg) {
             var $parent = $self.parents('.listaCarrito');
             $parent.hide();
-            $('.alert').show();
-            $('#txtMensaje').text(msg.d);
-            $('#mensaje').addClass("info");           
+            alertify.success(msg.d);
         },
         error: function (result) {
-            $('.alert').show();
-            $('#txtMensaje').text(result.d);
-            $('#mensaje').addClass("alert");
+            alertify.error(result.d);
         }
-    });   
+    });
 };
 
 function realizarComprabyAjax(correo, titular, tarjeta) {
-    var actionData = "{'correo': '" + correo + "', 'titular': '" + titular + "', 'tarjeta': '"+tarjeta+"' }";
+    var actionData = "{'correo': '" + correo + "', 'titular': '" + titular + "', 'tarjeta': '" + tarjeta + "' }";
     debugger;
     $.ajax(
     {
@@ -77,16 +73,11 @@ function realizarComprabyAjax(correo, titular, tarjeta) {
         dataType: "json",
         type: "POST",
         contentType: "application/json; charset=utf-8",
-        success: function (msg) {                       
-            $('.listaCarrito').hide();
-            $('.alert').show();
-            $('#txtMensaje').text(msg.d);
-            $('#mensaje').addClass("success");
+        success: function (msg) {
+            alertify.success(msg.d);
         },
         error: function (result) {
-            $('.alert').show();
-            $('#txtMensaje').text(result.d);
-            $('#mensaje').addClass("alert");
+            alertify.error(result.d);
         }
     });
     debugger;
@@ -104,9 +95,9 @@ function actualizarCantidadbyAjax(id, cantidad) {
         type: "POST",
         contentType: "application/json; charset=utf-8",
         success: function (msg) {
-            location.reload();            
+            location.reload();
         },
-        error: function (result) {          
+        error: function (result) {
         }
 
     });
@@ -125,14 +116,10 @@ function agregarCarritobyAjax(codigo, cantidad) {
         type: "POST",
         contentType: "application/json; charset=utf-8",
         success: function (msg) {
-            $('.alert').show();
-            $('#txtMensaje').text(msg.d);
-            $('#mensaje').addClass("info");
+            alertify.success(msg.d);
         },
         error: function (result) {
-            $('.alert').show();
-            $('#txtMensaje').text(result.d);
-            $('#mensaje').addClass("alert");
+            alertify.error(result.d);
         }
 
     });
@@ -146,3 +133,17 @@ function DesplegarCredencialesInvalidas(mensaje) {
         $('#mensaje').addClass("alert");
     }, 0);
 }
+
+$("#cantidad").keypress(function (evt) {
+    evt.preventDefault();
+    var elid = $(document.activeElement).hasClass('cantidad');
+    console.log(e.keyCode + ' && ' + elid);
+    if (e.keyCode === 8 && !elid) {
+        return false;
+    };
+});
+
+function MostrarLogoutCarrito() {
+    debugger;
+    alertify.success('Sesion finalizada');
+};

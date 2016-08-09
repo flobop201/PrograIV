@@ -84,7 +84,7 @@
             <asp:View ID="View1" runat="server">
                 <br />
                 <br />
-                <asp:GridView ID="GridViewVerProductos" runat="server" CssClass="tablestyle" DataSourceID="SqlDataSourceProductos" Visible="False" AllowSorting="True" AutoGenerateColumns="False">
+                <asp:GridView ID="GridViewVerProductos" runat="server" CssClass="tablestyle" DataSourceID="SqlDataSourceProductos" Visible="False" AllowSorting="True" AutoGenerateColumns="False" CaptionAlign="Left">
                 
                 <Columns>
                 <asp:BoundField DataField="Codigo" HeaderText="Codigo" 
@@ -96,13 +96,17 @@
                 <asp:BoundField DataField="Precio" HeaderText="Precio" 
                 InsertVisible="False" ReadOnly="True" SortExpression="Precio" />
                 <asp:BoundField DataField="Categoria" HeaderText="Categoria"/>
-                <asp:ImageField DataImageUrlField = "Imagen"
+                <asp:ImageField  DataImageUrlField = "Imagen"
                  DataImageUrlFormatString="~/Photos/{0}"
                  ControlStyle-Height = "100" 
                  HeaderText = "Imagen previa"
-                 runat="server"/>
+                 runat="server">
+                    <ControlStyle Height="100px" />
+                    <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
+                    </asp:ImageField>
                 </Columns>
                 <AlternatingRowStyle CssClass="altrowstyle" />
+                    <EditRowStyle HorizontalAlign="Center" VerticalAlign="Middle" />
                 <HeaderStyle CssClass="headerstyle" />
                 <RowStyle CssClass="rowstyle" />
                 </asp:GridView>
@@ -183,7 +187,12 @@
                 </asp:TemplateField>
                      <asp:TemplateField HeaderText="Imagen" SortExpression="Imagen">
                          <EditItemTemplate>
-                             <asp:FileUpload ID="FileUpload1" runat="server" />
+                             <asp:FileUpload ID="FileUpload1" value='<%# Eval("Imagen","~/Images/{0}") %>' runat="server" 
+                             />
+                             <asp:Image ID="Image1" runat="server" 
+                                ImageUrl='<%# Eval("Imagen","~/Images/{0}") %>'
+                                ControlStyle-Height = "100"
+                                HeaderText = "Imagen previa"/>
                          </EditItemTemplate>
                          <ItemTemplate>
                              <asp:Image ID="Image1" runat="server" 
@@ -191,6 +200,7 @@
                                 ControlStyle-Height = "100"
                                 HeaderText = "Imagen previa"/>
                          </ItemTemplate>
+                         <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
                      </asp:TemplateField>
                     </Columns>
                 <AlternatingRowStyle CssClass="altrowstyle" />

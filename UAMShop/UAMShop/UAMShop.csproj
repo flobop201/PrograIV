@@ -63,6 +63,8 @@
     <Content Include="category\cart.aspx" />
     <Content Include="category\category.aspx" />
     <Content Include="css\alert.css" />
+    <Content Include="css\alertify.core.css" />
+    <Content Include="css\alertify.default.css" />
     <Content Include="css\datagrid.css" />
     <Content Include="css\font-awesome.css" />
     <Content Include="css\font-awesome.min.css" />
@@ -94,6 +96,8 @@
     <Content Include="img\sprite.png" />
     <Content Include="index.aspx" />
     <Content Include="informacion.aspx" />
+    <Content Include="js\alertify.js" />
+    <Content Include="js\alertify.min.js" />
     <Content Include="js\carrito.js" />
     <Content Include="js\prograIV.js" />
     <Content Include="js\slider.js" />
@@ -207,6 +211,7 @@
     <Compile Include="user\register.aspx.designer.cs">
       <DependentUpon>register.aspx</DependentUpon>
     </Compile>
+    <Compile Include="user\SendMail.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="MasterPages\MainTemplate.Master" />
@@ -240,6 +245,10 @@
     <ProjectReference Include="..\MenuModule\MenuModule.csproj">
       <Project>{c6a1693f-032a-43f3-8d59-6d69bfa88e53}</Project>
       <Name>MenuModule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NotificationModule\NotificationModule.csproj">
+      <Project>{ade95714-013c-4cf0-9541-e99744601c98}</Project>
+      <Name>NotificationModule</Name>
     </ProjectReference>
     <ProjectReference Include="..\ProductModule\ProductModule.csproj">
       <Project>{c87071ac-ec0d-4b1d-a560-41261db95189}</Project>

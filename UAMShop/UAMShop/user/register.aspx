@@ -38,7 +38,7 @@
                 /*indicamos que el margen izquierdo, es la mitad de la anchura*/
                 margin-left: -240px;
                 /*/*determinamos una altura*/
-                height: 480px;
+                height: 550px;
                 /*indicamos que el margen superior, es la mitad de la altura*/
                 margin-top: -150px;
                 border: 1px solid #cccccc;
@@ -52,28 +52,48 @@
                 font-weight: bold;
             }
         </style>
+
+        <asp:SqlDataSource ID="SqlDataSourceCrearCuenta" runat="server"
+            ConnectionString="<% $AppSettings:ConnectionString %> "
+            InsertCommandType="StoredProcedure"
+            InsertCommand="usp_usuariosInsert">
+         </asp:SqlDataSource>
         <div class="test centrar" style="border-radius: 5px; padding: 40px;">
             <h3><i class="fa fa-user"></i> Crear mi cuenta </h3>
-            <label for="nombre">Su nombre:</label>
-            <input type="email" id="nombre" required="" value="" placeholder="Ingresa tu nombre aqui" maxlength="50" />
+            <label for="nombre">Su nombre:
+            <asp:Label ID="lblErrorNombre" runat="server" Text=""></asp:Label>
+            </label>
+            <asp:TextBox ID="txtbnombre" runat="server" placeholder="Ingresa tu nombre aqui" maxlength="50"></asp:TextBox>
 
-            <label for="correo">Correo:</label>
-            <input type="email" id="correo" style="text-transform: lowercase" required="" value="" placeholder="usuario@dominio.com" maxlength="50" />
+            <label for="correo">Correo:
+            <asp:Label ID="lblErrorCorreo" runat="server" Text=""></asp:Label>
+            </label>
+            <asp:TextBox ID="txtbcorreo" runat="server" placeholder="usuario@dominio.com" maxlength="50"></asp:TextBox>
 
-            <label for="contrasena">Contraseña:</label>
-            <input type="password" id="contrasena" required="" placeholder="Define tu contraseña ( Máximo 10 caracteres )" maxlength="10" />
-            <label for="repetircontrasena">Repetir contraseña:</label>
-            <input type="password" id="repetircontrasena" required="" placeholder="Vuelve a escribir tu contraseña " maxlength="10" />
+            <label for="contrasena">Contraseña:
+            <asp:Label ID="lblErrorContrasena" runat="server" Text=""></asp:Label>
+            </label>
+            <asp:TextBox ID="txtbcontrasena" placeholder="Define tu contraseña ( Máximo 10 caracteres )" runat="server"></asp:TextBox>
+            <label for="repetircontrasena">Repetir contraseña:
+            <asp:Label ID="lblErrorRepetirContrasena" runat="server" Text="Label"></asp:Label>
+            </label>
+            <asp:TextBox ID="txtbrepetircontrasena" runat="server" placeholder="Vuelve a escribir tu contraseña " maxlength="10"></asp:TextBox>
             <div>
                 <br />
                 <span style="font-size: 12px">Al crear una cuenta , usted está de acuerdo a las condiciones de uso y privacidad de  UAM SHOP.</span>
                 <br />
                 <br />
-                <label>Ya tienes una cuenta? <a href="#">Inicia sesión</a></label>
+                <label>Ya tienes una cuenta? </label>
+                <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="~/login.aspx">Iniciar sesion</asp:LinkButton>
                 <br />
                 <br />
-                <a id="btnRelizarCompra" class="btn blue wide" role="button">Crear cuenta UAM SHOP <i class="fa fa-chevron-right"></i></a>
+                <asp:Button ID="btnRelizarCompra" class="btn blue wide" runat="server" Text="Crear cuenta UAM SHOP" OnClick="btnRelizarCompra_Click" />
             </div>
+            <div>
+                <asp:Label ID="lblResultadoCrearUsuario" runat="server" Text=""></asp:Label>
+            </div>
+            <div class="row">
+             </div>
         </div>
     </form>
     <link rel="stylesheet" type="text/css" href="../css/gridStyle.css">
