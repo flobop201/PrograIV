@@ -73,11 +73,11 @@
             <label for="contrasena">Contraseña:
             <asp:Label ID="lblErrorContrasena" runat="server" Text=""></asp:Label>
             </label>
-            <asp:TextBox ID="txtbcontrasena" placeholder="Define tu contraseña ( Máximo 10 caracteres )" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txtbcontrasena" TextMode="Password" placeholder="Define tu contraseña ( Máximo 10 caracteres )" runat="server"></asp:TextBox>
             <label for="repetircontrasena">Repetir contraseña:
-            <asp:Label ID="lblErrorRepetirContrasena" runat="server" Text="Label"></asp:Label>
+            <asp:Label ID="lblErrorRepetirContrasena" runat="server" Text=""></asp:Label>
             </label>
-            <asp:TextBox ID="txtbrepetircontrasena" runat="server" placeholder="Vuelve a escribir tu contraseña " maxlength="10"></asp:TextBox>
+            <asp:TextBox ID="txtbrepetircontrasena" runat="server" TextMode="Password" placeholder="Vuelve a escribir tu contraseña " maxlength="10"></asp:TextBox>
             <div>
                 <br />
                 <span style="font-size: 12px">Al crear una cuenta , usted está de acuerdo a las condiciones de uso y privacidad de  UAM SHOP.</span>

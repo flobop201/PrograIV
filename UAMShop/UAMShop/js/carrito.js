@@ -15,7 +15,6 @@
     });
 
     $(".cantidad").bind('keyup mouseup', function () {
-        debugger;
         var $parent = $(this).parents('#parent');
         var id = $('#id', $parent).val();
         var cantidad = $('#cantidad', $parent).val();
@@ -27,7 +26,6 @@
     });
 
     $('.btn.blue.carrito').click(function () {
-        debugger;
         var $parent = $(this).parents('#parent');
         var codigo = $('#codigo', $parent).val();
         var cantidad = 1;
@@ -43,7 +41,6 @@ function realizarBusquedabyAjax() {
 };
 
 function deletebyAjax(id, $self) {
-    debugger;
     var actionData = "{'id': '" + id + "'}";
     $.ajax(
     {
@@ -63,30 +60,108 @@ function deletebyAjax(id, $self) {
     });
 };
 
-function realizarComprabyAjax(correo, titular, tarjeta) {
-    var actionData = "{'correo': '" + correo + "', 'titular': '" + titular + "', 'tarjeta': '" + tarjeta + "' }";
+function validarEmail(valor) {
+    return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/.test(valor);
+}
+
+function validarCreditCard(creditcarnumber) {
     debugger;
-    $.ajax(
-    {
-        url: "cart.aspx/RealizarCompra",
-        data: actionData,
-        dataType: "json",
-        type: "POST",
-        contentType: "application/json; charset=utf-8",
-        success: function (msg) {
-            alertify.success(msg.d);
-        },
-        error: function (result) {
-            alertify.error(result.d);
+    var isamex = false;
+    var isvisa = false;
+    var ismastercard = false;
+    var returnvalue = '';
+
+    //Validar AMEX
+    var amexcardno = /^(?:3[47][0-9]{13})$/;
+    if (creditcarnumber.match(amexcardno)) {
+        isamex = true;
+    }
+    else {
+        isamex = false;
+    }
+
+    //Validar VISA
+    var visacardno = /^(?:4[0-9]{12}(?:[0-9]{3})?)$/;
+    if (creditcarnumber.match(visacardno)) {
+        isvisa = true;
+    }
+    else {
+        isvisa = false;
+    }
+
+    //Validar MASTERCAD
+    var mastercardno = /^(?:5[1-5][0-9]{14})$/;
+    if (creditcarnumber.match(mastercardno)) {
+        ismastercard = true;
+    }
+    else {       
+        ismastercard = false;
+    }
+
+
+    if (!isvisa && !isamex && !ismastercard) {
+        returnvalue= 'INVALID';
+    } else {
+        if (isvisa) {
+            returnvalue= 'VISA';
         }
-    });
+        if (isamex) {
+            returnvalue= 'AMEX';
+        }
+        if (ismastercard) {
+            returnvalue= 'MASTERCARD';
+        }
+    }
+    return returnvalue;
+}
+
+function realizarComprabyAjax(correo, titular, tarjeta) {
     debugger;
+    var valido = 1;
+    var result = validarEmail(correo);
+    if (result == false) {
+        valido = 0;
+        alertify.error('Ingrese un correo valido...');
+    }
+
+    if (titular == '') {
+        valido = 0;
+        alertify.error('Ingrese el titular de la tarjeta...');
+    }
+
+    var resultValidation = validarCreditCard(tarjeta);
+    if (resultValidation == 'INVALID') {
+        valido = 0;
+        alertify.error('Numero de tarjeta invalido...');
+    }
+
+    if (valido == 1) {
+        var actionData = "{'correo': '" + correo + "', 'titular': '" + titular + "', 'tarjeta': '" + tarjeta + "' }";
+        $.ajax(
+        {
+            url: "cart.aspx/RealizarCompra",
+            data: actionData,
+            dataType: "json",
+            type: "POST",
+            contentType: "application/json; charset=utf-8",
+            success: function (msg) {
+                var $parent = $('.checkout');
+                $parent.hide();
+                var $parent2 = $('.listaCarrito');
+                $parent2.hide();
+                alertify.success(msg.d);
+            },
+            error: function (result) {
+                alertify.error(result.d);
+            }
+        });
+    }
+
 };
 
 function actualizarCantidadbyAjax(id, cantidad) {
     var actionData = "{'id': '" + id + "', 'cantidad': '" + cantidad + "'}";
 
-    debugger;
     $.ajax(
     {
         url: "cart.aspx/ActualizarCantidad",
@@ -101,13 +176,11 @@ function actualizarCantidadbyAjax(id, cantidad) {
         }
 
     });
-    debugger;
 };
 
 function agregarCarritobyAjax(codigo, cantidad) {
     var actionData = "{'codigo': '" + codigo + "', 'cantidad': '" + cantidad + "'}";
 
-    debugger;
     $.ajax(
     {
         url: "category.aspx/AgregarCarrito",
@@ -123,7 +196,6 @@ function agregarCarritobyAjax(codigo, cantidad) {
         }
 
     });
-    debugger;
 };
 
 function DesplegarCredencialesInvalidas(mensaje) {
@@ -143,7 +215,3 @@ $("#cantidad").keypress(function (evt) {
     };
 });
 
-function MostrarLogoutCarrito() {
-    debugger;
-    alertify.success('Sesion finalizada');
-};

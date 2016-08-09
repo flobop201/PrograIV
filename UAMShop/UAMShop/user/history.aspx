@@ -6,28 +6,31 @@
             <div>
                 <table class="cart" cellspacing="0">
                     <tr>
-                        <th colspan="2">Factura</th>
+                        <th>Factura</th>
                         <th>Fecha</th>
                         <th>Monto</th>
                         <th>Tarjeta</th>
-                        <th></th>
+                        <th>Titular</th>
                     </tr>
-                    <% foreach (var item in ListCarrito)
+                    <% foreach (var compra in ListCompras)
                        {%>
-                    <tr id="parent" class="listaCarrito">
-                        <td>
-                            <input type="hidden" id="id" value="<% Page.Response.Write(item.Id); %>" />
-                            <img src="<% Page.Response.Write(item.Imagen); %>" height="45">
-                        </td>
-                        <td><% Page.Response.Write(item.Descripcion); %></td>
-                        <td><% Page.Response.Write(string.Format("{0:C}", item.Precio)); %></td>
-                        <td>
-                            <input id="cantidad" class="cantidad" type="number" step="1" min="1" name="cart[b139e104214a08ae3f2ebcce149cdf6e][qty]" value="<% Page.Response.Write(item.Cantidad); %>" title="Qty" class="input-text qty text"></td>
-                        <td><% Page.Response.Write(string.Format("{0:C}", item.Cantidad * item.Precio)); %></td>
-                        <td><a class="btn red wide btnDeleteitem" role="button"><i class="fa fa-times"></i></a></td>
+                    <tr>
+                        <td><% Page.Response.Write(compra.IdFactura); %></td>
+                        <td><% Page.Response.Write(compra.Fecha); %></td>
+                        <td><% Page.Response.Write(string.Format("{0:C}", compra.Monto)); %></td>
+                        <td><% Page.Response.Write(compra.Tarjeta); %></td>
+                        <td><% Page.Response.Write(compra.Titular); %></td>
                     </tr>
                     <% } %>
                 </table>
+                <br/>
+                <% if (!ListCompras.Any())
+                   {
+                       Page.Response.Write(string.Format("No has realizado ninguna compra recientemente. Mira nuestros productos"));
+                %>
+                <a href="../category/category.aspx">aqui</a>
+                <%
+                     } %>
             </div>
         </div>
     </div>

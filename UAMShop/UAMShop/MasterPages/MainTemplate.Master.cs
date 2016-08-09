@@ -16,12 +16,13 @@ namespace UAMShop.MasterPages
         {
             try
             {
+                var usuario = Session["usuario_id"];
                 if (Page.ToString().Replace("ASP.","").Replace("_",".") != "login.aspx")
                 {                    
                 Response.Cookies.Add(new HttpCookie("returnUrl", Request.Url.PathAndQuery));
                 }
                 var menuDal = new MenuDal();
-                ListMenuBe = menuDal.RetrieveMenu();              
+                ListMenuBe = menuDal.RetrieveMenu(Convert.ToInt32(usuario));              
             }
             catch (Exception exception)
             {
@@ -31,14 +32,13 @@ namespace UAMShop.MasterPages
 
         }
 
-        protected void logout_btn_Click(object sender, EventArgs e)
+        public void logout_btn_Click(object sender, EventArgs e)
         {
             Session.Remove("usuario");
             Session.Remove("usuario_nombre");
             Session.Remove("usuario_correo");
             Session.Remove("usuario_id");
-            Response.Redirect(Request.RawUrl);
-            ScriptManager.RegisterStartupScript(this, typeof(Page), "invocarfuncion", "MostrarLogoutCarrito()", true);
+            Response.Redirect("~/login.aspx?logout=true");                       
         }
     }
 }

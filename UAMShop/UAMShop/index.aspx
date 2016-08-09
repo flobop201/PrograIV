@@ -20,8 +20,7 @@
                 {
             %>
             <div class="grid col-3">
-                <div class="small-banner">
-                    <a href="products/productdetail.aspx">
+                <div class="small-banner">                   
                         <img height="195" src="<%  Page.Response.Write(producto.Imagen); %>" />
                         <span><%  Page.Response.Write(String.Format("{0:C}", producto.Precio)); %></span>
                         <h3><%  Page.Response.Write(producto.Producto); %></h3>

@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.IO;
 using System.Data;
+using MenuModule;
 
 namespace UAMShop.mantenimiento
 {
@@ -13,6 +14,26 @@ namespace UAMShop.mantenimiento
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            #region Validar acceso a la pagina
+            try
+            {
+                //Se obtiene el usuario si esta logueado
+                var usuario = Session["usuario_id"];
+                //Se obtiene la pagina que esta intentando ingresar el usuario
+                string pagina = Path.GetFileName(Request.Path);
+                //Instanciamos el dal para acceder el metodo
+                var menuDal = new MenuDal();
+                //Accedemos el metodo de validar si se tiene acceso a la pagina
+                if (!menuDal.AccessToPage(Convert.ToInt32(usuario), pagina))
+                {
+                    Page.Response.Redirect("~/login.aspx?logout=true", false);  
+                }
+            }
+            catch (Exception exception)
+            {
+                Log4NetModule.Log4Net.WriteLog(exception, Log4NetModule.Log4Net.LogType.Error);
+            }
+            #endregion
         }
 
         protected void btnVerProductos_Click(object sender, EventArgs e)

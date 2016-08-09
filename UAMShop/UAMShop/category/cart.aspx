@@ -35,8 +35,8 @@
         <div class="division"></div>
         <br>
         <style>
-            .test input,
-            .test select
+            .checkout input,
+            .checkout select
             {
                 width: 100%;
                 margin: 8px 0;
@@ -55,14 +55,14 @@
         </style>
         <% if (ListCarrito.Any())
            {%>
-        <div class="test" style="border-radius: 5px; background-color: #f2f2f2; padding: 40px;">
+        <div id="checkout" class="checkout" style="border-radius: 5px; background-color: #f2f2f2; padding: 40px;">
             <h3>Realizar Compra</h3>
             <label for="correo">* Correo Electronico:</label>
-            <input type="email" id="correo" style="text-transform: lowercase" required="" value="<% Page.Response.Write(Session["usuario_correo"]);%> "/>
+            <input type="email" id="correo" style="text-transform: lowercase" required="" value="<% Page.Response.Write(Session["usuario_correo"]);%> " />
             <label for="titular">* Titular Tarjeta:</label>
             <input type="text" id="titular" style="text-transform: uppercase" required="" />
-            <label for="tarjeta">* Numero Tarjeta:</label>
-            <input type="text" id="tarjeta" value="3770 XXXX XX78" required="" />
+            <label for="tarjeta">* Numero Tarjeta: (  <i class="fa  fa-cc-amex blue"></i>- <i class="fa  fa-cc-mastercard blue"></i>- <i class="fa  fa-cc-visa blue"></i>)</label>
+            <input type="text" id="tarjeta"/>
             <label for="montototal">Monto Total:</label>
             <input type="text" readonly="readonly" id="montototal" value="<% Page.Response.Write(string.Format("{0:C}", ListCarrito.Sum(a => a.Cantidad * a.Precio))); %>" />
             <div>
@@ -75,7 +75,8 @@
            else
            {%>
         <span style="width: 70%; font-weight: 600; color: gray; max-width: 25em; margin-left: auto; margin-right: auto;">
-            <%  Page.Response.Write(string.Format("No hay articulos en el carrito de compras.")); %>
+            <%  Page.Response.Write(string.Format("No hay articulos en el carrito de compras. Mira nuestros productos")); %>
+            <a href="../category/category.aspx">aqui</a>
         </span>
         <%} %>
         <div class="division"></div>

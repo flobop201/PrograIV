@@ -149,5 +149,42 @@ namespace SaleModule
             }
             return tablahtml;
         }
+
+        public List<FacturaBe> ObtenerCompras(int usuario, string connectionString)
+        {
+            var myConnection = new ConnectionManager(connectionString);
+            var conexion = myConnection.CreateConnection();
+            var command = myConnection.createCommand(conexion);
+
+            var listResult = new List<FacturaBe>();
+
+            command.CommandText = "usp_FacturasSelect";
+            command.CommandType = CommandType.StoredProcedure;
+
+            var parameter = new SqlParameter("@IdUsuario", SqlDbType.Int) { Value = usuario };
+            command.Parameters.Add(parameter);
+
+            conexion.Open();
+            SqlDataReader reader = command.ExecuteReader();
+
+            while (reader.Read())
+            {
+                var factura = new FacturaBe
+                {
+                    IdFactura = Int32.Parse(reader["IdFactura"].ToString()),
+                    Fecha = DateTime.Parse(reader["Fecha"].ToString()),
+                    Monto = Double.Parse(reader["Monto"].ToString()),
+                    Tarjeta = (reader["Tarjeta"].ToString()),
+                    Titular = (reader["Titular"].ToString()),
+                    IdUsuario = Int32.Parse(reader["Idusuario"].ToString())
+                };
+
+
+                listResult.Add(factura);
+            }
+
+            conexion.Close();
+            return listResult;
+        }
     }
 }

@@ -12,7 +12,7 @@ namespace MenuModule
 {
     public class MenuDal
     {
-        public List<MenuBe> RetrieveMenu()
+        public List<MenuBe> RetrieveMenu(int idUsuario)
         {
             var listMenu = new List<MenuBe>();
             try
@@ -23,6 +23,8 @@ namespace MenuModule
                 SqlCommand command = myConnection.createCommand(conexion);                
                 command.CommandType = CommandType.StoredProcedure;
                 command.CommandText = "usp_menuSelect";
+                var parameter = new SqlParameter("IdUsuario", SqlDbType.BigInt) { Value = idUsuario };
+                command.Parameters.Add(parameter);
 
                 conexion.Open();
                 SqlDataReader menuReader = command.ExecuteReader();
@@ -50,35 +52,17 @@ namespace MenuModule
             return listMenu;
         }
 
-
-        public string RetieveMenuToPage()
+        public bool AccessToPage(int idUsuario, string namePage)
         {
-            string menuaspx = string.Empty + "<ul>";
-            var menuDal = new MenuDal();
-            List<MenuBe> listMenu = menuDal.RetrieveMenu();
-            foreach (var menu in listMenu)
-            {
-                if (menu.IdSubMenu == 0)
-                {
-                    List<MenuBe> submenus = listMenu.Where(a => a.IdSubMenu == menu.IdMenu).ToList();
+            bool returnvalue = false;
+            List<MenuBe> menuAccess = RetrieveMenu(idUsuario);
 
-                    menuaspx += ("<li> <a href=\"" + menu.Pagina + "\"> " + menu.Menu);
-                    if (submenus.Any())
-                    {
-                        menuaspx += ("<ul>");
-                    }
-                    foreach (var submenu in submenus)
-                    {
-                        menuaspx += ("<li> <a href=\"" + submenu.Pagina + "\"> " + submenu.Menu + " </li>");
-                    }
-                    if (submenus.Any())
-                    {
-                        menuaspx += ("</ul>");
-                    }
-                    menuaspx += " </li>";
-                }
-            }
-            return (menuaspx + " </ul>");
+            var result = menuAccess.Where(a => a.Pagina.Contains(namePage)).ToList();
+            if (result.Any())
+                returnvalue = true;
+
+            return returnvalue;
         }
+
     }
 }
