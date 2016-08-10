@@ -28,6 +28,7 @@ namespace SaleModule
                     var factura = (FacturaBe)(execute[2]);
                     var listFacturaDetalle = (List<FacturaDetalleBe>)(execute[3]);
                     SendMail.SendInvoice(factura.IdFactura.ToString(CultureInfo.InvariantCulture), emailTo, emailNameTo, factura.Monto, factura.Titular, factura.Tarjeta, GenerarTablaHtml(listFacturaDetalle));
+                    Log4Net.WriteLog(string.Format("Se ha generado la factura de compra {0} por un monto de {1}.", factura.IdFactura, string.Format("{0:C}", factura.Monto)), Log4Net.LogType.Info);
                 }
             }
             catch (Exception exception)

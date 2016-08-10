@@ -31,7 +31,7 @@
                         <tbody>
                             <tr>
                                 <td>Nombre de Usuario:</td>
-                                <td><% Page.Response.Write(Session["usuario"]); %>
+                                <td><% Page.Response.Write(Session["usuario_nombre"]); %>
                                 </td>
                             </tr>
                             <tr>
@@ -49,7 +49,7 @@
 
                             <tr>
                                 <td>Correo Electronico:</td>
-                                <td><a href="mailto:<% Page.Response.Write(Session["usuario_correo"]); %>.com"><% Page.Response.Write(Session["usuario_correo"]); %>
+                                <td><a href="mailto:<% Page.Response.Write(Session["usuario_correo"]); %>"><% Page.Response.Write(Session["usuario_correo"]); %>
                                     <asp:Label ID="lblCorreo" runat="server" Text=""></asp:Label>
                                     </a></td>
                             </tr>
