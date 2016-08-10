@@ -105,6 +105,7 @@
     <Content Include="mantenimiento\mantproductos.aspx" />
     <Content Include="mantenimiento\mantusuarios.aspx" />
     <Content Include="products\productdetail.aspx" />
+    <Content Include="script.sql" />
     <Content Include="user\history.aspx" />
     <Content Include="user\profile.aspx" />
     <Content Include="user\register.aspx" />
