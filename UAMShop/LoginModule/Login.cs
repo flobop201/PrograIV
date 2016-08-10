@@ -17,38 +17,26 @@ namespace LoginModule
     {
         public static UserBE Autenticar(string correo, string password)
         {
-            var usuarioDatos = RetrieveCategory(correo, password);
+            UserBE usuarioDatos = null;
+            try
+            {
+                usuarioDatos = ValidateUser(correo, password);
+            }
+            catch (Exception exception)
+            {
+                Log4Net.WriteLog(exception, Log4Net.LogType.Error);
+            }
             return usuarioDatos;
         }
 
-        private static UserBE RetrieveCategory(string correo, string password)
+        private static UserBE ValidateUser(string correo, string password)
         {
-            //Create PROC [dbo].usp_AutenticarUsuario 
-            //@Usuario VARCHAR(50),
-            //@Contrasena VARCHAR(50)
-            //AS
-            //    SET NOCOUNT ON 
-            //    SET XACT_ABORT ON  
-
-            //    BEGIN TRAN
-
-            //    SELECT  [Usuario] ,
-            //            [Nombre] ,
-            //            [IdUsuario]
-            //    FROM    [dbo].[usuarios]
-            //    WHERE   ( [Usuario] = @Usuario
-            //              AND [Contrasena] = @Contrasena
-            //            ) 
-
-            //    COMMIT
+            string connectionString = ConfigurationManager.AppSettings["ConnectionString"];
+            var myConnection = new ConnectionManager(connectionString);
+            SqlConnection conexion = myConnection.CreateConnection();
+            SqlCommand command = myConnection.CreateCommand(conexion);
             try
             {
-                string connectionString = ConfigurationManager.AppSettings["ConnectionString"];
-                ConnectionManager myConnection = new ConnectionManager(connectionString);
-                SqlConnection conexion = myConnection.CreateConnection();
-                SqlCommand command = myConnection.createCommand(conexion);
-                SqlDataReader userReader;
-
                 command.CommandText = "usp_AutenticarUsuario";
                 command.CommandType = CommandType.StoredProcedure;
                 var parameter = new SqlParameter("@Usuario", SqlDbType.VarChar) { Value = correo };
@@ -56,8 +44,8 @@ namespace LoginModule
                 var parameter2 = new SqlParameter("@Contrasena", SqlDbType.VarChar) { Value = password };
                 command.Parameters.Add(parameter2);
                 conexion.Open();
-                userReader = command.ExecuteReader();
-                UserBE usuario = new UserBE();
+                SqlDataReader userReader = command.ExecuteReader();
+                var usuario = new UserBE();
                 while (userReader.Read())
                 {
                     usuario.Nombre = userReader["Nombre"].ToString();
@@ -66,15 +54,18 @@ namespace LoginModule
                     usuario.IdRol = (userReader["Rol"].ToString());
                     usuario.Estado = (userReader["EstadoA"].ToString());
                     usuario.FechaSuscripcion = Convert.ToDateTime(userReader["FechaSuscripcion"]);
-                    
+
                 }
-                conexion.Close();
                 return usuario;
             }
             catch (Exception exception)
             {
-                Log4Net.WriteLog(exception, Log4Net.LogType.Error);  
+                Log4Net.WriteLog(exception, Log4Net.LogType.Error);
                 throw;
+            }
+            finally
+            {
+                conexion.Close();
             }
         }
 

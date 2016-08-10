@@ -36,28 +36,45 @@ namespace UAMShop.category
         [WebMethod]
         public static string Eliminar(Int32 id)
         {
-            var carritoDal = new CarritoDal();
-            string connection = WebConfigurationManager.AppSettings["ConnectionString"];
-            var resultado = carritoDal.EliminarItem(connection, id);
             string mensaje = string.Empty;
-            switch (resultado)
+            try
             {
-                case true:
-                    mensaje = string.Format("Producto eliminado del carrito de compras.");
-                    break;
-                case false:
-                    mensaje = string.Format("El producto no ha sido eliminado del carrito de compras.");
-                    break;
+                var carritoDal = new CarritoDal();
+                string connection = WebConfigurationManager.AppSettings["ConnectionString"];
+                var resultado = carritoDal.EliminarItem(connection, id);
+
+                switch (resultado)
+                {
+                    case true:
+                        mensaje = string.Format("Producto eliminado del carrito de compras.");
+                        break;
+                    case false:
+                        mensaje = string.Format("El producto no ha sido eliminado del carrito de compras.");
+                        break;
+                }
             }
+            catch (Exception exception)
+            {
+                Log4Net.WriteLog(exception, Log4Net.LogType.Error);
+            }
+
             return mensaje;
         }
 
         [WebMethod]
         public static string ActualizarCantidad(Int32 id, Int32 cantidad)
         {
-            var carritoDal = new CarritoDal();
-            string connection = WebConfigurationManager.AppSettings["ConnectionString"];
-            carritoDal.ActualizarItem(connection, id, cantidad);
+            try
+            {
+                var carritoDal = new CarritoDal();
+                string connection = WebConfigurationManager.AppSettings["ConnectionString"];
+                carritoDal.ActualizarItem(connection, id, cantidad);
+
+            }
+            catch (Exception exception)
+            {
+                Log4Net.WriteLog(exception, Log4Net.LogType.Error);
+            }
             return "Cantidad Actualizada";
         }
 

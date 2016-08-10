@@ -7,6 +7,7 @@ using CategoryModule;
 using ConnectionManage;
 using System.Data;
 using System.Data.SqlClient;
+using Log4NetModule;
 
 namespace CategoryModule
 {
@@ -14,32 +15,37 @@ namespace CategoryModule
     {
         public List<CategoryBE> RetrieveCategory(string connectionString)
         {
-            ConnectionManager myConnection = new ConnectionManager(connectionString);
+            var listResult = new List<CategoryBE>();
+            var myConnection = new ConnectionManager(connectionString);
             SqlConnection conexion = myConnection.CreateConnection();
-            SqlCommand command = myConnection.createCommand(conexion);
-            SqlDataReader productReader;
-
-            List<CategoryBE> listResult = new List<CategoryBE>();
-            CategoryBE product;
-
-            command.CommandText = "usp_CategoriasSelect";
-            command.CommandType = CommandType.StoredProcedure;
-
-            conexion.Open();
-            productReader = command.ExecuteReader();
-
-            while (productReader.Read())
+            SqlCommand command = myConnection.CreateCommand(conexion);
+            try
             {
-                product = new CategoryBE();
-                product.Id = Convert.ToInt16(productReader["Id"]);
-                product.Categoria = productReader["Categoria"].ToString();
-                listResult.Add(product);
-            }
+                command.CommandText = "usp_CategoriasSelect";
+                command.CommandType = CommandType.StoredProcedure;
 
-            conexion.Close();
+                conexion.Open();
+                SqlDataReader productReader = command.ExecuteReader();
+
+                while (productReader.Read())
+                {
+                    var product = new CategoryBE
+                    {
+                        Id = Convert.ToInt16(productReader["Id"]),
+                        Categoria = productReader["Categoria"].ToString()
+                    };
+                    listResult.Add(product);
+                }
+            }
+            catch (Exception exception)
+            {
+                Log4Net.WriteLog(exception, Log4Net.LogType.Error);
+            }
+            finally
+            {
+                conexion.Close();
+            }
             return listResult;
         }
-
-        //ToDo: Insert - Crear Delete - Crear Update
     }
 }

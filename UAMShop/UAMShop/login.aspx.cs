@@ -47,8 +47,9 @@ namespace UAMShop
                 Session["usuario_id"] = usuario.IdUsuario;
                 Session["usuario_idrol"] = usuario.IdRol;
                 Session["usuario_estado"] = usuario.Estado;
-                Session["usuario_fecha_suscripcion"] = usuario.FechaSuscripcion;                
-                Response.Redirect("index.aspx");                
+                Session["usuario_fecha_suscripcion"] = usuario.FechaSuscripcion;
+                Log4Net.WriteLog("Usuario logueado "+usuario.Nombre,Log4Net.LogType.Info);
+                Response.Redirect("index.aspx");                      
             }
             else
             {

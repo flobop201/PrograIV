@@ -36,7 +36,7 @@ namespace UAMShop.category
                 //Accedemos el metodo de validar si se tiene acceso a la pagina
                 if (!menuDal.AccessToPage(Convert.ToInt32(usuario), pagina))
                 {
-                    Page.Response.Redirect("~/login.aspx?logout=true",false);                     
+                    Page.Response.Redirect("~/login.aspx?logout=true", false);
                 }
             }
             catch (Exception exception)
@@ -64,29 +64,39 @@ namespace UAMShop.category
         [WebMethod]
         public static string AgregarCarrito(Int32 codigo, Int32 cantidad)
         {
-            if (_user != null)
+            string mensaje = string.Empty;
+            try
             {
-                int idUsuario = Convert.ToInt32(_user);
-
-                var carritoDal = new CarritoDal();
-                string connection = WebConfigurationManager.AppSettings["ConnectionString"];
-                var resultado = carritoDal.AgregarItem(connection, idUsuario, codigo, cantidad);
-                string mensaje = string.Empty;
-                switch (resultado)
+                if (_user != null)
                 {
-                    case true:
-                        mensaje = string.Format("Producto agregado al carrito de compras.");
-                        break;
-                    case false:
-                        mensaje = string.Format("El producto no ha sido agregado al carrito de compras.");
-                        break;
+                    int idUsuario = Convert.ToInt32(_user);
+
+                    var carritoDal = new CarritoDal();
+                    string connection = WebConfigurationManager.AppSettings["ConnectionString"];
+                    var resultado = carritoDal.AgregarItem(connection, idUsuario, codigo, cantidad);
+
+                    switch (resultado)
+                    {
+                        case true:
+                            mensaje = string.Format("Producto agregado al carrito de compras.");
+                            break;
+                        case false:
+                            mensaje = string.Format("El producto no ha sido agregado al carrito de compras.");
+                            break;
+                    }
+                    return mensaje;
                 }
-                return mensaje;
+                else
+                {
+                    mensaje = "Por favor inicie session...";
+                }
+
             }
-            else
+            catch (Exception exception)
             {
-                return "Por favor inicie session...";
+                Log4Net.WriteLog(exception, Log4Net.LogType.Error);
             }
+            return mensaje;
         }
     }
 }

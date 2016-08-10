@@ -221,6 +221,9 @@
     <Content Include="fonts\FontAwesome.otf" />
     <Content Include="MasterPages\CategoryTemplate.master" />
     <Content Include="packages.config" />
+    <Content Include="App.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="Properties\PublishProfiles\uamcr - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\uamcr - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">

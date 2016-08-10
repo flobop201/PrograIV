@@ -17,8 +17,7 @@ namespace Log4NetModule
             }
             catch (Exception exception)
             {
-                Log4Net.WriteLog(exception,Log4Net.LogType.Error);
-                Log4Net.WriteLog(exception, Log4Net.LogType.Warn);
+                Log4Net.WriteLog(exception,Log4Net.LogType.Error);            
             }
         }
     }

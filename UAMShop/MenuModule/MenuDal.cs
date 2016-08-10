@@ -14,13 +14,13 @@ namespace MenuModule
     {
         public List<MenuBe> RetrieveMenu(int idUsuario)
         {
+            string connectionString = ConfigurationManager.AppSettings["ConnectionString"];
+            var myConnection = new ConnectionManage.ConnectionManager(connectionString);
+            SqlConnection conexion = myConnection.CreateConnection();
+            SqlCommand command = myConnection.CreateCommand(conexion);
             var listMenu = new List<MenuBe>();
             try
             {
-                string connectionString = ConfigurationManager.AppSettings["ConnectionString"];
-                var myConnection = new ConnectionManage.ConnectionManager(connectionString);
-                SqlConnection conexion = myConnection.CreateConnection();
-                SqlCommand command = myConnection.createCommand(conexion);                
                 command.CommandType = CommandType.StoredProcedure;
                 command.CommandText = "usp_menuSelect";
                 var parameter = new SqlParameter("IdUsuario", SqlDbType.BigInt) { Value = idUsuario };
@@ -42,12 +42,14 @@ namespace MenuModule
 
                     listMenu.Add(menu);
                 }
-
-                conexion.Close();                
             }
             catch (Exception exception)
             {
                 Log4Net.WriteLog(exception, Log4Net.LogType.Error);
+            }
+            finally
+            {
+                conexion.Close();
             }
             return listMenu;
         }
@@ -55,11 +57,18 @@ namespace MenuModule
         public bool AccessToPage(int idUsuario, string namePage)
         {
             bool returnvalue = false;
-            List<MenuBe> menuAccess = RetrieveMenu(idUsuario);
+            try
+            {
+                List<MenuBe> menuAccess = RetrieveMenu(idUsuario);
 
-            var result = menuAccess.Where(a => a.Pagina.Contains(namePage)).ToList();
-            if (result.Any())
-                returnvalue = true;
+                var result = menuAccess.Where(a => a.Pagina.Contains(namePage)).ToList();
+                if (result.Any())
+                    returnvalue = true;
+            }
+            catch (Exception exception)
+            {
+                Log4Net.WriteLog(exception, Log4Net.LogType.Error);
+            }
 
             return returnvalue;
         }

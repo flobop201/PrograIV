@@ -24,7 +24,7 @@ namespace Log4NetModule
 
         private Log4Net()
         {
-            log4net.Config.XmlConfigurator.Configure(new FileInfo("App.config"));
+            log4net.Config.XmlConfigurator.Configure(new FileInfo(AppDomain.CurrentDomain.BaseDirectory+"App.config"));
             Log = LogManager.GetLogger("UAMSHOP");
 
         }

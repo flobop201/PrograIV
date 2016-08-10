@@ -23,7 +23,7 @@
                         <img src="<% Page.Response.Write(item.Imagen); %>" height="45">
                     </td>
                     <td><% Page.Response.Write(item.Descripcion); %></td>
-                    <td><% Page.Response.Write(string.Format("₡{0}", item.Precio)); %></td>
+                    <td><% Page.Response.Write(string.Format("₡{0:N}", item.Precio)); %></td>
                     <td>
                         <input id="cantidad" class="cantidad" type="number" step="1" min="1" max="100" name="cart[b139e104214a08ae3f2ebcce149cdf6e][qty]" value="<% Page.Response.Write(item.Cantidad); %>" title="Qty" class="input-text qty text"></td>
                     <td><% Page.Response.Write(string.Format("₡ {0:N}", item.Cantidad * item.Precio)); %></td>
@@ -58,13 +58,13 @@
         <div id="checkout" class="checkout" style="border-radius: 5px; background-color: #f2f2f2; padding: 40px;">
             <h3>Realizar Compra</h3>
             <label for="correo">* Correo Electronico:</label>
-            <input type="email" id="correo" style="text-transform: lowercase" required="" value="<% Page.Response.Write(Session["usuario_correo"]);%> " />
+            <input type="email" id="correo" placeholder="Enviar correo a" value="<% Page.Response.Write(Session["usuario_correo"]);%> " />
             <label for="titular">* Titular Tarjeta:</label>
-            <input type="text" id="titular" style="text-transform: uppercase" required="" />
+            <input type="text" id="titular" style="text-transform: uppercase" placeholder="Nombre en la tarjeta" />
             <label for="tarjeta">* Numero Tarjeta: (  <i class="fa  fa-cc-amex blue"></i>- <i class="fa  fa-cc-mastercard blue"></i>- <i class="fa  fa-cc-visa blue"></i>)</label>
-            <input type="text" id="tarjeta"/>
+            <input type="text" id="tarjeta" placeholder="Tarjeta Debito / Credito, sin guiones"/>
             <label for="montototal">Monto Total:</label>
-            <input type="text" readonly="readonly" id="montototal" value="<% Page.Response.Write(string.Format("{0:C}", ListCarrito.Sum(a => a.Cantidad * a.Precio))); %>" />
+            <input type="text" readonly="readonly" id="montototal" value="<% Page.Response.Write(string.Format("₡{0:N}", ListCarrito.Sum(a => a.Cantidad * a.Precio))); %>" />
             <div>
                 <br>
                 <a id="btnRelizarCompra" class="btn blue wide" role="button">Proceder con la compra <i class="fa fa-chevron-right"></i></a>

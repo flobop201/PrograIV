@@ -25,7 +25,7 @@ namespace NotificationModule
 
                 string htmlmessage = "<h3>Estimado(a) " + nameTo + ":</h3>"
                                      + "<br>Es un gusto enviarle la factura de su compra realizada recientemente"
-                                     + "<br><br>Le recordamos que puede ver su historial de compras en www.uamshopcr.com, lo esperamos próximamente en la sucursal electronica."
+                                     + "<br><br>Le recordamos que puede ver su historial de compras en uamcr.azurewebsites.net, lo esperamos próximamente en la sucursal electronica."
                                      + "<br><br>Gracias por recibir su factura de compra, de esta forma cuidamos el medio ambiente al reducir el uso de papel y energía."
                                      + "<br><br>Le agradecemos no contestar este correo,  esta dirección de correo electrónico únicamente envía facturas de compra. Favor remitir sus consultas a uamshopcr@gmail.com o comuníquese al teléfono (506) 8302-1353";
 
@@ -97,7 +97,7 @@ namespace NotificationModule
 
                 string htmlmessage = "<h3>Estimado(a) " + nombre + ":</h3>"
                                      + "<br>Se ha registrado correctamente en UAM SHOP"
-                                     + "<br><br>Le recordamos que puede realizar sus compras en www.uamshopcr.com, lo esperamos próximamente en la sucursal electronica."
+                                     + "<br><br>Le recordamos que puede realizar sus compras en uamcr.azurewebsites.net, lo esperamos próximamente en la sucursal electronica."
                                      + "<br><br>Agradecemos no contestar este correo,  esta dirección de correo electrónico únicamente envía codigos de registro. Favor remitir sus consultas a consultas@uamshopcr.com o comuníquese al teléfono (506) 8302-1353." +
                                      "<br><br>Si no ha realizado ningun registro por favor ignorar este mensaje.";
                 AlternateView htmlView = AlternateView.CreateAlternateViewFromString(htmlmessage, Encoding.UTF8, MediaTypeNames.Text.Html);
