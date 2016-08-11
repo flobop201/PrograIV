@@ -42,6 +42,7 @@ namespace UAMShop.user
                     SqlDataSourceCrearCuenta.Insert();
                     lblResultadoCrearUsuario.Text = "Usuario cargado satisfactoriamente!";
                     SendMail.SendUserNotification(txtbnombre.Text, txtbcorreo.Text);
+                    Page.Response.Redirect("~/login.aspx", false);
                 }
                 else
                 {
@@ -78,7 +79,7 @@ namespace UAMShop.user
             catch (Exception ex)
             {
                 lblResultadoCrearUsuario.ForeColor = System.Drawing.Color.Red;
-                lblResultadoCrearUsuario.Text = "Error: El siguiente error ocurrió: " + ex.Message;
+                lblResultadoCrearUsuario.Text = "Ha sucedido un error: " + ex.Message;
                 Log4NetModule.Log4Net.WriteLog(ex, Log4NetModule.Log4Net.LogType.Error);
             }
         }

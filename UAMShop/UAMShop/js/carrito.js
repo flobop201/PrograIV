@@ -94,22 +94,22 @@ function validarCreditCard(creditcarnumber) {
     if (creditcarnumber.match(mastercardno)) {
         ismastercard = true;
     }
-    else {       
+    else {
         ismastercard = false;
     }
 
 
     if (!isvisa && !isamex && !ismastercard) {
-        returnvalue= 'INVALID';
+        returnvalue = 'INVALID';
     } else {
         if (isvisa) {
-            returnvalue= 'VISA';
+            returnvalue = 'VISA';
         }
         if (isamex) {
-            returnvalue= 'AMEX';
+            returnvalue = 'AMEX';
         }
         if (ismastercard) {
-            returnvalue= 'MASTERCARD';
+            returnvalue = 'MASTERCARD';
         }
     }
     return returnvalue;
@@ -149,7 +149,7 @@ function realizarComprabyAjax(correo, titular, tarjeta) {
                 $parent.hide();
                 var $parent2 = $('.listaCarrito');
                 $parent2.hide();
-                alertify.success(msg.d);
+                alertify.alert(msg.d);
             },
             error: function (result) {
                 alertify.error(result.d);

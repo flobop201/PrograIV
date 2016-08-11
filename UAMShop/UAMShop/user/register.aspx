@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
+<head id="Head1" runat="server">
     <title>Crear cuenta en UAM SHOP</title>
 </head>
 <body>
@@ -56,28 +56,31 @@
         <asp:SqlDataSource ID="SqlDataSourceCrearCuenta" runat="server"
             ConnectionString="<% $AppSettings:ConnectionString %> "
             InsertCommandType="StoredProcedure"
-            InsertCommand="usp_usuariosInsert">
-         </asp:SqlDataSource>
+            InsertCommand="usp_usuariosInsert"></asp:SqlDataSource>
         <div class="test centrar" style="border-radius: 5px; padding: 40px;">
-            <h3><i class="fa fa-user"></i> Crear mi cuenta </h3>
-            <label for="nombre">Su nombre:
+            <h3><i class="fa fa-user"></i>Crear mi cuenta </h3>
+            <label for="nombre">
+                Su nombre:
             <asp:Label ID="lblErrorNombre" runat="server" Text=""></asp:Label>
             </label>
-            <asp:TextBox ID="txtbnombre" runat="server" placeholder="Ingresa tu nombre aqui" maxlength="50"></asp:TextBox>
+            <asp:TextBox ID="txtbnombre" runat="server" placeholder="Ingresa tu nombre aqui" MaxLength="50"></asp:TextBox>
 
-            <label for="correo">Correo:
+            <label for="correo">
+                Correo:
             <asp:Label ID="lblErrorCorreo" runat="server" Text=""></asp:Label>
             </label>
-            <asp:TextBox ID="txtbcorreo" runat="server" placeholder="usuario@dominio.com" maxlength="50"></asp:TextBox>
+            <asp:TextBox ID="txtbcorreo" runat="server" placeholder="usuario@dominio.com" MaxLength="50"></asp:TextBox>
 
-            <label for="contrasena">Contraseña:
+            <label for="contrasena">
+                Contraseña:
             <asp:Label ID="lblErrorContrasena" runat="server" Text=""></asp:Label>
             </label>
             <asp:TextBox ID="txtbcontrasena" TextMode="Password" placeholder="Define tu contraseña ( Máximo 10 caracteres )" runat="server"></asp:TextBox>
-            <label for="repetircontrasena">Repetir contraseña:
+            <label for="repetircontrasena">
+                Repetir contraseña:
             <asp:Label ID="lblErrorRepetirContrasena" runat="server" Text=""></asp:Label>
             </label>
-            <asp:TextBox ID="txtbrepetircontrasena" runat="server" TextMode="Password" placeholder="Vuelve a escribir tu contraseña " maxlength="10"></asp:TextBox>
+            <asp:TextBox ID="txtbrepetircontrasena" runat="server" TextMode="Password" placeholder="Vuelve a escribir tu contraseña " MaxLength="10"></asp:TextBox>
             <div>
                 <br />
                 <span style="font-size: 12px">Al crear una cuenta , usted está de acuerdo a las condiciones de uso y privacidad de  UAM SHOP.</span>
@@ -93,7 +96,7 @@
                 <asp:Label ID="lblResultadoCrearUsuario" runat="server" Text=""></asp:Label>
             </div>
             <div class="row">
-             </div>
+            </div>
         </div>
     </form>
     <link rel="stylesheet" type="text/css" href="../css/gridStyle.css">

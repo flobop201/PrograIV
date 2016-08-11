@@ -20,12 +20,12 @@ namespace NotificationModule
                 var mailMessage = new MailMessage { Subject = "Factura de Compra #" + idInvoice };
 
                 mailMessage.To.Add(new MailAddress(to));
-                mailMessage.From = new MailAddress("uamshopcr@gmail.com", "UAM SHOP");
+                mailMessage.From = new MailAddress("uamshopcr@outlook.com", "UAM SHOP");
                 mailMessage.IsBodyHtml = true;
 
                 string htmlmessage = "<h3>Estimado(a) " + nameTo + ":</h3>"
                                      + "<br>Es un gusto enviarle la factura de su compra realizada recientemente"
-                                     + "<br><br>Le recordamos que puede ver su historial de compras en uamcr.azurewebsites.net, lo esperamos próximamente en la sucursal electronica."
+                                     + "<br><br>Le recordamos que puede ver su historial de compras en <a href=\"uamcr.azurewebsites.net/user/history.aspx\">uamcr.azurewebsites.net/user/history.aspx</a>, lo esperamos próximamente en la sucursal electronica."
                                      + "<br><br>Gracias por recibir su factura de compra, de esta forma cuidamos el medio ambiente al reducir el uso de papel y energía."
                                      + "<br><br>Le agradecemos no contestar este correo,  esta dirección de correo electrónico únicamente envía facturas de compra. Favor remitir sus consultas a uamshopcr@gmail.com o comuníquese al teléfono (506) 8302-1353";
 
@@ -37,11 +37,11 @@ namespace NotificationModule
                     LinkedResource imagen = null;
                     try
                     {
-                         imagen = new LinkedResource(ruta, MediaTypeNames.Image.Jpeg) {ContentId = "imagen"};
+                        imagen = new LinkedResource(ruta, MediaTypeNames.Image.Jpeg) { ContentId = "imagen" };
                     }
                     catch (Exception)
                     {
-                        string val="";
+                        string val = "";
                     }
                     htmlmessage += "<h2 style=\"color:white;width:100%;background-color:#DF0101\">UAM Shop | Factura de Compra</h2>"
                                    + "<ul><li><strong>Detalle de Compra.</strong><br>"
@@ -56,7 +56,7 @@ namespace NotificationModule
                                    + "  </tr>"
                                    + "  <tr>"
                                    + "    <td>Monto:</td>"
-                                   + "    <td>" + String.Format("{0:C}", amount) + "</td>"
+                                   + "    <td>" + String.Format("₡{0:N}", amount) + "</td>"
                                    + "  </tr>"
                                    + "</table> </li></ul>";
 
@@ -97,7 +97,7 @@ namespace NotificationModule
 
                 string htmlmessage = "<h3>Estimado(a) " + nombre + ":</h3>"
                                      + "<br>Se ha registrado correctamente en UAM SHOP"
-                                     + "<br><br>Le recordamos que puede realizar sus compras en uamcr.azurewebsites.net, lo esperamos próximamente en la sucursal electronica."
+                                     + "<br><br>Le recordamos que puede realizar sus compras en <a href=\"uamcr.azurewebsites.net/category/category.aspx\">uamcr.azurewebsites.net/category/category.aspx</a>, lo esperamos próximamente en la sucursal electronica."
                                      + "<br><br>Agradecemos no contestar este correo,  esta dirección de correo electrónico únicamente envía codigos de registro. Favor remitir sus consultas a consultas@uamshopcr.com o comuníquese al teléfono (506) 8302-1353." +
                                      "<br><br>Si no ha realizado ningun registro por favor ignorar este mensaje.";
                 AlternateView htmlView = AlternateView.CreateAlternateViewFromString(htmlmessage, Encoding.UTF8, MediaTypeNames.Text.Html);

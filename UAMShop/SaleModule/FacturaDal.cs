@@ -149,10 +149,10 @@ namespace SaleModule
                         //tablahtml = tablahtml + htmlTdStart + producto.Imagen + htmlTdEnd;
                         tablahtml = tablahtml + htmlTdStart + producto.Codigo + htmlTdEnd;
                         tablahtml = tablahtml + htmlTdStart + producto.Descripcion + htmlTdEnd;
-                        tablahtml = tablahtml + htmlTdStart + String.Format("{0:C}", producto.Precio) + htmlTdEnd;
+                        tablahtml = tablahtml + htmlTdStart + String.Format("₡{0:N}", producto.Precio) + htmlTdEnd;
                         tablahtml = tablahtml + htmlTdStart + Convert.ToString(producto.Cantidad) + htmlTdEnd;
                         tablahtml = tablahtml + htmlTdStart +
-                                      string.Format("{0:C}", producto.Cantidad * producto.Precio) + htmlTdEnd;
+                                      string.Format("₡{0:N}", producto.Cantidad * producto.Precio) + htmlTdEnd;
                         tablahtml = tablahtml + htmlTrEnd;
                     }
                     tablahtml = tablahtml + htmlTableEnd;
