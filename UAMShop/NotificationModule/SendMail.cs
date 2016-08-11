@@ -113,6 +113,36 @@ namespace NotificationModule
                 return false;
             }
         }
+
+        public static bool SendUserPasswordNotification(String nombre, String correo)
+        {
+            try
+            {
+                var mail = new Mail();
+                var mailMessage = new MailMessage { Subject = "Cambio de clave en UAM SHOP" };
+
+                mailMessage.To.Add(new MailAddress(correo));
+                mailMessage.From = new MailAddress("uamshopcr@gmail.com", "UAM SHOP");
+                mailMessage.IsBodyHtml = true;
+
+                string htmlmessage = "<h3>Estimado(a) " + nombre + ":</h3>"
+                                     + "<br>Se realizado un cambio de clave para usuario en UAM SHOP"
+                                     + "<br><br>Le recordamos que puede realizar sus compras en <a href=\"uamcr.azurewebsites.net/category/category.aspx\">uamcr.azurewebsites.net/category/category.aspx</a>, lo esperamos próximamente en la sucursal electronica."
+                                     + "<br><br>Agradecemos no contestar este correo,  esta dirección de correo electrónico únicamente envía codigos de registro. Favor remitir sus consultas a consultas@uamshopcr.com o comuníquese al teléfono (506) 8302-1353." +
+                                     "<br><br>Si no ha realizado ningun cambio de clave por favor ignorar este mensaje.";
+                AlternateView htmlView = AlternateView.CreateAlternateViewFromString(htmlmessage, Encoding.UTF8, MediaTypeNames.Text.Html);
+                mailMessage.AlternateViews.Add(htmlView);
+                mail.SendMail(mailMessage);
+
+                Log4Net.WriteLog(string.Format("Estimado(a) {0} se le ha enviado a {1} un correo de cambio de clave", nombre, correo), Log4Net.LogType.Info);
+                return true;
+            }
+            catch (Exception exception)
+            {
+                Log4Net.WriteLog(exception, Log4Net.LogType.Error);
+                return false;
+            }
+        }
     }
 }
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using NotificationModule;
 
 namespace UAMShop
 {
@@ -28,6 +29,8 @@ namespace UAMShop
                     lblResultadoCambiarContrasena.ForeColor = System.Drawing.Color.Black;
                     lblResultadoCambiarContrasena.Text = "Contraseñas cambiada satisfactoriamente";
                     SqlDataSource1.Update();
+                    SendMail.SendUserPasswordNotification(Session["usuario"].ToString(),
+                        Session["usuario_correo"].ToString());
                 }
                 else
                 {

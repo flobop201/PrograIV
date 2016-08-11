@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using log4net;
+using log4net.Appender;
 
 namespace Log4NetModule
 {
@@ -24,9 +25,9 @@ namespace Log4NetModule
 
         private Log4Net()
         {
-            log4net.Config.XmlConfigurator.Configure(new FileInfo(AppDomain.CurrentDomain.BaseDirectory+"App.config"));
-            Log = LogManager.GetLogger("UAMSHOP");
 
+            log4net.Config.XmlConfigurator.Configure(new FileInfo(AppDomain.CurrentDomain.BaseDirectory + "App.config"));
+            Log = LogManager.GetLogger("UAMSHOP");
         }
 
         public static void WriteLog(Exception exception, LogType type)
@@ -36,6 +37,8 @@ namespace Log4NetModule
             {
                 InstanceLog4Net = new Log4Net();
             }
+
+
 
             switch (type)
             {
@@ -54,6 +57,15 @@ namespace Log4NetModule
                 case LogType.Fatal:
                     Log.Fatal(exception.Message + exception.StackTrace);
                     break;
+            }
+            foreach (IAppender iapp in Log.Logger.Repository.GetAppenders())
+            {
+                var buffered = iapp as BufferingAppenderSkeleton;
+                var appender = buffered as BufferingForwardingAppender;
+                if (appender != null)
+                {
+                    appender.Flush();
+                }
             }
         }
 
@@ -81,7 +93,7 @@ namespace Log4NetModule
                 case LogType.Fatal:
                     Log.Fatal(message);
                     break;
-            }  
+            }
         }
     }
 }
