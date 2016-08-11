@@ -211,7 +211,6 @@
     <Compile Include="user\register.aspx.designer.cs">
       <DependentUpon>register.aspx</DependentUpon>
     </Compile>
-    <Compile Include="user\SendMail.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="MasterPages\MainTemplate.Master" />

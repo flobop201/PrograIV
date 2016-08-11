@@ -10,30 +10,44 @@ namespace UAMShop
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["usuario_correo"] ==null )
+            if (Session["usuario_correo"] == null)
             {
-                Response.Redirect("~/index.aspx");                
+                Response.Redirect("~/index.aspx");
             }
         }
 
         protected void btnCambiarContrasena_Click(object sender, EventArgs e)
         {
-            try 
+            try
             {
-                if (txtbPass.Text.ToString() == txtbPassConfirmation.Text.ToString())
+                if (!string.IsNullOrWhiteSpace(txtbPass.Text) && (!string.IsNullOrWhiteSpace(txtbPassConfirmation.Text)) && txtbPass.Text.ToString() == txtbPassConfirmation.Text.ToString())
                 {
                     SqlDataSource1.UpdateParameters.Add("Password", txtbPass.Text);
                     SqlDataSource1.UpdateParameters.Add("Usuario", Session["usuario"].ToString());
-                    
+
                     lblResultadoCambiarContrasena.ForeColor = System.Drawing.Color.Black;
-                    lblResultadoCambiarContrasena.Text = "Contrasenas cambiada satisfactoriamente";
+                    lblResultadoCambiarContrasena.Text = "Contraseñas cambiada satisfactoriamente";
                     SqlDataSource1.Update();
                 }
                 else
                 {
                     lblResultadoCambiarContrasena.ForeColor = System.Drawing.Color.Red;
-                    lblResultadoCambiarContrasena.Text = "Contrasenas no coinciden";
+                    lblResultadoCambiarContrasena.Text = "Contraseñas no coinciden";
                 }
+
+                if (string.IsNullOrWhiteSpace(txtbPass.Text))
+                {
+                    lblResultadoCambiarContrasena.ForeColor = System.Drawing.Color.Red;
+                    lblResultadoCambiarContrasena.Text = "Password es requerido";
+                    return;
+                }
+                if (string.IsNullOrWhiteSpace(txtbPassConfirmation.Text))
+                {
+                    lblResultadoCambiarContrasena.ForeColor = System.Drawing.Color.Red;
+                    lblResultadoCambiarContrasena.Text = "Confirmación Password es requerido";
+                    return;
+                }
+
             }
             catch (Exception ex)
             {
@@ -41,8 +55,8 @@ namespace UAMShop
                 lblResultadoCambiarContrasena.Text = "Error: El siguiente error ocurrió: " + ex.Message;
                 Log4NetModule.Log4Net.WriteLog(ex, Log4NetModule.Log4Net.LogType.Error);
             }
-            
-        }
 
         }
+
     }
+}
