@@ -135,7 +135,7 @@
                 <br />
                 <br />
                 <asp:Label ID="lblAgregarPrecioProducto" width= "200px" runat="server" Text="Precio del producto: "></asp:Label>
-                <asp:TextBox class="form-control" ID="txtbAgregarPrecioProducto" maxlength="20" runat="server" placeholder="Precio" Width="245px"></asp:TextBox>
+                <asp:TextBox class="form-control" ID="txtbAgregarPrecioProducto" maxlength="9"  runat="server" placeholder="Precio" Width="245px"></asp:TextBox>
                 <asp:Label ID="lblErrorPrecio" runat="server" Visible="False"></asp:Label>
                 <br />
                 <br />
